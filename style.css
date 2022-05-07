@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  background-image: url(./img/render.png);
+  width: 100vw;
+  height: 60vw;
+  background-size: 110rem;
+}
+
+.background {
+  height: 20%;
+  width: auto;
+}
+
+#stool {
+  position: absolute;
+  top: 85%;
+  left: 60%;
+}
+
+#vase {
+  position: absolute;
+  top: 72%;
+  left: 61%;
+}
+
+#vase:hover {
+  left: 60%;
+  top: 70%;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+#stool:hover {
+  top: 84%;
+  left: 59%;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+.stool {
+  height: 10rem;
+  width: auto;
+  opacity: 90%;
+}
+
+.vase {
+  height: 8rem;
+  width: auto;
+  opacity: 90%;
+}
+
+#cloud {
+  position: absolute;
+  top: 10%;
+}
+
+.cloud {
+  height: 25rem;
+  width: auto;
+  animation-name: moving;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(100vw) translateY(5vw);
+  }
+
+  20% {
+    transform: translateX(20vw) translateY(10vw);
+  }
+
+  40% {
+    transform: translateX(10vw) translateY(5vw);
+  }
+
+  60% {
+    transform: translateX(-10vw) translateY(2vw);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+
+#header {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.header {
+  height: 20rem;
+  width: auto;
+  z-index: -1;
+}

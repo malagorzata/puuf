@@ -4,7 +4,7 @@ body {
 }
 
 #background {
-  background-image: url(./img/render.png);
+  background-image: url("./img/render.png");
   width: 100vw;
   height: 60vw;
   background-size: 110rem;

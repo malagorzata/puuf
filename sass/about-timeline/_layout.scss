@@ -1,0 +1,12 @@
+.about-timeline {
+  #part1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

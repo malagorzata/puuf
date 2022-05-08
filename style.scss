@@ -2,3 +2,9 @@
 @use "./sass/base/reset";
 @use "./sass/base/colors";
 @use "./sass/base/typography";
+
+@use "./sass/start-screen/start-screen";
+
+@use "./sass/about-timeline/layout";
+
+@use "./sass/components/circle-button";

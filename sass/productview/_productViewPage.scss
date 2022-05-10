@@ -91,6 +91,7 @@
   }
 }
 
+// dropdown
 .dropdown a:hover {
   color: #f2d5e8;
 }
@@ -105,6 +106,7 @@
 .list2 li,
 .list3 li {
   color: black;
+  font-weight: 100;
 }
 .list,
 .list2,
@@ -133,4 +135,9 @@ li {
 
 .dropdown > .dropdownList:hover .name {
   color: colors.$purple-3;
+}
+
+hr {
+  width: 25rem;
+  margin-bottom: 1rem;
 }

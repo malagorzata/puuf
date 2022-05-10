@@ -40,6 +40,9 @@
 }
 
 .singleProduct {
+  height: fit-content;
+  width: fit-content;
+
   .materialTop {
     position: relative;
 
@@ -78,10 +81,20 @@
   .productImg {
     width: 400px;
     height: 400px;
+    background: url(../puuf-photos/gunnii.jpg);
+    background-size: cover;
+    overflow: hidden;
+
+    &:hover {
+      .hoverVideo {
+        visibility: visible;
+      }
+    }
   }
 
-  img {
-    max-width: 100%;
+  .hoverVideo {
+    visibility: hidden;
+    max-height: 100%;
   }
 
   h4 {
@@ -97,38 +110,44 @@
 
     .priceRight {
       font-weight: 100;
+      text-transform: lowercase;
     }
 
-    .productArrow {
-      max-width: 75%;
-      margin-top: 2rem;
+    .productArrowRight {
+      margin-top: 1rem;
+      display: none;
     }
   }
 
   .productInfoBottom {
     margin-top: 1rem;
     display: flex;
-    gap: 8rem;
+    gap: 2rem;
     align-items: flex-end;
 
     .infoBottom {
       display: flex;
       flex-direction: column;
       gap: 5px;
+      width: 200px;
     }
 
     .priceBottom {
       font-weight: 100;
+      text-transform: lowercase;
     }
 
-    .productArrow {
-      max-width: 15%;
+    .productArrowBottom {
       display: none;
     }
   }
 
   &:hover {
-    .productArrow {
+    .productArrowBottom {
+      display: initial;
+    }
+
+    .productArrowRight {
       display: initial;
     }
   }

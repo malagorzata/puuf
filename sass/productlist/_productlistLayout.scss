@@ -75,8 +75,13 @@
     gap: 1rem;
   }
 
+  .productImg {
+    width: 400px;
+    height: 400px;
+  }
+
   img {
-    max-width: 63%;
+    max-width: 100%;
   }
 
   h4 {

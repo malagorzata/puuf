@@ -1,40 +1,49 @@
-const urlParams = new URLSearchParams(window.location.search); /* 
-const category = urlParams.get("category");
-console.log(category);
-document.querySelector("h1").textContent = category;
-document.querySelector(".breadcrumbs .category").textContent = category; */
+let url = "https://kea2021-907c.restdb.io/rest/puuf";
 
-const url = "https://kea-alt-del.dk/t7/api/products";
+/*API key*/
+const options = {
+  headers: {
+    "x-apikey": "602e264f5ad3610fb5bb6267",
+  },
+};
 
-fetch(url)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (data) {
-    handleProductList(data);
-  });
+getData();
 
-function handleProductList(data) {
-  //console.log(data);
+function getData() {
+  fetch(url, options)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response.json();
+    })
+
+    .then((data) => {
+      // console.log(data);
+      handleData(data);
+    })
+    .catch((e) => {
+      console.error("an error occured:", e.message);
+    });
+}
+
+function handleData(data) {
+  console.log(data);
+  document.querySelector("#productListGrid").innerHTML = "";
   data.forEach(showProduct);
 }
 
 function showProduct(product) {
-  // console.log(product);
   //grab the template
   const template = document.querySelector("#productTemplate").content;
-
   //clone it
   const copy = template.cloneNode(true);
+  //change the content
+  copy.querySelector(".nameRight").textContent = product.name;
+  copy.querySelector(".priceRight").textContent = product.price;
 
-  //change content
-  copy.querySelector(".nameRight").textContent = product.productdisplayname;
-
-  copy.querySelector(".priceRight").textContent = product.price + " DKK";
-
-  //grab parent
+  //grab the parent
   const parent = document.querySelector("#productListGrid");
-
   //append
   parent.appendChild(copy);
 }

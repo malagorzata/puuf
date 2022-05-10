@@ -1,12 +1,36 @@
+@use "../base/colors";
+
 .about-timeline {
   #part1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding-left: 50px;
+    margin-bottom: 70px;
+    margin-top: 50px;
   }
   img {
-    width: 70%;
+    width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+  }
+  #part2 {
+    background-color: colors.$purple-1;
+    padding: 70px 50px;
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+
+  #team {
+    display: flex;
+    justify-content: space-a;
+
+    p {
+      text-align: center;
+      padding-top: 20px;
+    }
   }
 }

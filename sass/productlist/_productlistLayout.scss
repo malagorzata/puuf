@@ -1,0 +1,134 @@
+#productList {
+  margin: 3rem 6rem 10rem 6rem;
+}
+
+.title {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .shopLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.4rem;
+  }
+}
+
+.filters {
+  margin-top: 2rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    li {
+      border: 2px solid black;
+      border-radius: 20rem;
+      padding: 4px 50px 4px 50px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#productListGrid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5rem;
+  margin-left: 3rem;
+}
+
+.singleProduct {
+  .materialTop {
+    position: relative;
+
+    .circle {
+      position: absolute;
+      left: 18rem;
+      top: -2rem;
+      width: 115px;
+      height: 115px;
+      border-radius: 20rem;
+      border: 2px solid black;
+      background-color: gray;
+    }
+  }
+
+  .materialBottom {
+    position: relative;
+
+    .circle {
+      position: absolute;
+      left: 18rem;
+      top: 18rem;
+      width: 115px;
+      height: 115px;
+      border-radius: 20rem;
+      border: 2px solid black;
+      background-color: seashell;
+    }
+  }
+
+  .productInfoRight {
+    display: flex;
+    gap: 1rem;
+  }
+
+  img {
+    max-width: 63%;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .infoRight {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .priceRight {
+      font-weight: 100;
+    }
+
+    .productArrow {
+      max-width: 75%;
+      margin-top: 2rem;
+    }
+  }
+
+  .productInfoBottom {
+    margin-top: 1rem;
+    display: flex;
+    gap: 8rem;
+    align-items: flex-end;
+
+    .infoBottom {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .priceBottom {
+      font-weight: 100;
+    }
+
+    .productArrow {
+      max-width: 15%;
+      display: none;
+    }
+  }
+
+  &:hover {
+    .productArrow {
+      display: initial;
+    }
+  }
+}
+
+.singleProduct.rightSide {
+  margin-top: 13rem;
+}

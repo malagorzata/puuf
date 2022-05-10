@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="./style.scss" />
+  </head>
+  <body id="productList">
+    <header></header>
+    <main>
+      <section class="title">
+        <h2>Shop circular <br />with PUUF</h2>
+        <p>Want to learn more about how we <br />work with circularity?</p>
+        <a href="" class="shopLink">
+          <p>Learn more</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.756" height="18.584" viewBox="0 0 17.756 18.584">
+            <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(-6.5 -6.086)">
+              <path id="Path_9" data-name="Path 9" d="M7.5,18H23.256" transform="translate(0 -2.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path id="Path_10" data-name="Path 10" d="M18,7.5l7.878,7.878L18,23.256" transform="translate(-2.622)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </g>
+          </svg>
+        </a>
+      </section>
+
+      <section class="filters">
+        <ul>
+          <li class="filter selected" data-action="filter" data-filter="seats">Seats</li>
+          <li class="filter" data-action="filter" data-filter="vases">Vases</li>
+          <li class="filter" data-action="filter" data-filter="accesories">Accesories</li>
+          <li class="filter" data-action="filter" data-filter="recycled_plastic">Recycled Plastic</li>
+          <li class="filter" data-action="filter" data-filter="wood">Wood</li>
+        </ul>
+      </section>
+
+      <section id="productListGrid"></section>
+
+      <template id="productTemplate">
+        <div class="singleProduct">
+          <div class="materialTop">
+            <div class="circle"></div>
+          </div>
+
+          <div class="materialBottom">
+            <div class="circle"></div>
+          </div>
+
+          <div class="productInfoRight">
+            <img src="../puuf-photos/gunnii.jpg" alt="" />
+            <div class="infoRight">
+              <h4 class="nameRight">Gunnii</h4>
+              <h4 class="priceRight">200dkk</h4>
+            </div>
+          </div>
+
+          <div class="productInfoBottom">
+            <div class="infoBottom">
+              <h4 class="nameBottom">Gunnii</h4>
+              <h4 class="priceBottom">200dkk</h4>
+            </div>
+            <svg class="productArrow" xmlns="http://www.w3.org/2000/svg" width="130.646" height="23.527" viewBox="0 0 130.646 23.527">
+              <g id="Group_122" data-name="Group 122" transform="translate(-449 -1519.237)">
+                <line id="Line_29" data-name="Line 29" x2="130" transform="translate(449 1531)" fill="none" stroke="#000" stroke-width="2" />
+                <line id="Line_30" data-name="Line 30" x2="13" y2="11" transform="translate(566 1520)" fill="none" stroke="#000" stroke-width="2" />
+                <line id="Line_31" data-name="Line 31" y1="11" x2="13" transform="translate(566 1531)" fill="none" stroke="#000" stroke-width="2" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </template>
+    </main>
+
+    <footer></footer>
+
+    <script src="productlist.js"></script>
+  </body>
+</html>

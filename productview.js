@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 // const id = urlParams.get("_id");
-const url = "https://kea2021-907c.restdb.io/rest/puuf/6276b9ad8d10d4050003fe94";
+const url = "https://kea2021-907c.restdb.io/rest/puuf/6276b9358d10d4050003fe65";
 
 const options = {
   headers: {

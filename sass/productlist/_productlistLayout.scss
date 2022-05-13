@@ -45,6 +45,7 @@
 
   .materialTop {
     position: relative;
+    z-index: 100;
 
     .circle {
       position: absolute;
@@ -60,6 +61,7 @@
 
   .materialBottom {
     position: relative;
+    z-index: 100;
 
     .circle {
       position: absolute;
@@ -87,14 +89,16 @@
 
     &:hover {
       .hoverVideo {
-        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
       }
     }
   }
 
   .hoverVideo {
-    visibility: hidden;
+    opacity: 0;
     max-height: 100%;
+    transition: all 0.2s ease-in-out;
   }
 
   h4 {
@@ -115,7 +119,8 @@
 
     .productArrowRight {
       margin-top: 1rem;
-      display: none;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -138,17 +143,20 @@
     }
 
     .productArrowBottom {
-      display: none;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
     }
   }
 
   &:hover {
     .productArrowBottom {
-      display: initial;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
 
     .productArrowRight {
-      display: initial;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
   }
 }

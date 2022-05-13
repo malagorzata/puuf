@@ -47,6 +47,7 @@ function showProduct(product) {
   copy.querySelector(".productImg").style.backgroundSize = `cover`;
   copy.querySelector(".nameBottom").textContent = product.name;
   copy.querySelector(".priceBottom").textContent = `${product.price}kr`;
+  copy.querySelector("a.singleProduct").href = `productview.html?_id=${product._id}`;
 
   if (product.rightColumn === true) {
     console.log(product.name, "is in the right column");

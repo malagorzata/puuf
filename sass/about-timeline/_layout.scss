@@ -1,12 +1,115 @@
+@use "../base/colors";
+
 .about-timeline {
   #part1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding-left: 50px;
+    margin-bottom: 70px;
+    padding-top: 40px; // nie wiem jak tu z navigacja, jakby co usunac
+    img {
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
   }
-  img {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+  #part2 {
+    img {
+      width: 70%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    background-color: colors.$purple-1;
+    padding: 70px 50px;
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    #team {
+      display: flex;
+      justify-content: space-around;
+
+      p {
+        text-align: center;
+        padding-top: 20px;
+      }
+      .dropdown {
+        max-width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      svg {
+        width: 100%;
+      }
+      .name {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+  }
+
+  #part3 {
+    padding-right: 60px;
+    margin-top: 100px;
+
+    img {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    #ourStory {
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+
+    #date-1 {
+      margin-left: 200px;
+      margin-top: 80px;
+    }
+
+    #rightSide {
+      margin-left: 350px;
+    }
+  }
+  .next-to-date {
+    display: flex;
+    h1 {
+      padding-right: 10px;
+    }
+  }
+  #box1,
+  #box2 {
+    margin-bottom: 40px;
+    .img-container {
+      margin-top: 10px;
+      margin-left: 165px;
+    }
+  }
+  #part4 {
+    height: 100vh;
+    background-color: colors.$purple-1;
+  }
+}
+
+.background-circle {
+  border: colors.$purple-3 solid 4px;
+  width: 160px;
+  margin-left: 25px;
+  z-index: -1;
+  height: 60px;
+  position: absolute;
+  border-radius: 100%;
+  transform: rotate(-18deg);
 }

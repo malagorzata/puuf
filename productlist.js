@@ -51,7 +51,7 @@ function showProduct(product) {
 
   if (product.rightColumn === true) {
     console.log(product.name, "is in the right column");
-    copy.querySelector(".singleProduct").style.marginTop = "10rem";
+    copy.querySelector(".singleProduct").style.marginTop = "8rem";
     copy.querySelector(".nameBottom").style.display = "none";
     copy.querySelector(".priceBottom").style.display = "none";
     copy.querySelector(".materialBottom").style.display = "none";

@@ -1,4 +1,10 @@
-#productList {
+@use "../base/colors";
+
+html {
+  overflow-x: hidden;
+}
+
+#productList main {
   margin: 3rem 6rem 10rem 6rem;
 }
 
@@ -12,6 +18,11 @@
     align-items: center;
     gap: 10px;
     margin-top: 0.4rem;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: translateX(8px);
+      transition: all 0.2s ease-in-out;
+    }
   }
 }
 
@@ -35,8 +46,7 @@
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 5rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 .singleProduct {
@@ -55,7 +65,9 @@
       height: 115px;
       border-radius: 20rem;
       border: 2px solid black;
-      background-color: gray;
+      background: url(../puuf-photos/mini-gunnii-material.png);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -71,7 +83,9 @@
       height: 115px;
       border-radius: 20rem;
       border: 2px solid black;
-      background-color: seashell;
+      background: url(../puuf-photos/puuf-box-material.png);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -121,6 +135,7 @@
       margin-top: 1rem;
       opacity: 0;
       transition: all 0.2s ease-in-out;
+      max-width: 60%;
     }
   }
 
@@ -145,6 +160,7 @@
     .productArrowBottom {
       opacity: 0;
       transition: all 0.2s ease-in-out;
+      max-width: 17%;
     }
   }
 

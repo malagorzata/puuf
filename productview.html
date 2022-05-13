@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Products</title>
+  </head>
+  <body id="productView">
+    <header>
+      <nav>
+        <div class="logo-nav">
+          <a href="home.html"><img src="./img/puuf-logo.png" alt="puuf logo" /></a>
+        </div>
+        <ul class="nav-items">
+          <li>CART</li>
+          <li>MENU</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="product-tile">
+        <h2></h2>
+        <img src="./img/pink-shape.png" alt="pink shape" />
+      </section>
+      <div class="product-pics">
+        <img class="first" src="" alt="" />
+        <img class="second" src="" alt="" />
+        <img class="third" src="" alt="" />
+      </div>
+      <section class="product-description-all">
+        <h3 class="price"><span></span>kr</h3>
+        <p class="product-description"><br /><br /></p>
+        <div class="dropdown">
+          <ul class="dropdownList">
+            <li class="name">
+              MATERIAL + <i class="arrow down"></i>
+              <hr />
+              <ul class="list">
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="dropdownList">
+            <li class="name">
+              MEASUREMENTS + <i class="arrow down"></i>
+              <hr />
+              <ul class="list2">
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="dropdownList">
+            <li class="name">
+              OTHER DETAILS + <i class="arrow down"></i>
+
+              <hr />
+              <ul class="list3">
+                <li class="use">Use proposal: <span>E</span></li>
+                <li class="designer">Designer: <span></span></li>
+
+                <li class="production">Production: <span></span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="top-footer">
+        <div class="newsletter">
+          <img class="white-logo" alt="white logo" src="./img/puuf-white-logo.png" />
+          <div class="formContainer">
+            <h4>Keep in touch with our furniture, sustainability and other tips</h4>
+
+            <div class="container">
+              <form class="newsletterForm" name="Newsletter">
+                <input class="emailField" id="email" type="email" placeholder="Your e-mail" required />
+                <button type="submit"></button>
+
+                <!-- <input class="joinNow" type="submit" value="JOIN NOW" /> -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="spinning-img">
+          <img class="social-image" alt="social" src="./img/social-image.png" />
+          <img class="social-text" alt="social" src="./img/social-text.png" />
+        </div>
+      </section>
+      <section id="bottom-footer">
+        <p>© 2022 - PUUF</p>
+        <ul class="footer-details">
+          <li>Privacy Policy</li>
+          <li>T&Cs</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="productview.js"></script>
+  </body>
+</html>

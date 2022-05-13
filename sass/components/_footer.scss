@@ -1,0 +1,173 @@
+@use "../base/typography";
+@use "../base/colors";
+
+footer {
+  background-color: colors.$purple-2;
+  height: 32rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 80rem;
+
+  #top-footer {
+    padding-left: 10rem;
+
+    .newsletter {
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+      }
+    }
+
+    form {
+      color: #555;
+      display: flex;
+      padding: 2px;
+      border: none;
+      background-color: white;
+      border-radius: 1rem;
+      margin: 2rem 1rem;
+      width: 15rem;
+    }
+
+    input[type="email"] {
+      width: 15rem;
+
+      border: 0;
+      margin: 0;
+      padding: 7px 8px;
+
+      border-radius: 1rem;
+      z-index: 1;
+    }
+
+    input[type="email"]:focus {
+      border: 0;
+      outline: none;
+    }
+    input[type="email"]::placeholder {
+      color: black;
+    }
+
+    button[type="submit"] {
+      //   text-indent: -9px;
+      overflow: hidden;
+      width: 8rem;
+      height: auto;
+
+      margin: 0;
+      border: 1px solid transparent;
+      border-radius: inherit;
+      background: transparent url("./img/arrow-green.svg") no-repeat center center;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .spinning-img {
+      position: relative;
+      top: -5%;
+      left: 0;
+      height: 5rem;
+      width: auto;
+      .social-image {
+        position: absolute;
+        top: -17rem;
+        left: 64%;
+        width: 15rem;
+        height: auto;
+      }
+
+      .social-text {
+        position: relative;
+        top: -19.5rem;
+        left: 60%;
+        width: 20rem;
+        height: auto;
+        animation: spin infinite linear 30s;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    // input[type="email"] {
+    //   border: 0;
+    //   padding: 0.5rem;
+    //   border-radius: 1rem 0 0 1rem;
+    //   width: 15rem;
+    //   height: 1rem;
+    //   //   -webkit-box-shadow: 5px 3px 15px -4px rgba(0, 0, 0, 0.76);
+    //   //   box-shadow: 5px 3px 15px -4px rgba(0, 0, 0, 0.76);
+    //   margin-top: 2rem;
+    //   margin-left: 1rem;
+    //   border: none;
+    //   outline: none;
+    // }
+
+    // CHANGE THIS!!
+    // input[type="email"]::-webkit-input-placeholder {
+    //   color: black;
+    //   font-family: Arial, Helvetica, sans-serif;
+    // }
+
+    // .fa-solid {
+    //   color: #9de759;
+    //   background-color: white;
+    //   padding: 0.5rem;
+    //   height: 1rem;
+    //   border-radius: 0 1rem 1rem 0;
+    //   border: none;
+    //   outline: none;
+    //   margin-left: -1rem;
+    //   margin-top: -10rem;
+    // }
+
+    h4 {
+      width: 40rem;
+      height: auto;
+      padding-bottom: 1rem;
+      z-index: 10;
+      position: absolute;
+      margin-top: -3rem;
+      margin-left: 1rem;
+      font-size: 2rem;
+      line-height: 36px;
+    }
+
+    .white-logo {
+      width: 19rem;
+      height: auto;
+      position: relative;
+      top: 2rem;
+      left: -1rem;
+      z-index: 2 !important;
+    }
+  }
+
+  #bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    .footer-details {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+
+      li {
+        padding: 0 1rem;
+      }
+    }
+  }
+}

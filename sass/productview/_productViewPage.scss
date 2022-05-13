@@ -1,0 +1,143 @@
+@use "../base/typography";
+@use "../base/colors";
+
+#productView {
+  margin: 0;
+  padding: 0;
+  main {
+    display: flex;
+    flex-direction: row;
+
+    .product-tile {
+      width: 10rem;
+      height: 35rem;
+      position: fixed;
+      margin-top: 12rem;
+      padding: 0 1rem;
+      h2 {
+        writing-mode: vertical-rl;
+        position: absolute;
+        z-index: 2;
+        // transform: rotate(-90deg)
+      }
+
+      img {
+        position: relative;
+        z-index: -1;
+        top: -4%;
+        left: 20%;
+        height: 3rem;
+      }
+    }
+
+    .product-pics {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15%;
+
+      img {
+        width: 30rem;
+        height: auto;
+        padding-bottom: 1rem;
+      }
+    }
+    .product-description-all {
+      padding: 3rem 1rem;
+      width: 30rem;
+      height: 100%;
+      position: sticky;
+      top: 0;
+      margin-left: 2rem;
+
+      h3 {
+        padding: 1rem 0;
+      }
+
+      .product-description {
+        padding: 1rem 0;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      li {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 1.2rem;
+    position: fixed;
+    width: 95%;
+    .logo-nav {
+      img {
+        width: 4rem;
+        height: auto;
+      }
+    }
+    .nav-items {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+
+      li {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+// dropdown
+.dropdown a:hover {
+  color: #f2d5e8;
+}
+
+.dropdownList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li,
+.list2 li,
+.list3 li {
+  color: black;
+  font-weight: 100;
+}
+.list,
+.list2,
+.list3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+.dropdown ul ul {
+  /* transform: scaleY(0); */
+  transition: all 0.5s;
+  height: 0;
+  overflow: hidden;
+}
+
+.dropdown > .dropdownList:hover .list,
+.dropdown > .dropdownList:hover .list2,
+.dropdown > .dropdownList:hover .list3 {
+  /* transform: scaleY(1); */
+  height: 80px;
+}
+
+.dropdown > .dropdownList:hover .name {
+  color: colors.$purple-3;
+}
+
+hr {
+  width: 25rem;
+  margin-bottom: 1rem;
+}

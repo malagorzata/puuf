@@ -44,8 +44,12 @@ html {
 }
 
 .singleProduct {
+  height: fit-content;
+  width: fit-content;
+
   .materialTop {
     position: relative;
+    z-index: 100;
 
     .circle {
       position: absolute;
@@ -61,6 +65,7 @@ html {
 
   .materialBottom {
     position: relative;
+    z-index: 100;
 
     .circle {
       position: absolute;
@@ -82,10 +87,22 @@ html {
   .productImg {
     width: 400px;
     height: 400px;
+    background: url(../puuf-photos/gunnii.jpg);
+    background-size: cover;
+    overflow: hidden;
+
+    &:hover {
+      .hoverVideo {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+    }
   }
 
-  img {
-    max-width: 100%;
+  .hoverVideo {
+    opacity: 0;
+    max-height: 100%;
+    transition: all 0.2s ease-in-out;
   }
 
   h4 {
@@ -101,39 +118,49 @@ html {
 
     .priceRight {
       font-weight: 100;
+      text-transform: lowercase;
     }
 
-    .productArrow {
-      max-width: 75%;
-      margin-top: 2rem;
+    .productArrowRight {
+      margin-top: 1rem;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
     }
   }
 
   .productInfoBottom {
     margin-top: 1rem;
     display: flex;
-    gap: 8rem;
+    gap: 2rem;
     align-items: flex-end;
 
     .infoBottom {
       display: flex;
       flex-direction: column;
       gap: 5px;
+      width: 200px;
     }
 
     .priceBottom {
       font-weight: 100;
+      text-transform: lowercase;
     }
 
-    .productArrow {
-      max-width: 15%;
-      display: none;
+    .productArrowBottom {
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
     }
   }
 
   &:hover {
-    .productArrow {
-      display: initial;
+    .productArrowBottom {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .productArrowRight {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
   }
 }

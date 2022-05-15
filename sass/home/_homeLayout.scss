@@ -2,7 +2,7 @@
   img {
     max-width: 100%;
   }
-  .pictures {
+  #smooth-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 120px;
@@ -10,11 +10,19 @@
     padding: 50px;
   }
 
-  svg {
-    fill: currentColor;
-    height: auto;
-    max-width: 66vmin;
-    transform-origin: center;
-    width: 66%;
+  #circular-icon {
+    position: absolute;
+    top: 60vh;
+    right: 60px;
+    animation: spin infinite linear 7s;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

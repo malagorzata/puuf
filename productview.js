@@ -26,6 +26,7 @@ fetch(url, options)
 function handleProducts(products) {
   console.log(products);
   document.querySelector(".product-tile h2").textContent = products.name;
+  document.querySelector(".product-description-all h2").textContent = products.name;
   document.querySelector(".price span").textContent = products.price;
   document.querySelector(".product-description").textContent = products.description;
   document.querySelector(".list li").textContent = products.material;

@@ -189,12 +189,12 @@ hr {
 
         h2 {
           font-size: 2.5rem;
-          padding: 1rem 0;
+          padding: 0.4rem 0;
           margin: 0;
           line-height: 25px;
         }
         .price {
-          font-size: 2rem;
+          font-size: 1.7rem;
           padding: 0;
         }
 
@@ -203,9 +203,13 @@ hr {
         }
         .product-description {
           padding: 0;
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
           width: 80vw;
           font-size: 1rem;
+        }
+
+        .dropdown {
+          margin-bottom: 2rem;
         }
 
         hr {
@@ -218,6 +222,7 @@ hr {
         flex-direction: row !important;
         overflow-x: scroll;
         margin-left: 0;
+        margin-bottom: 1.5rem;
 
         img {
           width: 17rem !important;

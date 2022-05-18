@@ -1,28 +1,79 @@
+@use "../base/colors";
+
 #home-body {
-  img {
-    max-width: 100%;
+  #section1 {
+    height: 80vw;
+    img {
+      width: 35%;
+    }
   }
-  #smooth-content {
+  #wrapper {
+    width: 50%;
+    position: -webkit-sticky;
+    position: sticky;
+    margin-left: 80vw;
+    top: 28vw;
+    margin-right: auto;
+    align-content: center;
+  }
+
+  #section2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 120px;
-    row-gap: 120px;
-    padding: 50px;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+    padding-top: 100px;
+    img {
+      max-width: 100%;
+      margin-bottom: -9px;
+    }
+
+    h2 {
+      padding-top: 3vw;
+      line-height: 4.5vw;
+    }
+
+    h4 {
+      width: 80%;
+      line-height: 2.5vw;
+    }
+    #text-sec2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #buttons-sec2 {
+    }
   }
 
-  #circular-icon {
+  #section3 {
+    background-color: colors.$purple-1;
+    padding: 60px;
+  }
+
+  .delayed-section {
     position: absolute;
-    top: 60vh;
-    right: 60px;
-    // animation: spin infinite linear 7s;
+    width: 100%;
   }
-  //   @keyframes spin {
-  //     0% {
-  //       transform: rotate(0deg);
-  //     }
 
-  //     100% {
-  //       transform: rotate(360deg);
-  //     }
-  //   }
+  .delayed-section .inner-container {
+    will-change: transform;
+  }
+  .delayed-section img {
+    max-width: 120%;
+    will-change: transform;
+  }
+
+  #del1 {
+    top: -80px;
+    left: 200px;
+  }
+  #del2 {
+    top: 180px;
+    left: 880px;
+  }
+  #del3 {
+    top: 550px;
+    left: 120px;
+  }
 }

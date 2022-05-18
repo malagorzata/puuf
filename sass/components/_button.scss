@@ -1,0 +1,11 @@
+@use "../base/colors";
+
+.regular-button {
+  padding: 8px 15px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2vw;
+  background-color: transparent;
+  border-radius: 20px;
+  border: solid 2px colors.$purple-3;
+}

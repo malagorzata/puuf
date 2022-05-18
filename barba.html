@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <title>Document</title>
+  </head>
+  <body data-barba="wrapper">
+    <div class="load-container">
+      <div class="loading-screen"></div>
+    </div>
+
+    <main id="tryingBarba" data-barba="container" data-barba-namespace="barba1">
+      <h3 class="animate-this">Barba 1</h3>
+      <div class="animate-this">
+        <a href="barba2.html">take me to barba 2</a>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="barba.js"></script>
+  </body>
+</html>

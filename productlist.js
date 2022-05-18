@@ -1,3 +1,18 @@
+window.addEventListener("DOMContentLoaded", start);
+
+const allProducts = [];
+
+function start() {
+  registerFilterOptions();
+  getData();
+}
+
+function registerFilterOptions() {
+  document.querySelectorAll(".filters li[data-action='filter']").forEach((option) => option.addEventListener("click", selectFilter));
+}
+
+//fetching database
+
 let url = "https://kea2021-907c.restdb.io/rest/puuf";
 
 /*API key*/
@@ -6,8 +21,6 @@ const options = {
     "x-apikey": "602e264f5ad3610fb5bb6267",
   },
 };
-
-getData();
 
 function getData() {
   fetch(url, options)
@@ -20,19 +33,78 @@ function getData() {
 
     .then((data) => {
       // console.log(data);
-      handleData(data);
+      prepareData(data);
     })
     .catch((e) => {
       console.error("an error occured:", e.message);
     });
 }
 
-function handleData(data) {
-  console.log(data);
+function prepareData(data) {
+  data.forEach((jsonObject) => {
+    //adding prducts to global array to use for filtering
+    allProducts.push(jsonObject);
+    handleProductList(allProducts);
+  });
+}
+
+//FILTERING
+
+//desktop view filters
+function selectFilter(e) {
+  const filter = e.target.dataset.filter;
+
+  //find previously selected, and remove .selected
+  const previouslySelected = document.querySelector(".filters ul li.selected");
+  previouslySelected.classList.remove("selected");
+
+  //indicate active filter
+  e.target.classList.add("selected");
+
+  filterList(filter);
+}
+
+function filterList(filter) {
+  let filteredList = allProducts;
+  if (filter === "seats") {
+    filteredList = allProducts.filter(showSeats);
+  } else if (filter === "vases") {
+    filteredList = allProducts.filter(showVases);
+  } else if (filter === "accessories") {
+    filteredList = allProducts.filter(showAccessories);
+  } else if (filter === "recycled_plastic") {
+    filteredList = allProducts.filter(showRecycledPlastic);
+  } else if (filter === "wood") {
+    filteredList = allProducts.filter(showWood);
+  }
+
+  handleProductList(filteredList);
+}
+
+function showSeats(product) {
+  return product.filter1 === "seats" || product.filter2 === "seats";
+}
+
+function showVases(product) {
+  return product.filter1 === "vases" || product.filter2 === "vases";
+}
+function showAccessories(product) {
+  return product.filter1 === "accessories" || product.filter2 === "accessories";
+}
+function showRecycledPlastic(product) {
+  return product.filter1 === "recycled_plastic" || product.filter2 === "recycled_plastic";
+}
+function showWood(product) {
+  return product.filter1 === "wood" || product.filter2 === "wood";
+}
+
+function handleProductList(data) {
+  //console.log(data);
   document.querySelector("#productListGrid").innerHTML = "";
   data.forEach(showProduct);
 }
 
+//displaying the client list
 function showProduct(product) {
   //console.log(product);
   //grab the template
@@ -48,9 +120,10 @@ function showProduct(product) {
   copy.querySelector(".nameBottom").textContent = product.name;
   copy.querySelector(".priceBottom").textContent = `${product.price}kr`;
   copy.querySelector("a.singleProduct").href = `productview.html?_id=${product._id}`;
+  copy.querySelector(".materialBottom .circle").style.background = `url(${product.materialPhoto})`;
+  copy.querySelector(".materialTop .circle").style.background = `url(${product.materialPhoto})`;
 
   if (product.rightColumn === true) {
-    console.log(product.name, "is in the right column");
     copy.querySelector(".singleProduct").style.marginTop = "8rem";
     copy.querySelector(".nameBottom").style.display = "none";
     copy.querySelector(".priceBottom").style.display = "none";

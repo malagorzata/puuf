@@ -84,6 +84,27 @@
     }
   }
 
+  #section4 {
+    #circular-goods {
+      display: flex;
+      justify-content: space-between;
+    }
+    #products {
+      overflow: auto;
+      white-space: nowrap;
+      width: unset;
+
+      article {
+        display: inline-block;
+        width: 30vw;
+        margin-right: 2vw;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
   .delayed-section {
     position: absolute;
     width: 100%;

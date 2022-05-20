@@ -97,23 +97,55 @@
       </section>
 
       <section id="section4">
-        <div>
+        <div id="circular-goods">
           <h3>Circular goods for your home</h3>
-          <button class="regular-button">SHOP ALL</button>
+          <button class="regular-button">
+            SHOP ALL &nbsp
+            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="20.066" height="20.895" viewBox="0 0 20.066 20.895">
+              <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
+                <path
+                  id="Path_9"
+                  data-name="Path 9"
+                  d="M7.5,18H25.567"
+                  transform="translate(-7.5 -8.967)"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  id="Path_10"
+                  data-name="Path 10"
+                  d="M18,7.5l9.033,9.033L18,25.567"
+                  transform="translate(-8.967 -7.5)"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </button>
         </div>
 
         <section id="products"></section>
-        <template id="template">
+        <template id="product-template">
           <article>
-            <a href=""><img id="img" src="" alt="" /></a>
-            <h3>Name</h3>
-            <p>Price</p>
+            <a class="productLink" href="">
+              <img class="image" />
+            </a>
+            <h4 class="name"></h4>
+            <p class="price"></p>
           </article>
         </template>
       </section>
+
+      <section id="section5"></section>
     </main>
     <footer></footer>
-    <script src="./script/home/home-gsap.js"></script>
-    <script src="./script/home/home-products.js"></script>
+    <script type="module" src="./script/home/home-gsap.js"></script>
+    <script type="module" src="./script/home/home-products.js"></script>
   </body>
 </html>

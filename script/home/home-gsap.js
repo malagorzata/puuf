@@ -16,6 +16,52 @@ const rotate = gsap
     ease: "none",
   });
 
+const imageAnim = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#section6",
+      scrub: 0,
+      start: "top",
+      markers: true,
+    },
+  })
+
+  .to(document.querySelector("#circle1"), {
+    x: "-10vw",
+    delay: 0,
+    duration: 5000,
+  });
+
+const imageAnim2 = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#section6",
+      scrub: 0,
+      start: "top",
+      markers: true,
+    },
+  })
+
+  .to(document.querySelector("#circle2"), {
+    x: "10vw",
+    duration: 5000,
+  });
+
+const imageAnim3 = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#section6",
+      scrub: 0.3,
+      start: "top",
+      markers: true,
+    },
+  })
+
+  .to(document.querySelector("#inside"), {
+    duration: 5000,
+    opacity: 1,
+  });
+
 // const pin = gsap.timeline({
 //   scrollTrigger: {
 //     trigger: "#circular-icon",

@@ -6,7 +6,7 @@ const rotate = gsap
       trigger: "#circular-icon",
       scrub: 0.2,
       start: 0,
-      end: 1000,
+      end: 1300,
       markers: true,
     },
   })

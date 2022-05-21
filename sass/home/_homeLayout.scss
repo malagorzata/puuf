@@ -182,6 +182,14 @@
   }
 
   #section8 {
+    padding-top: 5vw;
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 20vw;
+    }
+
     h3 {
       text-align: center;
     }
@@ -190,12 +198,41 @@
     }
 
     #sec8-grid {
+      padding: 5vw 10vw;
       h3 {
         text-align: left;
       }
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 4vw;
+
+      #column1 {
+        .text-block {
+          margin-top: 5vw;
+        }
+        .karol-mateo {
+          margin-top: 15vw;
+        }
+      }
+      #column2 {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .text-block {
+          margin-left: 1vw;
+        }
+      }
+      #column3 {
+        padding-top: 20vw;
+        img {
+          margin-left: -3vw;
+          padding-bottom: 10vw;
+        }
+        .text-block {
+          margin-left: 1vw;
+        }
+      }
     }
   }
 

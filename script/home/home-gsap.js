@@ -21,15 +21,16 @@ const imageAnim = gsap
     scrollTrigger: {
       trigger: "#section6",
       scrub: 0,
-      start: "top",
-      markers: true,
+      start: "top 70%",
+      end: "bottom 80%",
+      markers: false,
     },
   })
 
   .to(document.querySelector("#circle1"), {
-    x: "-10vw",
+    x: "-20vw",
     delay: 0,
-    duration: 5000,
+    duration: 4000,
   });
 
 const imageAnim2 = gsap
@@ -37,14 +38,15 @@ const imageAnim2 = gsap
     scrollTrigger: {
       trigger: "#section6",
       scrub: 0,
-      start: "top",
+      start: "top 70%",
+      end: "bottom 80%",
       markers: true,
     },
   })
 
   .to(document.querySelector("#circle2"), {
-    x: "10vw",
-    duration: 5000,
+    x: "20vw",
+    duration: 4000,
   });
 
 const imageAnim3 = gsap
@@ -52,14 +54,30 @@ const imageAnim3 = gsap
     scrollTrigger: {
       trigger: "#section6",
       scrub: 0.3,
-      start: "top",
-      markers: true,
+      start: "top 70%",
+      end: "bottom 80%",
+      markers: false,
     },
   })
 
   .to(document.querySelector("#inside"), {
-    duration: 5000,
+    duration: 4000,
     opacity: 1,
+  });
+
+const textAni = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#section6",
+      scrub: 0.3,
+      start: "top 70%",
+      end: "bottom 80%",
+      markers: false,
+    },
+  })
+  .to(document.querySelector("#text-ani"), {
+    duration: 4000,
+    x: "7vw",
   });
 
 // const pin = gsap.timeline({

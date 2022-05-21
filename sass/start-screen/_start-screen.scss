@@ -1,100 +1,270 @@
-body {
+@use "../base/typography";
+@import url("https://use.typekit.net/iln6akr.css");
+
+#start-screen {
+  color: black;
+  width: 100%;
   margin: 0;
   padding: 0;
-}
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 
-#background {
-  background-image: url("./img/render.png");
-  width: 100vw;
-  height: 60vw;
-  background-size: 110rem;
-}
+  font-size: calc(100vw / var(--context));
 
-.background {
-  height: 20%;
-  width: auto;
-}
-
-#stool {
-  position: absolute;
-  top: 85%;
-  left: 60%;
-}
-
-#vase {
-  position: absolute;
-  top: 72%;
-  left: 61%;
-}
-
-#vase:hover {
-  left: 60%;
-  top: 70%;
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-
-#stool:hover {
-  top: 84%;
-  left: 59%;
-  transform: scale(0.9);
-  transition: 0.5s;
-}
-.stool {
-  height: 10rem;
-  width: auto;
-  opacity: 90%;
-}
-
-.vase {
-  height: 8rem;
-  width: auto;
-  opacity: 90%;
-}
-
-#cloud {
-  position: absolute;
-  top: 10%;
-}
-
-.cloud {
-  height: 25rem;
-  width: auto;
-  animation-name: moving;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes moving {
-  0% {
-    transform: translateX(100vw) translateY(5vw);
+  #background {
+    background-image: url("./img/render-two.png");
+    height: 100vh;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  20% {
-    transform: translateX(20vw) translateY(10vw);
+  .title {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    display: none;
   }
 
-  40% {
-    transform: translateX(10vw) translateY(5vw);
+  .tt-scroll {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
-  60% {
-    transform: translateX(-10vw) translateY(2vw);
+  .tt-scroll__title {
+    line-height: 1;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    transform: translate(90vw, -50%);
+    z-index: 3;
+
+    h1 {
+      font-size: 4.5rem;
+      color: white;
+    }
   }
-  100% {
-    transform: translateX(-120vw);
+
+  .tt-scroll__content {
+    font-size: 64rem;
+    line-height: 70rem;
+    max-width: 1084rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tt-scroll__line {
+    overflow: hidden;
+  }
+
+  .tt-scroll__line__inner {
+    transform: translateY(100%);
+  }
+
+  #stool {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+  }
+
+  #vase {
+    position: absolute;
+    top: 43.5%;
+    left: 70.5%;
+    animation: pulse 3s infinite linear;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  #vase:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    // animation: rotate 2s;
+  }
+
+  .break {
+    color: transparent;
+  }
+
+  .stool {
+    height: 10rem;
+    width: auto;
+    opacity: 90%;
+  }
+
+  .vase {
+    height: 10rem;
+    width: auto;
+    opacity: 90%;
+  }
+
+  #cloud {
+    position: absolute;
+    top: 10%;
+    height: 50px;
+  }
+
+  .cloud {
+    height: 20rem;
+    width: auto;
+    animation-name: moving;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes moving {
+    0% {
+      transform: translateX(90vw) translateY(5vw);
+    }
+
+    100% {
+      transform: translateX(-130vw);
+    }
+  }
+
+  #design {
+    background: transparent;
+    animation: fade-in ease-in 2s forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  a {
+    .wrapper {
+      position: relative;
+      top: 63vh;
+      left: 38vw;
+      .button {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        // top: 20%;
+        // left: 20%;
+        img {
+          width: 11rem;
+          position: relative;
+          height: auto;
+          background-color: #c0a8ba;
+          border-radius: 50%;
+          padding: 1.2rem;
+        }
+        h2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  .wrapper:hover .button {
+    animation: rotate 10s linear infinite;
   }
 }
 
-#header {
-  position: absolute;
-  top: 30%;
-  left: 5%;
+@media only screen and (max-width: 1279px) {
+  #start-screen {
+    .smooth-scroll {
+      display: none;
+    }
+
+    .title {
+      font-size: 3.5rem;
+      line-height: 55px;
+      color: white;
+      top: 10%;
+      left: 0%;
+      width: 100vw;
+      height: auto;
+      display: block;
+      text-align: center;
+    }
+
+    a {
+      .wrapper {
+        top: 74vh;
+        left: 30vw;
+        margin: 0 auto;
+
+        .button {
+          h2 {
+            font-size: 2rem;
+          }
+          img {
+            width: 8rem;
+          }
+        }
+      }
+    }
+    #items {
+      #stool {
+        position: absolute;
+        top: 55%;
+        left: 60%;
+
+        .stool {
+          width: 7rem;
+          height: auto;
+        }
+      }
+
+      #vase {
+        position: absolute;
+        top: 41.5%;
+        left: 63.5%;
+
+        .vase {
+          width: 5.5rem;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
-.header {
-  height: 20rem;
-  width: auto;
-  z-index: -1;
+@media only screen and (min-width: 1280px) {
+  #start-screen {
+    .title {
+      display: none;
+    }
+  }
 }

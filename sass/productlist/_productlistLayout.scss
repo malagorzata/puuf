@@ -1,9 +1,12 @@
+@use "../base/colors";
+
 html {
   overflow-x: hidden;
+  width: 100vw;
 }
 
-#productList main {
-  margin: 3rem 6rem 10rem 6rem;
+#productList .marginWrapper {
+  margin: 3rem;
 }
 
 .title {
@@ -11,11 +14,27 @@ html {
     margin-bottom: 0.5rem;
   }
 
+  .oval {
+    position: absolute;
+    top: -19px;
+    left: 17rem;
+    z-index: -1;
+    svg {
+      max-width: 65%;
+    }
+  }
+
   .shopLink {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 0.4rem;
+    transition: all 0.2s ease-in-out;
+    width: max-content;
+    &:hover {
+      transform: translateX(8px);
+      transition: all 0.2s ease-in-out;
+    }
   }
 }
 
@@ -24,23 +43,40 @@ html {
   ul {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
+    width: 100%;
+    overflow-x: scroll;
 
     li {
       border: 2px solid black;
       border-radius: 20rem;
-      padding: 4px 50px 4px 50px;
+      padding: 5px 40px 5px 40px;
       text-transform: uppercase;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        border-color: colors.$purple-4;
+        color: colors.$purple-4;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    li.selected {
+      font-weight: 900;
+      border-color: colors.$purple-4;
     }
   }
 }
 
 #productListGrid {
   margin-top: 4rem;
-  display: grid;
+  display: grid; /* 
+  grid-template-columns: repeat(auto-fill, minmax(50px, 500px)); */
   grid-template-columns: 50% 50%;
-  gap: 5rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 .singleProduct {
@@ -58,8 +94,8 @@ html {
       width: 115px;
       height: 115px;
       border-radius: 20rem;
-      border: 2px solid black;
-      background-color: gray;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -74,8 +110,8 @@ html {
       width: 115px;
       height: 115px;
       border-radius: 20rem;
-      border: 2px solid black;
-      background-color: seashell;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -125,6 +161,7 @@ html {
       margin-top: 1rem;
       opacity: 0;
       transition: all 0.2s ease-in-out;
+      max-width: 60%;
     }
   }
 
@@ -149,6 +186,7 @@ html {
     .productArrowBottom {
       opacity: 0;
       transition: all 0.2s ease-in-out;
+      max-width: 17%;
     }
   }
 
@@ -167,4 +205,309 @@ html {
 
 .singleProduct.rightSide {
   margin-top: 13rem;
+}
+
+.vrSection {
+  height: 60vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .videoText {
+    z-index: 1;
+    position: relative;
+    color: white;
+    align-self: flex-end;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .wavy {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    background-position: 0 95%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  }
+
+  .wavy:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .4s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23cb76ec' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+  }
+
+  .wavy a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1250px) {
+  html {
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: antiquewhite;
+  }
+
+  #productList .marginWrapper {
+    margin: 2rem;
+  }
+
+  .title {
+    /* .oval {
+      position: relative;
+      top: 1px;
+      left: 1px;
+      z-index: -1;
+      svg {
+        max-width: 65%;
+      }
+    } */
+    .oval::after {
+      background-image: url(../svg/oval.svg);
+      width: 100%;
+      height: 100%;
+    }
+
+    .shopLink {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0.4rem;
+      transition: all 0.2s ease-in-out;
+      width: max-content;
+      &:hover {
+        transform: translateX(8px);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .filters {
+    margin-top: 2rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      overflow-x: scroll;
+
+      li {
+        border: 2px solid black;
+        border-radius: 20rem;
+        padding: 5px 40px 5px 40px;
+        text-transform: uppercase;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          border-color: colors.$purple-4;
+          color: colors.$purple-4;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      li.selected {
+        font-weight: 900;
+        border-color: colors.$purple-4;
+      }
+    }
+  }
+
+  #productListGrid {
+    margin-top: 4rem;
+    display: grid; /* 
+    grid-template-columns: repeat(auto-fill, minmax(50px, 500px)); */
+    grid-template-columns: 50% 50%;
+    margin-left: 4rem;
+  }
+
+  .singleProduct {
+    height: fit-content;
+    width: fit-content;
+
+    .materialTop {
+      position: relative;
+      z-index: 100;
+
+      .circle {
+        position: absolute;
+        left: 18rem;
+        top: -2rem;
+        width: 115px;
+        height: 115px;
+        border-radius: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .materialBottom {
+      position: relative;
+      z-index: 100;
+
+      .circle {
+        position: absolute;
+        left: 18rem;
+        top: 18rem;
+        width: 115px;
+        height: 115px;
+        border-radius: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .productInfoRight {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .productImg {
+      width: 400px;
+      height: 400px;
+      background: url(../puuf-photos/gunnii.jpg);
+      background-size: cover;
+      overflow: hidden;
+
+      &:hover {
+        .hoverVideo {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .hoverVideo {
+      opacity: 0;
+      max-height: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .infoRight {
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .priceRight {
+        font-weight: 100;
+        text-transform: lowercase;
+      }
+
+      .productArrowRight {
+        margin-top: 1rem;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        max-width: 60%;
+      }
+    }
+
+    .productInfoBottom {
+      margin-top: 1rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-end;
+
+      .infoBottom {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 200px;
+      }
+
+      .priceBottom {
+        font-weight: 100;
+        text-transform: lowercase;
+      }
+
+      .productArrowBottom {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        max-width: 17%;
+      }
+    }
+
+    &:hover {
+      .productArrowBottom {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .productArrowRight {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .singleProduct.rightSide {
+    margin-top: 13rem;
+  }
+
+  .vrSection {
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+
+    video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .videoText {
+      z-index: 1;
+      position: relative;
+      color: white;
+      align-self: flex-end;
+      padding-right: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    .wavy {
+      background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+      background-position: 0 95%;
+      background-repeat: repeat-x;
+      background-size: 4px 4px;
+    }
+
+    .wavy:hover {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .4s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23cb76ec' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+      background-position: 0 100%;
+      background-size: auto 10px;
+      background-repeat: repeat-x;
+      text-decoration: none;
+    }
+
+    .wavy a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
 }

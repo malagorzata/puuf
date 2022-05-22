@@ -171,7 +171,9 @@
       padding: 0;
       width: 100vw;
       overflow-x: hidden;
-
+      .hidden {
+        display: none;
+      }
       .product-tile {
         width: 0;
         height: 0;
@@ -235,18 +237,6 @@
       }
     }
   }
-
-  .product-tile {
-    width: 100vw;
-    height: auto;
-    display: block;
-    margin-top: 15rem;
-    padding: 1rem 3rem;
-
-    .hidden {
-      display: none;
-    }
-  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 949px) {
@@ -298,9 +288,12 @@
     main {
       padding: 0;
       margin: 0;
-
+      .product-tile {
+        width: 2rem;
+        height: 35rem;
+      }
       .product-description-all {
-        width: 20rem;
+        width: 18rem;
         .dropdown > .dropdownList:hover .list3 {
           height: 100px;
         }

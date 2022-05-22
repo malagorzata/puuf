@@ -200,18 +200,6 @@
   }
 }
 
-// @media only screen and (min-width: 580px) and (max-width: 1278px) {
-//   #start-screen {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-
-//     a {
-//       .wrapper {
-//         left: 42vw;
-//       }
-//     }
-//   }
-// }
 @media only screen and (min-width: 375px) and (max-width: 1279px) {
   #start-screen {
     display: grid;

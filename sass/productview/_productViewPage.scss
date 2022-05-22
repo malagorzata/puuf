@@ -10,16 +10,15 @@
     width: 100vw;
 
     .product-tile {
-      width: 10rem;
+      width: 5rem;
       height: 35rem;
-      position: fixed;
-      margin-top: 12rem;
-      padding: 0 1rem;
+      position: sticky;
+      top: 10rem;
+      left: 2rem;
+
       h2 {
         writing-mode: vertical-rl;
-        position: absolute;
         z-index: 2;
-        // transform: rotate(-90deg)
       }
 
       img {
@@ -141,7 +140,7 @@
   }
 
   hr {
-    width: 5rem;
+    width: 20rem;
     margin-bottom: 1rem;
   }
 }
@@ -172,6 +171,14 @@
       padding: 0;
       width: 100vw;
       overflow-x: hidden;
+
+      .product-tile {
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
       .product-description-all {
         width: 100vw;
         padding: 0.2rem 0;
@@ -196,6 +203,10 @@
           margin-bottom: 2rem;
           width: 80vw;
           font-size: 1rem;
+
+          hr {
+            width: 15rem;
+          }
         }
 
         .dropdown {
@@ -241,9 +252,37 @@
 @media only screen and (min-width: 700px) and (max-width: 949px) {
   #productView {
     main {
+      .product-tile {
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+
+      .hidden {
+        display: none;
+      }
       .product-description-all {
         width: 20rem;
         font-size: 14px;
+
+        .hide {
+          display: block;
+          font-size: 3rem;
+        }
+
+        .price {
+          padding: 0;
+          font-size: 2.5rem;
+        }
+        .dropdown > .dropdownList:hover .list3 {
+          height: 100px;
+        }
+
+        hr {
+          width: 15rem;
+        }
       }
       .product-pics {
         img {
@@ -262,6 +301,9 @@
 
       .product-description-all {
         width: 20rem;
+        .dropdown > .dropdownList:hover .list3 {
+          height: 100px;
+        }
       }
 
       .product-pics {

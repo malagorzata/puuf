@@ -90,7 +90,9 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  p {
+    padding: 0.1rem 0.6rem;
+  }
   .footer-details {
     display: flex;
     flex-direction: row;
@@ -378,7 +380,7 @@ button[type="submit"] {
       grid-column: 2/5;
       display: grid;
       grid-template-columns: 1fr 0.2fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 0.5fr;
 
       .spinning-img {
         grid-column: 3/3;
@@ -401,7 +403,7 @@ button[type="submit"] {
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 3fr 2fr 1fr;
-        grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.1fr;
         align-items: start;
 
         .white-logo {

@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   height: 100vh;
-
   font-size: calc(100vw / var(--context));
 
   #background {
@@ -166,11 +165,11 @@
   }
   a {
     .wrapper {
-      position: relative;
+      position: absolute;
       top: 63vh;
       left: 38vw;
       .button {
-        position: absolute;
+        position: relative;
         text-align: center;
         top: 0;
         left: 0;
@@ -201,8 +200,26 @@
   }
 }
 
-@media only screen and (max-width: 1279px) {
+// @media only screen and (min-width: 580px) and (max-width: 1278px) {
+//   #start-screen {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+
+//     a {
+//       .wrapper {
+//         left: 42vw;
+//       }
+//     }
+//   }
+// }
+@media only screen and (min-width: 375px) and (max-width: 1279px) {
   #start-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    #background {
+      grid-column: 1/4;
+    }
     .smooth-scroll {
       display: none;
     }
@@ -220,11 +237,12 @@
     }
 
     a {
-      .wrapper {
-        top: 74vh;
-        left: 30vw;
-        margin: 0 auto;
+      grid-column: 2/2;
+      justify-items: center;
 
+      .wrapper {
+        margin: 0 auto;
+        left: 30vw;
         .button {
           h2 {
             font-size: 2rem;

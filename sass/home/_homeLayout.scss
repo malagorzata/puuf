@@ -57,6 +57,15 @@
     }
 
     #buttons-sec2 {
+      margin-left: 35%;
+      width: 100%;
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+
+      button {
+        margin-left: auto;
+      }
+
       .circle-button {
         display: none;
       }
@@ -66,7 +75,7 @@
   #section3 {
     background-color: colors.$purple-1;
     z-index: -2;
-    padding: 10vw 60px 60px 60px;
+    padding: 15vw 60px 60px 60px;
     display: flex;
     justify-content: space-between;
 
@@ -76,42 +85,49 @@
     }
 
     #think-circular {
-      margin-left: 20vw;
+      margin-left: 12vw;
       margin-top: 4vw;
     }
     img {
-      border-radius: 50%;
-      width: 35%;
-      height: 35%;
+      display: none;
     }
 
     .background-circle {
       border: colors.$purple-3 solid 5px;
-      width: 40vw;
-      margin-top: -120px;
-      margin-left: 17vw;
-      height: 12vw;
+      width: 55vw;
+      margin-top: -57px;
+      margin-left: 22vw;
+      height: 14vw;
       position: unset;
       border-radius: 100%;
       transform: rotate(-12deg);
     }
+
+    svg {
+      width: 60px;
+      margin-top: -10vw;
+    }
   }
 
   #section4 {
-    padding: 5vw 0;
+    padding: 10vw 0;
     #circular-goods {
-      display: flex;
-      justify-content: space-between;
+      display: block;
+      text-align: center;
       margin-bottom: 2vw;
+      button {
+        margin: 5vw 0 7vw 0;
+      }
     }
     #products {
       overflow: auto;
       white-space: nowrap;
       width: unset;
+      margin-left: 4vw;
 
       article {
         display: inline-block;
-        width: 30vw;
+        width: 55vw;
         margin-right: 2vw;
         img {
           max-width: 100%;
@@ -121,12 +137,14 @@
   }
 
   #section5 {
-    padding: 1vw 0 13vw 0;
+    padding: 1vw 7vw 20vw 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     svg {
       padding: 5vw;
+      width: 65px;
     }
   }
 
@@ -182,12 +200,14 @@
 
   #section7 {
     background-color: colors.$purple-2;
-    padding: 1vw 0 13vw 0;
+    padding: 6vw 4vw 20vw 4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     svg {
       padding: 5vw;
+      width: 55px;
     }
     h2 {
       color: white;
@@ -319,11 +339,77 @@
       }
 
       #buttons-sec2 {
+        width: unset;
+        margin: unset;
         .circle-button {
           display: block;
           margin-left: 28vw;
           margin-top: -10vw;
         }
+      }
+    }
+    #section3 {
+      padding: 10vw 60px 60px 60px;
+      img {
+        display: unset;
+        border-radius: 50%;
+        width: 35%;
+        height: 35%;
+      }
+
+      .background-circle {
+        width: 40vw;
+        margin-top: -120px;
+        margin-left: 17vw;
+        height: 12vw;
+      }
+      svg {
+        width: 100px;
+        margin-top: unset;
+      }
+    }
+
+    #section4 {
+      padding: 5vw 0;
+      #circular-goods {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2vw;
+        text-align: left;
+        padding: 0 4vw;
+
+        button {
+          margin: 0;
+        }
+      }
+      #products {
+        overflow: auto;
+        white-space: nowrap;
+        width: unset;
+        margin-left: 3.5vw;
+
+        article {
+          display: inline-block;
+          width: 30vw;
+          margin-right: 2vw;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    #section5 {
+      padding: 1vw 0 13vw 0;
+
+      svg {
+        padding: 5vw;
+        width: 80px;
+      }
+    }
+    #section7 {
+      padding: 1vw 0 13vw 0;
+      svg {
+        width: 90px;
       }
     }
   }

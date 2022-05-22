@@ -25,41 +25,41 @@ p {
 h1 {
   font-weight: 900;
   font-size: 7rem;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 h2 {
   font-weight: 900;
-  font-size: 4rem;
-  line-height: 75px;
+  font-size: 4.5rem;
+  line-height: 50px;
 }
 
 h3 {
   font-weight: 900;
   font-size: 3rem;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 h4 {
   font-weight: normal;
   font-size: 1.7rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 @media only screen and (min-width: 760px) {
   html {
-    font-size: 13px;
+    font-size: 13.5px;
   }
   p {
     line-height: 20px;
   }
 
   h1 {
-    line-height: 80px;
+    line-height: 90px;
   }
 
   h2 {
-    line-height: 60px;
+    line-height: 65px;
   }
 
   h3 {
@@ -67,7 +67,7 @@ h4 {
   }
 
   h4 {
-    line-height: 30px;
+    line-height: 28px;
   }
 }
 
@@ -76,22 +76,22 @@ h4 {
     font-size: 18px;
   }
   p {
-    line-height: 25px;
+    line-height: 30px;
   }
 
   h1 {
-    line-height: 100px;
+    line-height: 110px;
   }
 
   h2 {
-    line-height: 70px;
+    line-height: 80px;
   }
 
   h3 {
-    line-height: 50px;
+    line-height: 60px;
   }
 
   h4 {
-    line-height: 35px;
+    line-height: 43px;
   }
 }

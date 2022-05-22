@@ -1,51 +1,66 @@
 @use "../base/colors";
 
 #home-body {
+  #del1 {
+    top: -5vw;
+    left: 40vw;
+  }
+  #del2 {
+    top: 60vw;
+    left: 6vw;
+  }
+  #del3 {
+    top: 126vw;
+    left: 150px;
+  }
+  #del4 {
+    display: none;
+  }
   #section1 {
-    height: 95vw;
+    height: 230vw;
     img {
-      width: 35%;
+      width: 58%;
     }
   }
   #wrapper {
-    width: 50%;
+    width: 70%;
     position: -webkit-sticky;
     position: sticky;
-    margin-left: 80vw;
-    top: 28vw;
+    margin-left: 56vw;
+    top: 28vh;
     margin-right: auto;
     align-content: center;
   }
 
   #section2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 3vw;
-    padding-top: 100px;
+    display: block;
+
+    padding-top: 20px;
     img {
       max-width: 100%;
       margin-bottom: -9px;
     }
 
     h2 {
-      padding-top: 3vw;
-      line-height: 4.5vw;
+      text-align: center;
+      padding-top: 15vw;
+      // line-height: 4.5vw;
     }
 
     h4 {
-      width: 80%;
-      line-height: 2.5vw;
+      text-align: center;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+      // line-height: 2.5vw;
     }
     #text-sec2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
     }
 
     #buttons-sec2 {
       .circle-button {
-        margin-left: 16vw;
-        margin-bottom: 20px;
+        display: none;
       }
     }
   }
@@ -224,7 +239,7 @@
         }
       }
       #column3 {
-        padding-top: 20vw;
+        padding-top: 23vw;
         img {
           margin-left: -3vw;
           padding-bottom: 10vw;
@@ -232,37 +247,101 @@
         .text-block {
           margin-left: 1vw;
         }
+        .circle-button {
+          margin-top: 25vw;
+          margin-left: 14vw;
+        }
       }
     }
   }
+}
 
-  .delayed-section {
-    position: absolute;
-    width: 100%;
-  }
+@media only screen and (min-width: 760px) {
+  #home-body {
+    #del1 {
+      top: -8vw;
+      left: 50vw;
+    }
+    #del2 {
+      top: 7vw;
+      left: 6vw;
+    }
+    #del3 {
+      top: 53vw;
+      left: 150px;
+    }
+    #del4 {
+      display: unset;
+      top: 37vw;
+      left: 55vw;
+    }
+    #section1 {
+      height: 95vw;
+      img {
+        width: 35%;
+      }
+    }
+    #wrapper {
+      width: 50%;
+      position: -webkit-sticky;
+      position: sticky;
+      margin-left: 80vw;
+      top: 28vw;
+      margin-right: auto;
+      align-content: center;
+    }
 
-  .delayed-section .inner-container {
-    will-change: transform;
-  }
-  .delayed-section img {
-    max-width: 120%;
-    will-change: transform;
-  }
+    #section2 {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 3vw;
+      padding-top: 100px;
+      img {
+        max-width: 100%;
+        margin-bottom: -10px;
+      }
 
-  #del1 {
-    top: -8vw;
-    left: 50vw;
+      h2 {
+        text-align: left;
+        padding-top: 3vw;
+
+        // line-height: 4.5vw;
+      }
+
+      h4 {
+        text-align: left;
+        width: 80%;
+        margin: unset;
+        // line-height: 2.5vw;
+      }
+      #text-sec2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      #buttons-sec2 {
+        .circle-button {
+          display: block;
+          margin-left: 28vw;
+          margin-top: -10vw;
+        }
+      }
+    }
   }
-  #del2 {
-    top: 7vw;
-    left: 6vw;
-  }
-  #del3 {
-    top: 53vw;
-    left: 150px;
-  }
-  #del4 {
-    top: 37vw;
-    left: 55vw;
-  }
+}
+
+////// not sure if im gonna use this part ???
+
+.delayed-section {
+  position: absolute;
+  width: 100%;
+}
+
+.delayed-section .inner-container {
+  will-change: transform;
+}
+.delayed-section img {
+  max-width: 120%;
+  will-change: transform;
 }

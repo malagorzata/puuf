@@ -1,20 +1,347 @@
+@use "../base/colors";
+
 #home-body {
-  img {
-    max-width: 100%;
+  #del1 {
+    top: -5vw;
+    left: 40vw;
   }
-  .pictures {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 120px;
-    row-gap: 120px;
-    padding: 50px;
+  #del2 {
+    top: 60vw;
+    left: 6vw;
+  }
+  #del3 {
+    top: 126vw;
+    left: 150px;
+  }
+  #del4 {
+    display: none;
+  }
+  #section1 {
+    height: 230vw;
+    img {
+      width: 58%;
+    }
+  }
+  #wrapper {
+    width: 70%;
+    position: -webkit-sticky;
+    position: sticky;
+    margin-left: 56vw;
+    top: 28vh;
+    margin-right: auto;
+    align-content: center;
   }
 
-  svg {
-    fill: currentColor;
-    height: auto;
-    max-width: 66vmin;
-    transform-origin: center;
-    width: 66%;
+  #section2 {
+    display: block;
+
+    padding-top: 20px;
+    img {
+      max-width: 100%;
+      margin-bottom: -9px;
+    }
+
+    h2 {
+      text-align: center;
+      padding-top: 15vw;
+      // line-height: 4.5vw;
+    }
+
+    h4 {
+      text-align: center;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+      // line-height: 2.5vw;
+    }
+    #text-sec2 {
+    }
+
+    #buttons-sec2 {
+      .circle-button {
+        display: none;
+      }
+    }
   }
+
+  #section3 {
+    background-color: colors.$purple-1;
+    z-index: -2;
+    padding: 10vw 60px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      z-index: 1;
+      position: relative;
+    }
+
+    #think-circular {
+      margin-left: 20vw;
+      margin-top: 4vw;
+    }
+    img {
+      border-radius: 50%;
+      width: 35%;
+      height: 35%;
+    }
+
+    .background-circle {
+      border: colors.$purple-3 solid 5px;
+      width: 40vw;
+      margin-top: -120px;
+      margin-left: 17vw;
+      height: 12vw;
+      position: unset;
+      border-radius: 100%;
+      transform: rotate(-12deg);
+    }
+  }
+
+  #section4 {
+    padding: 5vw 0;
+    #circular-goods {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2vw;
+    }
+    #products {
+      overflow: auto;
+      white-space: nowrap;
+      width: unset;
+
+      article {
+        display: inline-block;
+        width: 30vw;
+        margin-right: 2vw;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  #section5 {
+    padding: 1vw 0 13vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      padding: 5vw;
+    }
+  }
+
+  #section6 {
+    background-image: url(../img-home/postcard.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 60vw;
+
+    #circle1 {
+      height: 36vw;
+      width: 36vw;
+      background-color: white;
+      border-radius: 50%;
+      position: relative;
+      top: -26vw;
+      margin-left: auto;
+      margin-right: auto;
+      h4 {
+        display: flex;
+        text-align: center;
+        height: 35vw;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    #circle2 {
+      height: 36vw;
+      width: 36vw;
+      border-radius: 50%;
+      position: relative;
+      top: 10vw;
+      margin-left: auto;
+      margin-right: auto;
+      outline: dotted 4px colors.$purple-3;
+      #inside {
+        background-color: white;
+        height: 36vw;
+        width: 36vw;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      h4 {
+        display: flex;
+        text-align: center;
+        height: 35vw;
+        justify-content: left;
+        align-items: center;
+      }
+    }
+  }
+
+  #section7 {
+    background-color: colors.$purple-2;
+    padding: 1vw 0 13vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      padding: 5vw;
+    }
+    h2 {
+      color: white;
+    }
+  }
+
+  #section8 {
+    padding-top: 5vw;
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 20vw;
+    }
+
+    h3 {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    #sec8-grid {
+      padding: 5vw 10vw;
+      h3 {
+        text-align: left;
+      }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      #column1 {
+        .text-block {
+          margin-top: 5vw;
+        }
+        .karol-mateo {
+          margin-top: 15vw;
+        }
+      }
+      #column2 {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .text-block {
+          margin-left: 1vw;
+        }
+      }
+      #column3 {
+        padding-top: 23vw;
+        img {
+          margin-left: -3vw;
+          padding-bottom: 10vw;
+        }
+        .text-block {
+          margin-left: 1vw;
+        }
+        .circle-button {
+          margin-top: 25vw;
+          margin-left: 14vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #home-body {
+    #del1 {
+      top: -8vw;
+      left: 50vw;
+    }
+    #del2 {
+      top: 7vw;
+      left: 6vw;
+    }
+    #del3 {
+      top: 53vw;
+      left: 150px;
+    }
+    #del4 {
+      display: unset;
+      top: 37vw;
+      left: 55vw;
+    }
+    #section1 {
+      height: 95vw;
+      img {
+        width: 35%;
+      }
+    }
+    #wrapper {
+      width: 50%;
+      position: -webkit-sticky;
+      position: sticky;
+      margin-left: 80vw;
+      top: 28vw;
+      margin-right: auto;
+      align-content: center;
+    }
+
+    #section2 {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 3vw;
+      padding-top: 100px;
+      img {
+        max-width: 100%;
+        margin-bottom: -10px;
+      }
+
+      h2 {
+        text-align: left;
+        padding-top: 3vw;
+
+        // line-height: 4.5vw;
+      }
+
+      h4 {
+        text-align: left;
+        width: 80%;
+        margin: unset;
+        // line-height: 2.5vw;
+      }
+      #text-sec2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      #buttons-sec2 {
+        .circle-button {
+          display: block;
+          margin-left: 28vw;
+          margin-top: -10vw;
+        }
+      }
+    }
+  }
+}
+
+////// not sure if im gonna use this part ???
+
+.delayed-section {
+  position: absolute;
+  width: 100%;
+}
+
+.delayed-section .inner-container {
+  will-change: transform;
+}
+.delayed-section img {
+  max-width: 120%;
+  will-change: transform;
 }

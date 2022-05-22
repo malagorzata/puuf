@@ -63,3 +63,14 @@ div.circle-button:hover {
     -webkit-transform: translate(2px, 1px) rotate(0deg);
   }
 }
+
+@media only screen and (min-width: 1300px) {
+  div.circle-button {
+    height: 155px;
+    width: 155px;
+
+    p {
+      height: 155px;
+    }
+  }
+}

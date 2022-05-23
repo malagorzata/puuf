@@ -17,9 +17,22 @@
     display: none;
   }
   #section1 {
+    margin: 0;
     height: 230vw;
     img {
       width: 58%;
+    }
+
+    #logo-wrapper {
+      text-align: center;
+      position: fixed;
+      z-index: 99;
+      top: 2vh;
+      width: 25vw;
+      #logo {
+        margin: 0;
+        max-width: 100%;
+      }
     }
   }
   #wrapper {
@@ -57,13 +70,12 @@
     }
 
     #buttons-sec2 {
-      margin-left: 35%;
-      width: 100%;
-      margin-top: 10vw;
-      margin-bottom: 10vw;
+      display: block;
+      text-align: center;
+      margin-bottom: 2vw;
 
       button {
-        margin-left: auto;
+        margin: 5vw 0 7vw 0;
       }
 
       .circle-button {
@@ -298,6 +310,11 @@
       img {
         width: 35%;
       }
+
+      #logo-wrapper {
+        top: 20vh;
+        width: 90vw;
+      }
     }
     #wrapper {
       width: 50%;
@@ -339,8 +356,13 @@
       }
 
       #buttons-sec2 {
+        text-align: left;
+        display: unset;
         width: unset;
         margin: unset;
+        button {
+          margin: 0;
+        }
         .circle-button {
           display: block;
           margin-left: 28vw;

@@ -1,0 +1,72 @@
+@media only screen and (min-width: 760px) {
+  .logoAppear {
+    animation: logoAppear;
+
+    animation-duration: 1.5s;
+
+    animation-iteration-count: 1;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: 3s;
+
+    opacity: 0;
+  }
+
+  @keyframes logoAppear {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+
+      opacity: 1;
+    }
+  }
+
+  .moveLogo {
+    animation: moveLogo;
+
+    animation-duration: 1.5s;
+
+    animation-iteration-count: 1;
+
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveLogo {
+    100% {
+      left: 0;
+
+      top: 0;
+
+      width: 15vw;
+    }
+  }
+
+  .returnLogo {
+    animation: returnLogo;
+
+    animation-duration: 1.5s;
+
+    animation-iteration-count: 1;
+
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes returnLogo {
+    0% {
+      left: 0;
+
+      top: 0;
+
+      width: 10vw;
+    }
+
+    100% {
+      left: 4%;
+      width: 90vw;
+    }
+  }
+}

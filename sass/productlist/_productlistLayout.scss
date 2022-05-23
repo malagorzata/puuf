@@ -45,7 +45,6 @@ html {
     justify-content: center;
     gap: 1rem;
     width: 100%;
-    overflow-x: scroll;
 
     li {
       border: 2px solid black;
@@ -57,6 +56,7 @@ html {
       justify-content: center;
       align-items: center;
       transition: all 0.2s ease-in-out;
+      white-space: nowrap;
       &:hover {
         border-color: colors.$purple-4;
         color: colors.$purple-4;
@@ -73,15 +73,16 @@ html {
 
 #productListGrid {
   margin-top: 4rem;
+  margin-bottom: 6rem;
   display: grid; /* 
   grid-template-columns: repeat(auto-fill, minmax(50px, 500px)); */
   grid-template-columns: 50% 50%;
-  margin-left: 4rem;
 }
 
 .singleProduct {
   height: fit-content;
   width: fit-content;
+  justify-self: center;
 
   .materialTop {
     position: relative;
@@ -151,6 +152,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 30%;
 
     .priceRight {
       font-weight: 100;
@@ -175,7 +177,7 @@ html {
       display: flex;
       flex-direction: column;
       gap: 5px;
-      width: 200px;
+      width: 230px;
     }
 
     .priceBottom {
@@ -186,7 +188,7 @@ html {
     .productArrowBottom {
       opacity: 0;
       transition: all 0.2s ease-in-out;
-      max-width: 17%;
+      max-width: 19%;
     }
   }
 
@@ -277,20 +279,28 @@ html {
     } */
     .oval::after {
       background-image: url(../svg/oval.svg);
-      width: 100%;
-      height: 100%;
+      width: 100px;
+      height: 100px;
     }
+  }
 
+  .singleProduct {
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .vrSection {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .title {
     .shopLink {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 0.4rem;
-      transition: all 0.2s ease-in-out;
-      width: max-content;
-      &:hover {
-        transform: translateX(8px);
-        transition: all 0.2s ease-in-out;
+      gap: 5px;
+      svg {
+        max-width: 13%;
       }
     }
   }
@@ -298,215 +308,175 @@ html {
   .filters {
     margin-top: 2rem;
     ul {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      width: 100%;
-      overflow-x: scroll;
-
       li {
-        border: 2px solid black;
-        border-radius: 20rem;
-        padding: 5px 40px 5px 40px;
-        text-transform: uppercase;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          border-color: colors.$purple-4;
-          color: colors.$purple-4;
-          transition: all 0.2s ease-in-out;
-        }
-      }
-
-      li.selected {
-        font-weight: 900;
-        border-color: colors.$purple-4;
+        padding: 10px 40px 10px 40px;
+        line-height: 13px;
       }
     }
   }
 
-  #productListGrid {
-    margin-top: 4rem;
-    display: grid; /* 
-    grid-template-columns: repeat(auto-fill, minmax(50px, 500px)); */
-    grid-template-columns: 50% 50%;
-    margin-left: 4rem;
-  }
-
   .singleProduct {
-    height: fit-content;
-    width: fit-content;
-
     .materialTop {
-      position: relative;
-      z-index: 100;
-
       .circle {
-        position: absolute;
-        left: 18rem;
+        left: 55%;
         top: -2rem;
-        width: 115px;
-        height: 115px;
-        border-radius: 20rem;
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 90px;
+        height: 90px;
       }
     }
 
     .materialBottom {
-      position: relative;
-      z-index: 100;
-
       .circle {
-        position: absolute;
-        left: 18rem;
-        top: 18rem;
-        width: 115px;
-        height: 115px;
-        border-radius: 20rem;
-        background-size: cover;
-        background-repeat: no-repeat;
+        left: 73%;
+        bottom: 1%;
+        width: 90px;
+        height: 90px;
       }
-    }
-
-    .productInfoRight {
-      display: flex;
-      gap: 1rem;
     }
 
     .productImg {
-      width: 400px;
-      height: 400px;
-      background: url(../puuf-photos/gunnii.jpg);
-      background-size: cover;
-      overflow: hidden;
-
-      &:hover {
-        .hoverVideo {
-          opacity: 1;
-          transition: all 0.2s ease-in-out;
-        }
-      }
-    }
-
-    .hoverVideo {
-      opacity: 0;
-      max-height: 100%;
-      transition: all 0.2s ease-in-out;
-    }
-
-    h4 {
-      text-transform: uppercase;
-      font-weight: 900;
+      width: 300px;
+      height: 300px;
     }
 
     .infoRight {
-      margin-top: 6rem;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
+      gap: 0px;
 
       .priceRight {
         font-weight: 100;
         text-transform: lowercase;
+        margin-top: -0.5rem;
       }
 
       .productArrowRight {
-        margin-top: 1rem;
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-        max-width: 60%;
+        max-width: 64%;
       }
     }
 
     .productInfoBottom {
-      margin-top: 1rem;
-      display: flex;
-      gap: 2rem;
-      align-items: flex-end;
+      margin-top: 0.5rem;
+      gap: 0rem;
 
       .infoBottom {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        width: 200px;
+        gap: 0px;
+        width: 210px;
       }
 
       .priceBottom {
-        font-weight: 100;
-        text-transform: lowercase;
+        margin-top: -0.5rem;
       }
 
       .productArrowBottom {
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-        max-width: 17%;
+        max-width: 25%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .filters {
+    ul {
+      justify-content: flex-start;
+      gap: 1rem;
+      width: 100vw;
+      overflow-x: scroll;
+    }
+  }
+
+  .singleProduct {
+    .materialTop {
+      .circle {
+        left: 52%;
+        top: -2rem;
+        width: 80px;
+        height: 80px;
       }
     }
 
-    &:hover {
-      .productArrowBottom {
-        opacity: 1;
-        transition: all 0.2s ease-in-out;
+    .materialBottom {
+      .circle {
+        left: 60%;
+        top: 16rem;
+        width: 80px;
+        height: 80px;
       }
+    }
 
-      .productArrowRight {
-        opacity: 1;
-        transition: all 0.2s ease-in-out;
+    .productImg {
+      width: 260px;
+      height: 260px;
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  #productList .marginWrapper {
+    margin: 1rem;
+  }
+
+  .filters {
+    ul {
+      justify-content: center;
+
+      li {
+        padding: 8px 25px 8px 25px;
       }
     }
   }
 
-  .singleProduct.rightSide {
-    margin-top: 13rem;
+  .singleProduct {
+    .materialTop {
+      .circle {
+        left: 65%;
+        top: -1.5rem;
+      }
+    }
+
+    .materialBottom {
+      .circle {
+        left: 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #productListGrid {
+    justify-content: center;
+    grid-template-columns: 40%;
+    gap: 4rem 0rem;
   }
 
-  .vrSection {
-    height: 60vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    justify-content: flex-end;
+  .filters {
+    ul {
+      justify-content: flex-start;
+    }
+  }
 
-    video {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      object-fit: cover;
-      z-index: 0;
+  .singleProduct {
+    .materialBottom {
+      .circle {
+        left: 80%;
+        top: -2rem;
+      }
     }
 
-    .videoText {
-      z-index: 1;
-      position: relative;
-      color: white;
-      align-self: flex-end;
-      padding-right: 3rem;
-      padding-bottom: 1rem;
-    }
+    .productInfoBottom {
+      margin-top: 0.8rem;
+      gap: 0rem;
 
-    .wavy {
-      background: linear-gradient(to bottom, #fff 0%, #fff 100%);
-      background-position: 0 95%;
-      background-repeat: repeat-x;
-      background-size: 4px 4px;
-    }
+      .infoBottom {
+        gap: 0px;
+        width: 210px;
+      }
 
-    .wavy:hover {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .4s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23cb76ec' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-      background-position: 0 100%;
-      background-size: auto 10px;
-      background-repeat: repeat-x;
-      text-decoration: none;
-    }
+      .priceBottom {
+        margin-top: 0rem;
+      }
 
-    .wavy a {
-      text-decoration: none;
-      color: #ffffff;
+      .productArrowBottom {
+        max-width: 30%;
+      }
     }
   }
 }

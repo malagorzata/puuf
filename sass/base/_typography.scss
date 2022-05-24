@@ -1,15 +1,62 @@
 @import url("https://use.typekit.net/iln6akr.css");
 
+// html {
+//   font-size: 100%;
+//   font-family: roc-grotesk, sans-serif;
+//   font-style: normal;
+//   font-size: 18px;
+//   line-height: 25px;
+// }
+
+// $font-1: roc-grotesk;
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// p {
+//   font-family: roc-grotesk, sans-serif;
+//   font-style: normal;
+// }
+
+// p {
+//   font-size: 18px;
+//   line-height: 25px;
+// }
+
+// h1 {
+//   font-weight: 900;
+//   font-size: 6.4rem;
+//   line-height: 94px;
+// }
+
+// h2 {
+//   font-weight: 900;
+//   font-size: 4rem;
+//   line-height: 90px;
+// }
+
+// h3 {
+//   font-weight: 900;
+//   font-size: 3rem;
+//   line-height: 50px;
+// }
+
+// h4 {
+//   font-weight: normal;
+//   font-size: 1.5rem;
+//   line-height: 30px;
+// }
+
+@import url("https://use.typekit.net/iln6akr.css");
 html {
   font-size: 100%;
   font-family: roc-grotesk, sans-serif;
   font-style: normal;
-  font-size: 18px;
+  font-size: 10px;
   line-height: 25px;
 }
-
-$font-1: roc-grotesk;
-
 h1,
 h2,
 h3,
@@ -20,31 +67,83 @@ p {
   font-style: normal;
 }
 
+$font-1: roc-grotesk;
+
 p {
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 15px;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 6.4rem;
-  line-height: 94px;
+  font-size: 7rem;
+  line-height: 60px;
 }
 
 h2 {
   font-weight: 900;
-  font-size: 4rem;
-  line-height: 90px;
+  font-size: 4.3rem;
+  line-height: 50px;
 }
 
 h3 {
   font-weight: 900;
   font-size: 3rem;
-  line-height: 50px;
+  line-height: 35px;
 }
 
 h4 {
   font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 30px;
+  font-size: 1.7rem;
+  line-height: 22px;
+}
+
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 13.5px;
+  }
+  p {
+    line-height: 20px;
+  }
+
+  h1 {
+    line-height: 75px;
+  }
+
+  h2 {
+    line-height: 63px;
+  }
+
+  h3 {
+    line-height: 42px;
+  }
+
+  h4 {
+    line-height: 28px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+  p {
+    line-height: 30px;
+  }
+
+  h1 {
+    line-height: 110px;
+  }
+
+  h2 {
+    line-height: 80px;
+  }
+
+  h3 {
+    line-height: 60px;
+  }
+
+  h4 {
+    line-height: 43px;
+  }
 }

@@ -128,7 +128,7 @@
   }
 
   hr {
-    width: 20rem;
+    width: 25rem;
     margin-bottom: 1rem;
   }
 }
@@ -159,14 +159,13 @@
         margin: 0 1rem;
 
         h2 {
-          font-size: 2.5rem;
           padding: 0.4rem 0;
           margin: 0;
           line-height: 25px;
         }
         .price {
-          font-size: 1.7rem;
           padding: 0;
+          margin-bottom: 0.5rem;
         }
 
         .hide {
@@ -176,7 +175,6 @@
           padding: 0;
           margin-bottom: 2rem;
           width: 80vw;
-          font-size: 1rem;
 
           hr {
             width: 15rem;
@@ -199,11 +197,12 @@
         margin: 0;
         padding: 0;
         padding-bottom: 0rem;
+        margin-bottom: 2rem;
         margin-left: 0;
         width: 100%;
 
         img {
-          width: 17rem;
+          width: 28rem;
           padding-bottom: 0rem;
         }
       }
@@ -226,8 +225,8 @@
         display: none;
       }
       .product-description-all {
-        width: 20rem;
-        font-size: 14px;
+        width: 30rem;
+        // font-size: 14px;
 
         .hide {
           display: block;
@@ -243,12 +242,12 @@
         }
 
         hr {
-          width: 15rem;
+          width: 20rem;
         }
       }
       .product-pics {
         img {
-          width: 15rem;
+          width: 25rem;
           height: auto;
         }
       }
@@ -265,7 +264,10 @@
         height: 35rem;
       }
       .product-description-all {
-        width: 18rem;
+        width: 27rem;
+        hr {
+          width: 27rem;
+        }
         .dropdown > .dropdownList:hover .list3 {
           height: 100px;
         }
@@ -273,7 +275,7 @@
 
       .product-pics {
         img {
-          width: 20rem;
+          width: 27rem;
           height: auto;
         }
       }

@@ -1,3 +1,12 @@
+//RELOAD when RESIZING THE SCREEN
+let resizeTimeout;
+window.addEventListener("resize", function (event) {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(function () {
+    window.location.reload();
+  }, 500);
+});
+
 gsap.set("#circular-icon", { xPercent: 0 });
 
 function gsapAnimation(x) {
@@ -9,7 +18,7 @@ function gsapAnimation(x) {
           scrub: 0.2,
           start: 0,
           end: 1300,
-          markers: true,
+          markers: false,
         },
       })
       .to("#circular-icon", {
@@ -23,9 +32,9 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0,
-          start: "top 70%",
-          end: "bottom 80%",
-          markers: false,
+          start: "top 10%",
+          end: "bottom 30%",
+          markers: true,
         },
       })
 
@@ -40,9 +49,9 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0,
-          start: "top 70%",
-          end: "bottom 80%",
-          markers: true,
+          start: "top 10%",
+          end: "bottom 30%",
+          markers: false,
         },
       })
 
@@ -56,8 +65,8 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0.3,
-          start: "top 70%",
-          end: "bottom 80%",
+          start: "top 10%",
+          end: "bottom 30%",
           markers: false,
         },
       })
@@ -72,13 +81,13 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0.3,
-          start: "top 70%",
-          end: "bottom 80%",
+          start: "top 10%",
+          end: "bottom 30%",
           markers: false,
         },
       })
       .to(document.querySelector("#text-ani"), {
-        duration: 4000,
+        // duration: 4000,
         x: "7vw",
       });
   } else {
@@ -90,7 +99,7 @@ function gsapAnimation(x) {
           scrub: 1,
           start: 0,
           end: 1300,
-          markers: true,
+          markers: false,
         },
       })
       .to("#circular-icon", {
@@ -103,10 +112,10 @@ function gsapAnimation(x) {
       .timeline({
         scrollTrigger: {
           trigger: "#section6",
-          scrub: 0,
-          start: "top 20%",
-          end: "bottom 80%",
-          markers: true,
+          scrub: 0.3,
+          start: "top ",
+          end: "bottom 30%",
+          markers: false,
         },
       })
 
@@ -120,8 +129,8 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0.3,
-          start: "top 20%",
-          end: "bottom 80%",
+          start: "top",
+          end: "bottom 30%",
           markers: false,
         },
       })
@@ -136,8 +145,8 @@ function gsapAnimation(x) {
         scrollTrigger: {
           trigger: "#section6",
           scrub: 0.3,
-          start: "top 20%",
-          end: "bottom 80%",
+          start: "top ",
+          end: "bottom 30%",
           markers: false,
         },
       })

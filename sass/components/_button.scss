@@ -7,9 +7,9 @@
   padding: 8px 20px;
   display: inline-flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 45px;
   border: solid 2px colors.$purple-3;
   height: 37px;
   margin-top: auto;
@@ -18,7 +18,14 @@
 
 @media only screen and (min-width: 760px) {
   .regular-button {
-    font-size: 1.8vw;
+    font-size: 17px;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .regular-button {
+    font-size: 18px;
     height: 40px;
   }
 }

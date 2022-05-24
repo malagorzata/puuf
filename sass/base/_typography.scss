@@ -18,7 +18,7 @@ p {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 15px;
 }
 
@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-weight: 900;
-  font-size: 4.5rem;
+  font-size: 4.3rem;
   line-height: 50px;
 }
 
@@ -55,15 +55,15 @@ h4 {
   }
 
   h1 {
-    line-height: 90px;
+    line-height: 75px;
   }
 
   h2 {
-    line-height: 65px;
+    line-height: 63px;
   }
 
   h3 {
-    line-height: 40px;
+    line-height: 42px;
   }
 
   h4 {
@@ -71,7 +71,7 @@ h4 {
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1200px) {
   html {
     font-size: 18px;
   }

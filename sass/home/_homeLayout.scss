@@ -250,44 +250,67 @@
     }
 
     #sec8-grid {
-      padding: 5vw 10vw;
+      // padding: 5vw 10vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 5vw 5vw;
+
       h3 {
         text-align: left;
       }
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
 
-      #column1 {
-        .text-block {
-          margin-top: 5vw;
-        }
-        .karol-mateo {
-          margin-top: 15vw;
-        }
-      }
-      #column2 {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+      #row1,
+      #row2,
+      #row3 {
+        // max-width: 100%;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr;
+        // margin-bottom: 10vw;
+        // column-gap: 1vw;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        margin-bottom: 10vw;
+        column-gap: 1vw;
 
         .text-block {
-          margin-left: 1vw;
+          padding-left: 1.4vw;
         }
       }
-      #column3 {
-        padding-top: 23vw;
-        img {
-          margin-left: -3vw;
-          padding-bottom: 10vw;
+
+      .bean-bag {
+        // margin-top: 30vw;
+        // margin-left: -4vw;
+        margin-left: 40vw;
+        margin-top: -10vw;
+      }
+      .vase {
+        // margin-top: -15vw;
+        width: 90%;
+        margin-left: 6vw;
+        //zmienic na 100
+        margin-top: 10vw;
+      }
+
+      #row2 {
+        div {
+          &:first-child {
+            // padding-left: 0;
+            // margin-top: -15vw;
+            margin-top: -25vw;
+          }
+          &:last-child {
+            margin-top: -20vw; //usunac
+          }
         }
-        .text-block {
-          margin-left: 1vw;
-        }
-        .circle-button {
-          margin-top: 25vw;
-          margin-left: 14vw;
-        }
+      }
+      #row3 {
+        margin-top: 30vw;
+      }
+      .circle-button {
+        // margin-left: 10vw;
+        // margin-top: 20vw;
+        display: none;
       }
     }
   }
@@ -474,6 +497,56 @@
       padding: 1vw 0 13vw 0;
       svg {
         width: 90px;
+      }
+    }
+
+    #section8 {
+      #sec8-grid {
+        padding: 5vw 10vw;
+
+        #row1,
+        #row2,
+        #row3 {
+          max-width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          margin-bottom: 10vw;
+          column-gap: 1vw;
+
+          .text-block {
+            padding-left: 1.4vw;
+          }
+        }
+
+        .bean-bag {
+          margin-top: 30vw;
+          margin-left: -3vw;
+        }
+        .vase {
+          margin-top: -15vw;
+          width: 100%;
+          margin-left: 0;
+        }
+
+        #row2 {
+          div {
+            &:first-child {
+              padding-left: 0;
+              margin-top: -15vw;
+            }
+            &:last-child {
+              margin-top: 0;
+            }
+          }
+        }
+        #row3 {
+          margin-top: 0;
+        }
+        .circle-button {
+          margin-left: 10vw;
+          margin-top: 20vw;
+          display: unset;
+        }
       }
     }
   }

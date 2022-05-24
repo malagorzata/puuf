@@ -6,7 +6,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     padding-left: 50px;
-    height: 100vh;
+    // height: 100vh;
 
     // nie wiem jak tu z navigacja, jakby co usunac
     img {
@@ -120,4 +120,7 @@
   position: absolute;
   border-radius: 100%;
   transform: rotate(-18deg);
+}
+
+@media only screen and (min-width: 760px) {
 }

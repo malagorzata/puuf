@@ -1,6 +1,10 @@
 @use "../base/colors";
 
 #home-body {
+  .delayed-section {
+    position: absolute;
+    width: 100%;
+  }
   #del1 {
     top: -5vw;
     left: 40vw;
@@ -560,15 +564,10 @@
 
 ////// not sure if im gonna use this part ???
 
-.delayed-section {
-  position: absolute;
-  width: 100%;
-}
-
-.delayed-section .inner-container {
-  will-change: transform;
-}
-.delayed-section img {
-  max-width: 120%;
-  will-change: transform;
-}
+// .delayed-section .inner-container {
+//   will-change: transform;
+// }
+// .delayed-section img {
+//   max-width: 120%;
+//   will-change: transform;
+// }

@@ -98,10 +98,57 @@ function gsapAnimation(x) {
         duration: 1,
         ease: "none",
       });
+
+    const imageAnim2 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#section6",
+          scrub: 0,
+          start: "top 20%",
+          end: "bottom 80%",
+          markers: true,
+        },
+      })
+
+      .to(document.querySelector("#circle2"), {
+        y: "65vw",
+        duration: 4000,
+      });
+
+    const imageAnim3 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#section6",
+          scrub: 0.3,
+          start: "top 20%",
+          end: "bottom 80%",
+          markers: false,
+        },
+      })
+
+      .to(document.querySelector("#inside"), {
+        duration: 4000,
+        opacity: 1,
+      });
+
+    const textAni = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#section6",
+          scrub: 0.3,
+          start: "top 20%",
+          end: "bottom 80%",
+          markers: false,
+        },
+      })
+      .to(document.querySelector("#text-ani"), {
+        duration: 4000,
+        y: "22vw",
+      });
   }
 }
 
-const x = window.matchMedia("(min-width:640px)");
+const x = window.matchMedia("(min-width:760px)");
 gsapAnimation(x);
 // x.addEventListener(gsapAnimation);
 

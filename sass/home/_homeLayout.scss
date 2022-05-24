@@ -163,49 +163,56 @@
     background-image: url(../img-home/postcard.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 180%;
+    background-size: 200%;
     // height: 60vw;
-    height: 120vw;
+    height: 140vw;
 
     #circle1 {
-      height: 36vw;
-      width: 36vw;
+      // height: 36vw;
+      // width: 36vw;
+      height: 60vw;
+      width: 60vw;
       background-color: white;
       border-radius: 50%;
       position: relative;
-      top: -26vw;
+      // top: -26vw;
+      top: -53vw;
+
       margin-left: auto;
       margin-right: auto;
       h4 {
         display: flex;
         text-align: center;
-        height: 35vw;
+        // height: 35vw;
+        height: 60vw;
         justify-content: center;
         align-items: center;
       }
     }
     #circle2 {
-      height: 36vw;
-      width: 36vw;
+      height: 60vw;
+      width: 60vw;
       border-radius: 50%;
       position: relative;
-      top: 10vw;
+      // top: 10vw;
+      top: 7vw;
       margin-left: auto;
       margin-right: auto;
       outline: dotted 4px colors.$purple-3;
       #inside {
         background-color: white;
-        height: 36vw;
-        width: 36vw;
+        height: 60vw;
+        width: 60vw;
         border-radius: 50%;
         opacity: 0;
-      }
-      h4 {
-        display: flex;
-        text-align: center;
-        height: 35vw;
-        justify-content: left;
-        align-items: center;
+        h4 {
+          height: 60vw;
+          display: flex;
+          text-align: center;
+          height: 60vw;
+          justify-content: center;
+          // align-items: center;
+        }
       }
     }
   }
@@ -431,6 +438,38 @@
         width: 80px;
       }
     }
+
+    #section6 {
+      height: 60vw;
+      background-size: 100%;
+
+      #circle1 {
+        height: 36vw;
+        width: 36vw;
+        top: -26vw;
+
+        h4 {
+          height: 35vw;
+        }
+      }
+      #circle2 {
+        height: 36vw;
+        width: 36vw;
+        top: 10vw;
+        #inside {
+          height: 36vw;
+          width: 36vw;
+          h4 {
+            height: 36vw;
+            display: flex;
+            text-align: left;
+            justify-content: left;
+            align-items: center;
+          }
+        }
+      }
+    }
+
     #section7 {
       padding: 1vw 0 13vw 0;
       svg {

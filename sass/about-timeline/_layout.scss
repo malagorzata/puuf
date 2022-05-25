@@ -87,7 +87,8 @@
   }
 
   #part3 {
-    padding-right: 60px;
+    // padding-right: 60px;
+    padding-right: 20px;
     margin-top: 100px;
 
     img {
@@ -96,18 +97,20 @@
     }
 
     #ourStory {
-      padding-left: 50px;
+      // padding-left: 50px;
+      padding-left: 5vw;
       padding-top: 20px;
     }
 
     #date-1 {
       // margin-left: 200px;
-      margin-left: 80px;
+      margin-left: 35px;
       margin-top: 80px;
     }
 
     #rightSide {
-      margin-left: 350px;
+      // margin-left: 350px;
+      margin-left: 120px;
     }
   }
   .next-to-date {
@@ -121,24 +124,21 @@
     margin-bottom: 40px;
     .img-container {
       margin-top: 10px;
-      margin-left: 165px;
+      // margin-left: 165px;
+      margin-left: 95px;
     }
   }
-  #part4 {
-    height: 100vh;
-    background-color: colors.$purple-1;
+  .background-circle {
+    border: colors.$purple-3 solid 4px;
+    width: 140px;
+    margin-left: 18px;
+    z-index: -1;
+    height: 45px;
+    top: 10px;
+    position: absolute;
+    border-radius: 100%;
+    transform: rotate(-18deg);
   }
-}
-
-.background-circle {
-  border: colors.$purple-3 solid 4px;
-  width: 160px;
-  margin-left: 25px;
-  z-index: -1;
-  height: 60px;
-  position: absolute;
-  border-radius: 100%;
-  transform: rotate(-18deg);
 }
 
 @media only screen and (min-width: 760px) {
@@ -160,7 +160,7 @@
       }
 
       #intro {
-        padding: 0;
+        padding: 0 0 50px 0;
 
         h2 {
           margin-top: 4.5vw;
@@ -208,10 +208,40 @@
         }
       }
     }
+
+    #part3 {
+      padding-right: 65px;
+
+      #ourStory {
+        padding-left: 50px;
+      }
+
+      #date-1 {
+        margin-left: 200px;
+      }
+
+      #rightSide {
+        margin-left: 315px;
+      }
+
+      #box1,
+      #box2 {
+        margin-bottom: 40px;
+        .img-container {
+          margin-left: 130px;
+        }
+      }
+      .background-circle {
+        width: 190px;
+        margin-left: 40px;
+        height: 57px;
+        top: 6px;
+      }
+    }
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1200px) {
   .about-timeline {
     #part2 {
       #team {
@@ -241,6 +271,33 @@
           display: flex;
           justify-content: space-between;
         }
+      }
+    }
+
+    #part3 {
+      padding-right: 70px;
+
+      #date-1 {
+        margin-left: 200px;
+      }
+
+      #rightSide {
+        margin-left: 345px;
+      }
+
+      #box1,
+      #box2 {
+        margin-bottom: 40px;
+        .img-container {
+          margin-left: 160px;
+        }
+      }
+
+      .background-circle {
+        width: 200px;
+        margin-left: 40px;
+        height: 60px;
+        top: 10px;
       }
     }
   }

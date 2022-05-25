@@ -2,6 +2,8 @@ window.addEventListener("DOMContentLoaded", start);
 
 const allProducts = [];
 
+let mediaQuery;
+
 function start() {
   registerFilterOptions();
   getData();
@@ -98,6 +100,47 @@ function showWood(product) {
   return product.filter1 === "wood" || product.filter2 === "wood";
 }
 
+/* MEDIA QUERIES */
+
+//tablet
+function readMediaQueriesB(y) {
+  if (y.matches) {
+    // If media query matches
+    mediaQuery = "tablet";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  } else {
+    mediaQuery = "desktop";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  }
+}
+
+var y = window.matchMedia("(max-width: 770px)");
+readMediaQueriesB(y); // Call listener function at run time
+y.addListener(readMediaQueriesB); // Attach listener function on state changes
+
+//mobile
+
+function readMediaQueries(x) {
+  if (x.matches) {
+    // If media query matches
+    mediaQuery = "mobile";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  } else {
+    mediaQuery = "tablet";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  }
+}
+
+var x = window.matchMedia("(max-width: 500px)");
+readMediaQueries(x); // Call listener function at run time
+x.addListener(readMediaQueries); // Attach listener function on state changes
+
+/* handling current data */
+
 function handleProductList(data) {
   //console.log(data);
   document.querySelector("#productListGrid").innerHTML = "";
@@ -123,17 +166,37 @@ function showProduct(product) {
   copy.querySelector(".materialBottom .circle").style.background = `url(${product.materialPhoto})`;
   copy.querySelector(".materialTop .circle").style.background = `url(${product.materialPhoto})`;
 
-  if (product.rightColumn === true) {
-    copy.querySelector(".singleProduct").style.marginTop = "8rem";
-    copy.querySelector(".nameBottom").style.display = "none";
-    copy.querySelector(".priceBottom").style.display = "none";
-    copy.querySelector(".materialBottom").style.display = "none";
-    copy.querySelector(".productArrowBottom").style.visibility = "hidden";
+  if (mediaQuery === "desktop") {
+    if (product.rightColumn === true) {
+      copy.querySelector(".singleProduct").style.marginTop = "8rem";
+      copy.querySelector(".nameBottom").style.display = "none";
+      copy.querySelector(".priceBottom").style.display = "none";
+      copy.querySelector(".materialBottom").style.display = "none";
+      copy.querySelector(".productArrowBottom").style.visibility = "hidden";
+    } else {
+      copy.querySelector(".singleProduct").style.marginLeft = "6rem";
+      copy.querySelector(".nameRight").style.display = "none";
+      copy.querySelector(".priceRight").style.display = "none";
+      copy.querySelector(".materialTop").style.display = "none";
+      copy.querySelector(".infoRight").style.display = "none";
+      copy.querySelector(".productArrowRight").style.visibility = "hidden";
+    }
+  } else if (mediaQuery === "tablet") {
+    if (product.rightColumn === true) {
+      copy.querySelector(".singleProduct").style.marginTop = "8rem";
+      copy.querySelector(".singleProduct").style.marginLeft = "4rem";
+      copy.querySelector(".materialBottom").style.display = "none";
+    } else {
+      copy.querySelector(".singleProduct").style.marginLeft = "6rem";
+      copy.querySelector(".materialTop").style.display = "none";
+    }
+    copy.querySelector(".nameBottom").style.display = "initial";
+    copy.querySelector(".priceBottom").style.display = "initial";
+    copy.querySelector(".productArrowBottom").style.visibility = "visible";
+    copy.querySelector(".infoRight").style.display = "none";
   } else {
-    copy.querySelector(".nameRight").style.display = "none";
-    copy.querySelector(".priceRight").style.display = "none";
+    copy.querySelector(".infoRight").style.display = "none";
     copy.querySelector(".materialTop").style.display = "none";
-    copy.querySelector(".productArrowRight").style.visibility = "hidden";
   }
 
   //grab the parent

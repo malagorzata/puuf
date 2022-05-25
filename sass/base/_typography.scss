@@ -30,8 +30,8 @@ h1 {
 
 h2 {
   font-weight: 900;
-  font-size: 4.3rem;
-  line-height: 50px;
+  font-size: 4rem;
+  line-height: 43px;
 }
 
 h3 {
@@ -46,7 +46,7 @@ h4 {
   line-height: 22px;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 500px) {
   html {
     font-size: 13.5px;
   }
@@ -59,7 +59,7 @@ h4 {
   }
 
   h2 {
-    line-height: 63px;
+    line-height: 55px;
   }
 
   h3 {

@@ -21,7 +21,7 @@
 
       p {
         font-size: 1.2rem;
-        line-height: 3.5vw;
+        line-height: 17px;
       }
     }
   }
@@ -63,6 +63,11 @@
           font-size: 1.3rem; //
           line-height: 4vw;
           margin-top: 2vw; //
+
+          div {
+            line-height: 7vw;
+            font-weight: 600;
+          }
         }
       }
       svg {
@@ -163,6 +168,77 @@
         p {
           font-size: unset;
           line-height: unset;
+        }
+      }
+    }
+
+    #part2 {
+      #team {
+        display: flex;
+        justify-content: space-around;
+
+        p {
+          text-align: center;
+          padding-top: 20px;
+          font-size: 1.8vw; //
+          line-height: 1.3vw; //
+        }
+
+        .dropdown {
+          max-width: 24vw; // to zmienic na wieksze
+
+          li {
+            font-size: unset; //
+            line-height: unset;
+            margin-top: unset; //
+
+            div {
+              line-height: 5vw;
+              font-weight: 600;
+            }
+          }
+        }
+        svg {
+          width: 100%;
+        }
+        .name {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .about-timeline {
+    #part2 {
+      #team {
+        p {
+          padding-top: 2vw;
+          font-size: 1.6vw; //
+          line-height: 1.3vw; //
+        }
+        .dropdown {
+          max-width: 26vw; // to zmienic na wieksze
+
+          li {
+            font-size: unset; //
+            line-height: unset;
+            margin-top: unset; //
+
+            div {
+              line-height: 5vw;
+              font-weight: 600;
+            }
+          }
+        }
+        svg {
+          width: 100%;
+        }
+        .name {
+          display: flex;
+          justify-content: space-between;
         }
       }
     }

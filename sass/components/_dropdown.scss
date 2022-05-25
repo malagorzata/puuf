@@ -38,7 +38,7 @@ li {
 .dropdown > .dropdownList:hover .list2,
 .dropdown > .dropdownList:hover .list3 {
   /* transform: scaleY(1); */
-  height: 150px;
+  height: 180px; // create media queries for this one
 }
 
 .dropdown > .dropdownList:hover .name {

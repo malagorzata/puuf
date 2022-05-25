@@ -103,19 +103,19 @@
     }
 
     #date-1 {
-      // margin-left: 200px;
-      margin-left: 35px;
+      margin-left: 20px;
       margin-top: 80px;
+      font-size: 6rem; //
     }
 
     #rightSide {
-      // margin-left: 350px;
       margin-left: 120px;
     }
   }
   .next-to-date {
     display: flex;
     h1 {
+      font-size: 6rem; ///
       padding-right: 10px;
     }
   }
@@ -125,7 +125,7 @@
     .img-container {
       margin-top: 10px;
       // margin-left: 165px;
-      margin-left: 95px;
+      margin-left: 110px;
     }
   }
   .background-circle {
@@ -138,6 +138,18 @@
     position: absolute;
     border-radius: 100%;
     transform: rotate(-18deg);
+  }
+
+  #part4 {
+    background-color: colors.$purple-1;
+    padding: 60px 60px;
+    display: grid;
+    column-gap: 10vw;
+    grid-template-columns: 35% 60%;
+    p {
+      display: flex;
+      gap: 10px;
+    }
   }
 }
 
@@ -218,10 +230,14 @@
 
       #date-1 {
         margin-left: 200px;
+        font-size: 7rem;
       }
 
       #rightSide {
         margin-left: 315px;
+        h1 {
+          font-size: 7rem;
+        }
       }
 
       #box1,

@@ -1,0 +1,33 @@
+@use "../base/colors";
+.about-timeline {
+  #part4 {
+    #form {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 40vw;
+        border-radius: 20px;
+        border: solid 1px colors.$purple-2;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+      }
+
+      input[id="message"] {
+        height: 40px;
+      }
+      label {
+        display: block;
+        padding-left: 10px;
+        color: colors.$purple-3;
+      }
+      label[for="terms"] {
+        color: black;
+        font-size: 1vw;
+        display: inline;
+      }
+      button {
+        margin-top: 2vw;
+      }
+    }
+  }
+}

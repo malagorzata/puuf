@@ -19,129 +19,95 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    .title {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      display: none;
+    }
 
-  .title {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    display: none;
-  }
+    .tt-scroll {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  .tt-scroll {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+    .tt-scroll__title {
+      line-height: 1;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      top: 35%;
+      transform: translate(90vw, -50%);
+      z-index: 3;
 
-  .tt-scroll__title {
-    line-height: 1;
-    white-space: nowrap;
-    position: absolute;
-    left: 0;
-    top: 35%;
-    transform: translate(90vw, -50%);
-    z-index: 3;
+      h1 {
+        font-size: 4.5rem;
+        color: white;
+      }
+    }
 
-    h1 {
-      font-size: 4.5rem;
-      color: white;
+    .tt-scroll__content {
+      font-size: 64rem;
+      line-height: 70rem;
+      max-width: 1084rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tt-scroll__line {
+      overflow: hidden;
+    }
+
+    .tt-scroll__line__inner {
+      transform: translateY(100%);
     }
   }
 
-  .tt-scroll__content {
-    font-size: 64rem;
-    line-height: 70rem;
-    max-width: 1084rem;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .tt-scroll__line {
-    overflow: hidden;
-  }
-
-  .tt-scroll__line__inner {
-    transform: translateY(100%);
-  }
-
-  #stool {
-    position: absolute;
-    top: 60%;
-    left: 70%;
-  }
-
-  #vase {
-    position: absolute;
-    top: 43.5%;
-    left: 70.5%;
-    animation: pulse 3s infinite linear;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
+  #items {
+    #stool {
+      position: absolute;
+      top: 60%;
+      left: 70%;
     }
 
-    100% {
+    #vase {
+      position: absolute;
+      top: 43.5%;
+      left: 70.5%;
+      animation: pulse 3s infinite linear;
+    }
+
+    #vase:hover {
       transform: scale(1.1);
-    }
-  }
-
-  #vase:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-    // animation: rotate 2s;
-  }
-
-  .break {
-    color: transparent;
-  }
-
-  .stool {
-    height: 10rem;
-    width: auto;
-    opacity: 90%;
-  }
-
-  .vase {
-    height: 10rem;
-    width: auto;
-    opacity: 90%;
-  }
-
-  #cloud {
-    position: absolute;
-    top: 10%;
-    height: 50px;
-  }
-
-  .cloud {
-    height: 20rem;
-    width: auto;
-    animation-name: moving;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-
-  @keyframes moving {
-    0% {
-      transform: translateX(90vw) translateY(5vw);
+      transition: 0.5s;
+      // animation: rotate 2s;
     }
 
-    100% {
-      transform: translateX(-130vw);
+    .stool {
+      height: 10rem;
+      width: auto;
+      opacity: 90%;
     }
-  }
 
-  #design {
-    background: transparent;
-    animation: fade-in ease-in 2s forwards;
+    .vase {
+      height: 10rem;
+      width: auto;
+      opacity: 90%;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.1);
+      }
+    }
   }
 
   @keyframes fade-in {
@@ -164,17 +130,14 @@
     }
   }
   a {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
     .wrapper {
-      position: absolute;
-      top: 63vh;
-      left: 38vw;
       .button {
-        position: relative;
-        text-align: center;
-        top: 0;
-        left: 0;
-        // top: 20%;
-        // left: 20%;
         img {
           width: 11rem;
           position: relative;

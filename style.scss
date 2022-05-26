@@ -6,7 +6,7 @@
 @use "./sass/start-screen/start-screen";
 
 @use "./sass/home/homeLayout";
-@use './sass/home/logoAnimation';
+@use "./sass/home/logoAnimation";
 
 @use "./sass/about-timeline/layout";
 
@@ -14,6 +14,7 @@
 @use "./sass/components/footer";
 @use "./sass/components/dropdown";
 @use "./sass/components/button";
+@use "./sass/components/navigation";
 
 @use "./sass/productlist/productlistLayout";
 @use "./sass/productview/productViewPage";

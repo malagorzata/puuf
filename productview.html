@@ -15,16 +15,24 @@
     <title>Products</title>
   </head>
   <body id="productView">
-    <header>
-      <nav>
-        <div class="logo-nav">
-          <a href="home.html"><img src="./img/puuf-logo.png" alt="puuf logo" /></a>
-        </div>
-        <ul class="nav-items">
-          <li>CART</li>
-          <li>MENU</li>
+    <header id="menu-nav">
+      <a href="index.html"><img class="logo" src="./img/puuf-logo.png" alt="logo" /></a>
+      <div id="toggleIcon" onclick="menuToggle()"><p>MENU</p></div>
+      <div id="menu-overlay">
+        <ul id="top-menu">
+          <li><a href="./productlist.html">SHOP</a></li>
+          <li><a href="./about-timeline.html">ABOUT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">CIRCURALITY</a></li>
         </ul>
-      </nav>
+
+        <ul id="bottom-menu">
+          <li><a>Privacy Policy</a></li>
+          <li><a>T&cs</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
     </header>
     <main>
       <section class="product-tile">
@@ -43,7 +51,7 @@
         <div class="dropdown">
           <ul class="dropdownList">
             <li class="name">
-              MATERIAL + <i class="arrow down"></i>
+              MATERIAL <span class="plus">+</span> <span class="minus">-</span> <i class="arrow down"></i>
               <hr />
               <ul class="list">
                 <li></li>
@@ -52,7 +60,7 @@
           </ul>
           <ul class="dropdownList">
             <li class="name">
-              MEASUREMENTS + <i class="arrow down"></i>
+              MEASUREMENTS <span class="plus">+</span> <span class="minus">-</span> <i class="arrow down"></i>
               <hr />
               <ul class="list2">
                 <li></li>
@@ -61,7 +69,7 @@
           </ul>
           <ul class="dropdownList">
             <li class="name">
-              OTHER DETAILS + <i class="arrow down"></i>
+              OTHER DETAILS <span class="plus">+</span> <span class="minus">-</span> <i class="arrow down"></i>
 
               <hr />
               <ul class="list3">
@@ -107,5 +115,6 @@
     </footer>
 
     <script src="productview.js"></script>
+    <script src="./script/main.js"></script>
   </body>
 </html>

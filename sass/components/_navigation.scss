@@ -1,0 +1,148 @@
+@use "../base/typography";
+@use "../base/colors";
+
+#menu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: -7rem;
+
+  .logo {
+    padding: 1rem;
+    width: 4rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 3rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: 2;
+    #top-menu {
+      margin-top: 10rem;
+      li {
+        padding: 1rem 0;
+      }
+    }
+    #bottom-menu {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      li a {
+        padding: 1rem;
+        color: black;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #menu-overlay.active {
+    transform: scale(1);
+  }
+
+  #menu-overlay li a:hover {
+    color: colors.$pink-2;
+  }
+  #menu-overlay ul {
+    position: relative;
+  }
+
+  #menu-overlay ul li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    display: block;
+  }
+
+  #menu-overlay ul li a {
+    text-decoration: none;
+    position: relative;
+    font-size: 3em;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: colors.$purple-3;
+    display: inline-block;
+    font-family: typography.$font-1;
+  }
+
+  #menu-overlay ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-1);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition: 0.5s transform;
+  }
+
+  #menu-overlay ul li a:hover:before {
+    transform: translateY(-50%) scaleX(1);
+    transform-origin: left;
+    transition: 0.5s transform;
+  }
+
+  #toggleIcon {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  #toggleIcon p {
+    color: var(--color-1);
+    font-family: typography.$font-1;
+
+    font-size: 1.5em;
+  }
+
+  #toggleIcon.active {
+    color: colors.$green;
+  }
+
+  #toggleIcon p:hover {
+    opacity: 50%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  #menu-overlay {
+    ul li a {
+      font-size: 2em;
+    }
+    #top-menu li {
+      padding: 0.5rem 0;
+    }
+
+    #bottom-menu {
+      justify-content: center;
+
+      li a {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

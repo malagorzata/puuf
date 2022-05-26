@@ -1,5 +1,11 @@
 @use "../base/colors";
 
+#home #menu-nav {
+  .logo {
+    opacity: 0 !important;
+  }
+}
+
 #home-body {
   .delayed-section {
     position: absolute;
@@ -29,10 +35,12 @@
 
     #logo-wrapper {
       text-align: center;
+      padding: 1rem;
       position: fixed;
-      z-index: 99;
-      top: 2vh;
+      z-index: 90;
+      top: 0;
       width: 25vw;
+      left: -3vw;
       #logo {
         margin: 0;
         max-width: 100%;

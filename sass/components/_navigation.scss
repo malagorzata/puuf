@@ -37,7 +37,7 @@
     overflow-y: auto;
     transform: scale(0);
     transition: 0.5s;
-    z-index: 2;
+    z-index: 98;
     #top-menu {
       margin-top: 10rem;
       li {
@@ -108,7 +108,7 @@
     position: fixed;
     top: 2%;
     right: 2%;
-    z-index: 3;
+    z-index: 99;
     cursor: pointer;
   }
 

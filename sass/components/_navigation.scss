@@ -9,7 +9,6 @@ header {
 
   .logo {
     padding: 1rem;
-    //   margin-left: 3rem;
     width: 4rem;
   }
 
@@ -38,7 +37,7 @@ header {
     overflow-y: auto;
     transform: scale(0);
     transition: 0.5s;
-    z-index: 2; /*changed from 1 to 2 bc changes in slider*/
+    z-index: 2;
     #top-menu {
       margin-top: 10rem;
       li {
@@ -109,8 +108,7 @@ header {
     position: fixed;
     top: 2%;
     right: 2%;
-    z-index: 3; /*changed from 2 to 3 bc changes in slider*/
-    /* color: #c2aa90; */
+    z-index: 3;
     cursor: pointer;
   }
 
@@ -128,23 +126,22 @@ header {
   #toggleIcon p:hover {
     opacity: 50%;
   }
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  #menu-overlay {
+    ul li a {
+      font-size: 2em;
+    }
+    #top-menu li {
+      padding: 0.5rem 0;
+    }
 
-  @media only screen and (min-width: 320px) and (max-width: 500px) {
-    #menu-overlay {
-      ul li a {
-        font-size: 2em;
-      }
-      #top-menu li {
-        padding: 0.5rem 0;
-      }
+    #bottom-menu {
+      justify-content: center;
 
-      #bottom-menu {
-        justify-content: center;
-
-        li a {
-          font-size: 0.7rem;
-          padding: 0.5rem;
-        }
+      li a {
+        font-size: 0.7rem;
+        padding: 0.5rem;
       }
     }
   }

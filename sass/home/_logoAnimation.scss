@@ -37,6 +37,7 @@
 
   @keyframes moveLogo {
     0% {
+      width: 93vw;
     }
     100% {
       top: 0;
@@ -64,6 +65,7 @@
 
     100% {
       width: 90vw;
+      left: 0.5vw;
     }
   }
 }

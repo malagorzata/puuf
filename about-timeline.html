@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="./style.scss" />
   </head>
   <body class="about-timeline">
-    <header></header>
+    <header id="menu-nav">
+      <a href="index.html"><img class="logo" src="./img/puuf-logo.png" alt="logo" /></a>
+      <div id="toggleIcon" onclick="menuToggle()"><p>MENU</p></div>
+      <div id="menu-overlay">
+        <ul id="top-menu">
+          <li><a href="./productlist.html">SHOP</a></li>
+          <li><a href="./about-timeline.html">ABOUT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">CIRCURALITY</a></li>
+        </ul>
+
+        <ul id="bottom-menu">
+          <li><a>Privacy Policy</a></li>
+          <li><a>T&cs</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+    </header>
     <main>
       <div id="part1">
         <section id="intro">
@@ -154,5 +172,6 @@
     </main>
 
     <footer></footer>
+    <script src="./script/main.js"></script>
   </body>
 </html>

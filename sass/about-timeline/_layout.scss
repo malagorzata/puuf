@@ -3,6 +3,7 @@
 .about-timeline {
   #part1 {
     text-align: center;
+    margin-top: 80px;
 
     img {
       width: 70%;
@@ -147,8 +148,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
-      padding-left: 50px;
+      padding-left: 65px;
       text-align: left;
+      margin-top: 40px;
 
       // nie wiem jak tu z navigacja, jakby co usunac
       img {
@@ -243,6 +245,11 @@
 
 @media only screen and (min-width: 1200px) {
   .about-timeline {
+    #part1 {
+      #intro {
+        padding-top: 38px;
+      }
+    }
     #part2 {
       #team {
         p {

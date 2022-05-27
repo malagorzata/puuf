@@ -1,53 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("_id");
-const url = "https://kea2021-907c.restdb.io/rest/puuf/" + id;
-
-const options = {
-  headers: {
-    "x-apikey": "602e264f5ad3610fb5bb6267",
-  },
-};
-
-fetch(url, options)
-  .then((response) => {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    return response.json();
-  })
-
-  .then((data) => {
-    handleProducts(data);
-  })
-  .catch((e) => {
-    console.error("an error occured:", e.message);
-  });
-
-function handleProducts(products) {
-  console.log(products);
-  document.querySelector(".product-tile h2").textContent = products.name;
-  document.querySelector(".product-description-all h2").textContent = products.name;
-  document.querySelector(".price span").textContent = products.price;
-  document.querySelector(".product-description").textContent = products.description;
-  document.querySelector(".list li").textContent = products.material;
-  document.querySelector(".list2 li").textContent = products.measurements;
-  document.querySelector(".use span").textContent = products.useproposal;
-  document.querySelector(".designer span").textContent = products.designer;
-  document.querySelector(".production span").textContent = products.production;
-  document.querySelector(".first").src = products.photoOne;
-  document.querySelector(".second").src = products.photoTwo;
-  document.querySelector(".third").src = products.photoThree;
-  document.querySelector(".first").alt = products.name;
-  document.querySelector(".second").alt = products.name;
-  document.querySelector(".third").alt = products.name;
-
-  document.querySelector(".addCart").addEventListener("click", () => {
-    alert("added to cart");
-    //console.log(bags);
-    CART.add(products);
-  });
-}
-
 //CART
 const CART = {
   KEY: "basket",
@@ -60,6 +10,57 @@ const CART = {
       // if there's anything there, turn it into 20 objects that we can access with the dot . notation
       CART.contents = JSON.parse(_contents);
     } else {
+      /*CART.contents = [
+          {
+            _id: "608187eb3e28515100031d8f",
+            qty: 5,
+            collection: "",
+            colour: "Blue",
+            description:
+              "Ulrikke Woven Satin is a new shoulder bag with a shiny twist",
+            dimensions: "Dimensions: 30 x 6 x 20 cm.",
+            material: "Material: 100 % Polyester",
+            name: "ULRIKKE WOVEN SATIN",
+            newProducts: true,
+            outOfStock: false,
+            photo:
+              "https://anasofich.github.io/SILFEN-website/photos/ulrike-woven-satin-blue.jpg",
+            photoOne:
+              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-blue-top.jpg",
+            photoThree: "",
+            photoTwo:
+              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-statin-blue-side.jpg",
+            price: 499,
+            sale: false,
+            salePrice: "",
+            typeOfTheBag: "BumbagsandCrossbodybags",
+          },
+          {
+            _id: "608188303e28515100031d9a",
+            qty: 3,
+            collection: "",
+            colour: "Beige",
+            description:
+              "Ulrikke Woven Satin is a new crossbody bag with a shiny twist",
+            dimensions: "Dimensions: 30 x 6 x 20 cm.",
+            material: "Material: 100 % Polyester",
+            name: "ULRIKKE WOVEN SATIN",
+            newProducts: true,
+            outOfStock: false,
+            photo:
+              "https://anasofich.github.io/SILFEN-website/photos/ulrike-woven-satin-beige.jpg",
+            photoOne:
+              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-beige-side.jpg",
+            photoThree:
+              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-model.jpg",
+            photoTwo:
+              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-beige-top.jpg",
+            price: 499,
+            sale: false,
+            salePrice: "",
+            typeOfTheBag: "BumbagsandCrossbodybags",
+          },
+        ];*/
     }
     // I want to update the
     //this.updateDOM(); use this when we're not hardcoding the contents, and the content is read from localStorage
@@ -140,8 +141,8 @@ const CART = {
   },
   update(obj) {
     const index = CART.contents.findIndex((element) => element._id == obj._id);
-    //const inputEl = document.querySelector("#fid-" + obj._id);
-    //CART.contents[index].qty = inputEl.valueAsNumber;
+    /*const inputEl = document.querySelector("#fid-" + obj._id);
+      CART.contents[index].qty = inputEl.valueAsNumber;*/
 
     if (obj.qty === 0) {
       CART.contents.splice(index, 1);

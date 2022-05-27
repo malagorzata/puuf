@@ -1,0 +1,332 @@
+@use "../base/typography";
+@use "../base/colors";
+
+#shoppingBag {
+  /*ORDER DETAILS*/
+
+  .backArrow {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .backArrow {
+    text-decoration: none;
+    color: black;
+  }
+
+  .backArrow img {
+    max-width: 6%;
+  }
+
+  .logIn {
+    text-align-last: center;
+    margin-top: -1rem;
+  }
+
+  #shoppingbagDetails {
+    margin-top: 2rem;
+  }
+
+  .shoppingBagTitle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shoppingBagTitle h2 {
+    margin: 0;
+    margin-top: 0.8rem;
+  }
+
+  .shoppingBagTitle a {
+    text-align: right;
+  }
+
+  .shoppingBagTitle button {
+    background-color: white;
+    border: solid 2px black;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.12);
+    width: 60px;
+  }
+
+  .shoppingBagTitle button:hover,
+  .shoppingBagTitle button:active {
+    background-color: #c2c2c2;
+    cursor: pointer;
+  }
+
+  .shoppingBagTitle button:active {
+    box-shadow: none;
+  }
+
+  .orderItem {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .bagproductImg {
+    width: 140px;
+    height: 140px;
+  }
+
+  .bagproductImg img {
+    max-width: 100%;
+  }
+
+  .bagproductInfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    width: 160px;
+  }
+
+  .bagproductInfo * {
+    margin: 0;
+    margin-top: 0.3rem;
+  }
+
+  .bagName {
+    text-transform: uppercase;
+  }
+
+  .bagproductPrice {
+    align-self: flex-end;
+  }
+
+  .lineS {
+    width: 170px;
+    height: 2px;
+    background-color: gray;
+    position: relative;
+    z-index: -1;
+  }
+
+  .lineL {
+    width: 350px;
+    height: 2px;
+    background-color: gray;
+    position: relative;
+    z-index: -1;
+  }
+
+  .orderSummary {
+    margin-top: 3rem;
+  }
+
+  .orderPrice {
+    margin-left: 0.5rem;
+    display: flex;
+    font-size: 0.8rem;
+  }
+
+  .orderPrice * {
+    margin: 0;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .priceText {
+    width: 185px;
+  }
+
+  .priceAmount {
+    width: 185px;
+    text-align: right;
+  }
+
+  .subtotal {
+    margin-top: 1rem;
+    font-weight: 800;
+  }
+
+  .couponDiv {
+    display: flex;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .couponDiv input {
+    margin-top: 0.6rem;
+    width: 185px;
+    height: 30px;
+  }
+
+  .couponDiv button {
+    background-color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: solid 2px black;
+    border-radius: 20px;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.12);
+    width: 150px;
+    height: 35px;
+    margin-top: 0.5rem;
+  }
+
+  .couponDiv button:hover,
+  .couponDiv button:active {
+    background-color: #c2c2c2;
+    cursor: pointer;
+  }
+
+  .couponDiv button:active {
+    box-shadow: none;
+  }
+
+  .similar {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 7%;
+  }
+
+  .shoppingBag {
+    font-size: 1.2rem;
+    margin: 2rem 0 0 0.4rem;
+  }
+
+  .subtotalFinal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #suggestions {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-bottom: 5%;
+  }
+
+  .bagOne img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  #suggestions .bagOne {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .bagOne {
+    width: 10em;
+  }
+
+  .p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .proceed {
+    background-color: colors.$purple-3;
+    color: white;
+    border: none;
+  }
+
+  .continue {
+    background-color: white;
+    color: colors.$purple-3;
+    border: 2px solid colors.$purple-3;
+  }
+
+  .proceed:hover,
+  .continue:hover {
+    transform: scale(1.1);
+  }
+  .b {
+    font-size: 0.9rem;
+    border-radius: 20px;
+    width: 300px;
+    height: 35px;
+    align-self: center;
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  a {
+    margin-left: 0.8rem;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .orderSummary {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #shoppingbagDetails {
+      display: flex;
+      justify-content: center;
+    }
+
+    .items,
+    .itemsTwo {
+      margin: 0 4rem;
+    }
+
+    .bagOne {
+      width: 20em;
+    }
+
+    .similar {
+      font-size: 2rem;
+    }
+
+    .orderSummary {
+      margin-top: 0;
+    }
+
+    .shoppingBag {
+      margin-top: 0;
+    }
+
+    .bagproductImg {
+      width: 220px;
+      height: 220px;
+    }
+
+    .lineL {
+      width: 400px;
+    }
+    .bagName {
+      font-size: 1.3rem;
+    }
+
+    p,
+    .bagColor,
+    .bagQuantity {
+      font-size: 0.9rem;
+    }
+
+    .price {
+      text-align: center;
+      justify-content: center;
+      font-weight: 200;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

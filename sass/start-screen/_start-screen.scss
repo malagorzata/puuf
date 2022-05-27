@@ -19,53 +19,67 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    span {
+      opacity: 0;
+      transition: all 0.7s ease;
+    }
+
+    .fade {
+      opacity: 1;
+    }
     .title {
-      position: absolute;
-      top: 40%;
-      left: 20%;
-      display: none;
-    }
-
-    .tt-scroll {
-      display: flex;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .tt-scroll__title {
-      line-height: 1;
-      white-space: nowrap;
-      position: absolute;
-      left: 0;
-      top: 35%;
-      transform: translate(90vw, -50%);
-      z-index: 3;
-
-      h1 {
-        font-size: 4.5rem;
-        color: white;
-      }
-    }
-
-    .tt-scroll__content {
-      font-size: 64rem;
-      line-height: 70rem;
-      max-width: 1084rem;
-      margin: 0 auto;
+      font-size: 5rem;
+      line-height: 55px;
+      color: white;
+      padding-top: 10rem;
+      left: 0%;
+      width: 100vw;
+      height: auto;
+      display: block;
       text-align: center;
     }
 
-    .tt-scroll__line {
-      overflow: hidden;
-    }
+    // .tt-scroll {
+    //   display: flex;
+    //   position: relative;
+    //   overflow: hidden;
+    //   text-align: center;
+    //   justify-content: center;
+    //   align-items: center;
+    //   height: 100vh;
+    // }
 
-    .tt-scroll__line__inner {
-      transform: translateY(100%);
-    }
+    // .tt-scroll__title {
+    //   line-height: 1;
+    //   white-space: nowrap;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 35%;
+    //   transform: translate(90vw, -50%);
+    //   z-index: 3;
+
+    //   h1 {
+    //     font-size: 4.5rem;
+    //     color: white;
+    //   }
+    // }
+
+    // .tt-scroll__content {
+    //   font-size: 64rem;
+    //   line-height: 70rem;
+    //   max-width: 1084rem;
+    //   margin: 0 auto;
+    //   text-align: center;
+    // }
+
+    // .tt-scroll__line {
+    //   overflow: hidden;
+    // }
+
+    // .tt-scroll__line__inner {
+    //   transform: translateY(100%);
+    // }
   }
 
   #items {

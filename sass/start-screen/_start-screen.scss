@@ -135,25 +135,24 @@
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 1279px) {
+@media only screen and (min-width: 375px) and (max-width: 700px) {
   #start-screen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
     #background {
       grid-column: 1/4;
-    }
-
-    .title {
-      font-size: 3.5rem;
-      line-height: 55px;
-      color: white;
-      top: 10%;
-      left: 0%;
-      width: 100vw;
-      height: auto;
-      display: block;
-      text-align: center;
+      .title {
+        font-size: 6rem;
+        line-height: 6.5rem;
+        color: white;
+        top: 10%;
+        left: 0%;
+        width: 100vw;
+        height: auto;
+        display: block;
+        text-align: center;
+      }
     }
 
     a {
@@ -165,10 +164,10 @@
         left: 30vw;
         .button {
           h2 {
-            font-size: 2rem;
+            font-size: 3rem;
           }
           img {
-            width: 8rem;
+            width: 13rem;
           }
         }
       }
@@ -177,21 +176,83 @@
       #stool {
         position: absolute;
         top: 55%;
-        left: 60%;
+        left: 65%;
 
         .stool {
-          width: 7rem;
+          width: 10rem;
           height: auto;
         }
       }
 
       #vase {
         position: absolute;
-        top: 41.5%;
-        left: 63.5%;
+        top: 44%;
+        left: 67%;
 
         .vase {
-          width: 5.5rem;
+          width: 9rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  #start-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    #items {
+      #stool {
+        position: absolute;
+        top: 55%;
+        left: 65%;
+
+        .stool {
+          width: 10rem;
+          height: auto;
+        }
+      }
+
+      #vase {
+        position: absolute;
+        top: 40%;
+        left: 67%;
+
+        .vase {
+          width: 9rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #start-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    #items {
+      #stool {
+        position: absolute;
+        top: 55%;
+        left: 65%;
+
+        .stool {
+          width: 10rem;
+          height: auto;
+        }
+      }
+
+      #vase {
+        position: absolute;
+        top: 40%;
+        left: 67%;
+
+        .vase {
+          width: 9rem;
           height: auto;
         }
       }

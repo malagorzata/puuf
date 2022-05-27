@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Order</title>
+  </head>
+
+  <body id="shoppingFlow">
+    <header></header>
+
+    <main>
+      <section id="orderDetails">
+        <section id="orderConfirmation">
+          <div>
+            <a class="backArrow" href="home.html">
+              <div class="arrowBox">
+                <img src="../images/SVG/arrow.svg" />
+              </div>
+              <p>Back to shop</p>
+            </a>
+          </div>
+
+          <div class="thanksMsg">
+            <h1>THANK YOU</h1>
+            <p>We have received your order!</p>
+            <p>ORDER NUMBER <span class="orderNumber">#498549358</span></p>
+          </div>
+
+          <section class="orderConfSec">
+            <div class="orderDetailsConf">
+              <h2>ORDER DETAILS</h2>
+              <h3>E-MAIL</h3>
+              <p class="email">youremail@emai.com</p>
+              <h3>PAYMENT METHOD</h3>
+              <p class="pMethod">PayPal</p>
+              <h3>ORDER DATE</h3>
+              <p class="orderDate">11/04/2020</p>
+              <h3>DELIVERY OPTIONS</h3>
+              <p>Standard home delivery</p>
+              <h3>DELIVERY DETAILS</h3>
+              <div class="deliveryDetails">
+                <p><span class="firstName">Kate</span> <span class="lastName">Jones</span></p>
+                <p class="address">45 Street</p>
+                <p><span class="postCode">2600</span> <span class="city">Copenhagen</span></p>
+                <p class="country">Denmark</p>
+              </div>
+              <h3>CONTACT NUMBER</h3>
+              <p class="phoneNumber">+4549384309</p>
+            </div>
+
+            <div class="orderSummaryConf">
+              <h2>ORDER SUMMARY <span class="orderNumber">#498549358</span></h2>
+              <p class="exDel">EXPECTED DELIVERY 13/05/21</p>
+
+              <div class="cartContentConf"></div>
+
+              <template id="cartTemplateConf">
+                <div class="orderItem">
+                  <div class="bagproductImg">
+                    <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
+                  </div>
+                  <div class="bagproductInfo">
+                    <label for="fid-"><h3 class="bagName">NAME</h3></label>
+
+                    <p>
+                      <span class="bagQuantity">
+                        Quantity:
+                        <button class="minus" type="button">-</button>
+                        <input name="NAME-" type="number" id="fid-" min="0" max="20" class="quantityInput" />
+                        <button class="plus" type="button">+</button>
+                      </span>
+                    </p>
+
+                    <div class="lineS"></div>
+                    <p class="bagproductPrice">1200 DKK</p>
+                  </div>
+                </div>
+              </template>
+
+              <!-- <div class="orderItem">
+              <div class="bagproductImg">
+                <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
+              </div>
+              <div class="bagproductInfo">
+                <h3 class="bagName">Bibbi Nylon</h3>
+                <p>Color: <span class="bagColor">light blue</span></p>
+                <p>Quantity: <span class="bagQuantity">2</span></p>
+                <p class="bagproductPrice">1200 DKK</p>
+                <div class="lineS"></div>
+              </div>
+            </div>
+
+            <div class="orderItem">
+              <div class="bagproductImg">
+                <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-green.jpg" />
+              </div>
+              <div class="bagproductInfo">
+                <h3 class="bagName">Bibbi Nylon</h3>
+                <p>Color: <span class="bagColor">green</span></p>
+                <p>Quantity: <span class="bagQuantity">1</span></p>
+                <p class="bagproductPrice">600 DKK</p>
+                <div class="lineS"></div>
+              </div>
+            </div> -->
+
+              <div class="lineL"></div>
+
+              <div class="orderPrice">
+                <div class="priceText">
+                  <p>Order value</p>
+                  <p>Delivery</p>
+                  <p class="subtotal">Subtotal</p>
+                </div>
+                <div class="priceAmount">
+                  <p class="orderValue">1800 DKK</p>
+                  <p class="delivery">FREE</p>
+                  <p class="subtotal">1800 DKK</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="backtoShop">
+            <a href="home.html"><button>BACK TO SHOP</button></a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <section id="top-footer">
+        <div class="newsletter">
+          <img class="white-logo" alt="white logo" src="./img/puuf-white-logo.png" />
+          <h4>Keep in touch with our furniture, sustainability and other tips</h4>
+          <div class="formContainer">
+            <div class="container">
+              <form class="newsletterForm" name="Newsletter">
+                <input class="emailField" id="emailFooter" type="email" placeholder="Your e-mail" required />
+                <button type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="spinning-img hidden">
+          <img class="social-image" alt="social" src="./img/social-image.png" />
+          <img class="social-text" alt="social" src="./img/social-text.png" />
+        </div>
+      </section>
+      <section id="bottom-footer">
+        <p>© 2022 - PUUF</p>
+        <ul class="footer-details">
+          <li>Privacy Policy</li>
+          <li>T&Cs</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="./script/shopping flow/orderConfirmation.js"></script>
+  </body>
+</html>

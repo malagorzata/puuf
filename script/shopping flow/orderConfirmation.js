@@ -1,67 +1,6 @@
+/* const form = document.querySelector(".paymentForm");
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("_id");
-const url = "https://kea2021-907c.restdb.io/rest/puuf/" + id;
-
-const options = {
-  headers: {
-    "x-apikey": "602e264f5ad3610fb5bb6267",
-  },
-};
-
-fetch(url, options)
-  .then((response) => {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    return response.json();
-  })
-
-  .then((data) => {
-    handleProducts(data);
-  })
-  .catch((e) => {
-    console.error("an error occured:", e.message);
-  });
-
-function handleProducts(products) {
-  console.log(products);
-  document.querySelector(".product-tile h2").textContent = products.name;
-  document.querySelector(".product-description-all h2").textContent = products.name;
-  document.querySelector(".price span").textContent = products.price;
-  document.querySelector(".product-description").textContent = products.description;
-  document.querySelector(".list li").textContent = products.material;
-  document.querySelector(".list2 li").textContent = products.measurements;
-  document.querySelector(".use span").textContent = products.useproposal;
-  document.querySelector(".designer span").textContent = products.designer;
-  document.querySelector(".production span").textContent = products.production;
-  document.querySelector(".first").src = products.photoOne;
-  document.querySelector(".second").src = products.photoTwo;
-  document.querySelector(".third").src = products.photoThree;
-  document.querySelector(".first").alt = products.name;
-  document.querySelector(".second").alt = products.name;
-  document.querySelector(".third").alt = products.name;
-
-  document.querySelector(".addCart").addEventListener("click", () => {
-    CART.add(products);
-  });
-
-  /* ADD TO CART BUTTON */
-  const cartButton = document.querySelector(".cart-button");
-
-  cartButton.addEventListener("click", cartClick);
-
-  function cartClick() {
-    cartButton.classList.add("clicked");
-  }
-
-  document.querySelector(".cart-button span.added").addEventListener("animationend", restartButton);
-
-  function restartButton() {
-    cartButton.classList.remove("clicked");
-  }
-}
-
-const form = document.querySelector("form");
+const orderId = urlParams.get("article"); */
 
 //CART
 const CART = {
@@ -87,7 +26,7 @@ const CART = {
     CART.updateDOM();
   },
   updateDOM() {
-    const cartcontentEl = document.querySelector(".cartContent");
+    const cartcontentEl = document.querySelector(".cartContentConf");
     cartcontentEl.innerHTML = "";
 
     if (CART.contents.length === 0) {
@@ -97,7 +36,7 @@ const CART = {
       document.querySelector(".itemsTwo").classList.add("hidden");
     } else {
       CART.contents.forEach((element) => {
-        const tempItem = document.querySelector("#cartTemplate").content;
+        const tempItem = document.querySelector("#cartTemplateConf").content;
         //console.log(element);
         const itemCopy = tempItem.cloneNode(true);
 
@@ -132,8 +71,7 @@ const CART = {
         });
 
         itemCopy.querySelector("img").src = element.photoOne;
-        itemCopy.querySelector(".bagColor").textContent = element.material;
-        itemCopy.querySelector(".bagproductPrice").textContent = element.price;
+        itemCopy.querySelector(".bagproductPrice").textContent = element.price * element.qty + "dkk";
 
         cartcontentEl.appendChild(itemCopy);
       });
@@ -155,8 +93,8 @@ const CART = {
   },
   update(obj) {
     const index = CART.contents.findIndex((element) => element._id == obj._id);
-    //const inputEl = document.querySelector("#fid-" + obj._id);
-    //CART.contents[index].qty = inputEl.valueAsNumber;
+    /*const inputEl = document.querySelector("#fid-" + obj._id);
+      CART.contents[index].qty = inputEl.valueAsNumber;*/
 
     if (obj.qty === 0) {
       CART.contents.splice(index, 1);
@@ -181,3 +119,55 @@ const CART = {
 };
 
 CART.init();
+
+/* form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(form.elements.firstName.value);
+  console.log(form.elements.lastName.value);
+  console.log(form.elements.address.value);
+  console.log(form.elements.city.value);
+  console.log(form.elements.country.value);
+  console.log(form.elements.postCode.value);
+  console.log(form.elements.phoneNumber.value);
+  console.log(form.elements.email.value);
+
+  const payload = {
+    firstName: form.elements.firstName.value,
+    lastName: form.elements.lastName.value,
+    address: form.elements.address.value,
+    city: form.elements.city.value,
+    country: form.elements.country.value,
+    postCode: form.elements.postCode.value,
+    phoneNumber: form.elements.phoneNumber.value,
+    email: form.elements.email.value,
+  };
+
+  document.querySelector("input[type=submit]").disabled = true;
+
+  fetch("https://kea2021-907c.restdb.io/rest/orderdetails", {
+    method: "POST",
+    headers: {
+      "x-apikey": "602e264f5ad3610fb5bb6267",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => {
+      console.log(response);
+      document.querySelector("input[type=submit]").disabled = false;
+      form.elements.firstName.value = "";
+      form.elements.lastName.value = "";
+      form.elements.address.value = "";
+      form.elements.city.value = "";
+      form.elements.country.value = "";
+      form.elements.postCode.value = "";
+      form.elements.phoneNumber.value = "";
+      form.elements.email.value = "";
+      document.querySelector("#orderDetails").classList.add("hidden");
+      document.querySelector("#orderConfirmation").classList.remove("hidden");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+ */

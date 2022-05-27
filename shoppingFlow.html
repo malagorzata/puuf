@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Order</title>
+  </head>
+
+  <body id="shoppingFlow">
+    <header></header>
+
+    <main>
+      <section id="orderDetails">
+        <div>
+          <a class="backArrow" href="shoppingBag.html">
+            <div class="arrowBox">
+              <img src="../images/SVG/arrow.svg" />
+            </div>
+            <p>Back to shopping bag</p>
+          </a>
+        </div>
+
+        <div class="logIn">
+          <p>Do you have an account? <span>Log in!</span></p>
+        </div>
+
+        <section id="orderFlow">
+          <section id="shoppingbagDetails">
+            <div class="shoppingBagTitle">
+              <h4>SHOPPING BAG</h4>
+              <a href="shoppingBag.html"><button class="editButton">EDIT</button></a>
+            </div>
+
+            <div class="orderSummary">
+              <div class="cartContent"></div>
+
+              <div class="lineL"></div>
+
+              <div class="orderPrice">
+                <div class="priceText">
+                  <p>Order value</p>
+                  <p>Delivery</p>
+                  <p class="subtotal">Subtotal</p>
+                </div>
+                <div class="priceAmount">
+                  <p class="orderValue">1800 DKK</p>
+                  <p class="delivery">FREE</p>
+                  <p class="subtotal">1800 DKK</p>
+                </div>
+              </div>
+
+              <div class="couponDiv">
+                <input type="text" name="coupon" placeholder="COUPON CODE" />
+                <button>Apply coupon</button>
+              </div>
+            </div>
+
+            <template id="cartTemplate">
+              <div class="orderItem">
+                <div class="bagproductImg">
+                  <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
+                </div>
+                <div class="bagproductInfo">
+                  <label for="fid-"><h3 class="bagName">NAME</h3></label>
+
+                  <p>
+                    <span class="bagQuantity">
+                      Quantity:
+                      <button class="minus" type="button">-</button>
+                      <input name="NAME-" type="number" id="fid-" min="0" max="20" class="quantityInput" />
+                      <button class="plus" type="button">+</button>
+                    </span>
+                  </p>
+
+                  <div class="lineS"></div>
+                  <p class="bagproductPrice">1200 DKK</p>
+                </div>
+              </div>
+            </template>
+          </section>
+          <section id="paymentForm">
+            <form class="paymentForm" name="paymentForm" autocomplete="on">
+              <div class="shippingDetails">
+                <h2>SHIPPING DETAILS</h2>
+                <label for="firstName">First name</label>
+                <input type="text" name="firstName" id="firstName" required />
+
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastName" id="lastName" required />
+
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" required />
+
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" required />
+
+                <label for="country">Country/region</label>
+                <select name="country" id="country" required>
+                  <option>Show all</option>
+                  <option>Denmark</option>
+                  <option>Germany</option>
+                  <option>Sweden</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                </select>
+
+                <label for="postCode">Postcode</label>
+                <input type="text" name="postCode" id="postCode" required />
+
+                <label for="phoneNumber">Phone number</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" required />
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+
+              <div class="deliveryForm">
+                <h2>DELIVERY</h2>
+                <input type="radio" id="pickUp" name="pickUp" />
+                <label for="pickUp">Standard pick-up location<br /><span>Free 2-3 days</span></label
+                ><br />
+                <input type="radio" id="standardHome" name="standardHome" />
+                <label for="standardHome">Standard home delivery<br /><span>Free 2-3 days</span></label
+                ><br />
+                <input type="radio" id="expressHome" name="expressHome" />
+                <label for="expressHome">Express home delivery<br /><span>100 DKK 1-2 days</span></label>
+              </div>
+
+              <div class="paymentForm2">
+                <h2>PAYMENT</h2>
+                <h3>BILLING ADDRESS</h3>
+                <input type="radio" id="same" name="same" />
+                <label for="same">Same as shipping address</label><br />
+                <input type="radio" id="different" name="different" />
+                <label for="different">Use a different billing address</label><br />
+
+                <div class="paymentMethod">
+                  <h3>PAYMENT METHOD</h3>
+
+                  <div class="methodOptions">
+                    <input type="radio" id="cardMethod" />
+                    <label for="cardMethod"><h4>CREDIT/DEBIT CARD</h4></label>
+                  </div>
+
+                  <label for="cardNumber">Card number</label>
+                  <input type="text" name="cardNumber" id="cardNumber" />
+
+                  <label
+                    >Expiry date <br />
+                    <select name="month" id="month">
+                      <option>Month</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                    <select name="year" id="year">
+                      <option>Year</option>
+                      <option>2021</option>
+                      <option>2022</option>
+                      <option>2023</option>
+                      <option>2024</option>
+                      <option>2025</option>
+                      <option>2026</option>
+                    </select>
+                  </label>
+
+                  <label for="nameCard">Name on card</label>
+                  <input type="text" name="nameCard" id="nameCard" />
+
+                  <label for="CVV">CVV</label>
+                  <input type="password" name="CVV" id="CVV" />
+                </div>
+
+                <div class="methodOptions">
+                  <input type="radio" id="paypalMethod" />
+                  <label for="paypalMethod"><h4>PAYPAL</h4></label>
+                </div>
+
+                <div class="methodOptions">
+                  <input type="radio" id="mobilepayMethod" />
+                  <label for="mobilepayMethod"><h4>MOBILE PAY</h4></label>
+                </div>
+              </div>
+            </form>
+
+            <a href="orderConfimation.html"><button>PLACE ORDER</button></a>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <section id="top-footer">
+        <div class="newsletter">
+          <img class="white-logo" alt="white logo" src="./img/puuf-white-logo.png" />
+          <h4>Keep in touch with our furniture, sustainability and other tips</h4>
+          <div class="formContainer">
+            <div class="container">
+              <form class="newsletterForm" name="Newsletter">
+                <input class="emailField" id="emailFooter" type="email" placeholder="Your e-mail" required />
+                <button type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="spinning-img hidden">
+          <img class="social-image" alt="social" src="./img/social-image.png" />
+          <img class="social-text" alt="social" src="./img/social-text.png" />
+        </div>
+      </section>
+      <section id="bottom-footer">
+        <p>© 2022 - PUUF</p>
+        <ul class="footer-details">
+          <li>Privacy Policy</li>
+          <li>T&Cs</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="./script/shopping flow/shoppingBag.js"></script>
+  </body>
+</html>

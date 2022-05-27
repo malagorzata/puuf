@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Cart</title>
+  </head>
+  <body id="shoppingBag">
+    <header id="menu-nav">
+      <a href="index.html"><img class="logo" src="./img/puuf-logo.png" alt="logo" /></a>
+      <div class="navOptions">
+        <a href="shoppingBag.html">
+          <div id="cartButton"><p>CART</p></div>
+        </a>
+        <div id="toggleIcon" onclick="menuToggle()"><p>MENU</p></div>
+      </div>
+      <div id="menu-overlay">
+        <ul id="top-menu">
+          <li><a href="./productlist.html">SHOP</a></li>
+          <li><a href="./about-timeline.html">ABOUT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">CIRCULARITY</a></li>
+        </ul>
+
+        <ul id="bottom-menu">
+          <li><a>Privacy Policy</a></li>
+          <li><a>T&cs</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h2 class="similar">SHOPPING CART</h2>
+
+      <section id="shoppingbagDetails">
+        <div class="shoppingBagTitle"></div>
+
+        <template id="cartTemplate">
+          <div class="orderItem">
+            <div class="bagproductImg">
+              <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
+            </div>
+            <div class="bagproductInfo">
+              <label for="fid-"><h3 class="bagName">NAME</h3></label>
+
+              <p>
+                Quantity:
+                <span class="bagQuantity">
+                  <button class="minus" type="button">-</button>
+                  <input name="NAME-" type="number" id="fid-" min="0" max="20" class="quantityInput" />
+                  <button class="plus" type="button">+</button>
+                </span>
+              </p>
+
+              <div class="lineS"></div>
+              <p class="bagproductPrice">1200 DKK</p>
+            </div>
+          </div>
+        </template>
+
+        <div class="orderSummary">
+          <div class="items">
+            <div class="mockupBag">
+              <form action="">
+                <div class="cartContent">
+                  <h2>THE CART IS EMPTY</h2>
+                </div>
+              </form>
+            </div>
+            <div class="lineL"></div>
+            <div class="orderPrice">
+              <div class="priceText">
+                <p>Order value</p>
+                <p>Delivery</p>
+                <p class="subtotal">Subtotal</p>
+              </div>
+              <div class="priceAmount">
+                <p class="orderValue">1800dkk</p>
+                <p class="delivery">FREE</p>
+                <p class="subtotal">1800dkk</p>
+              </div>
+            </div>
+          </div>
+          <div class="itemsTwo">
+            <h1 class="shoppingBag">SHOPPING CART TOTAL</h1>
+            <div class="orderPrice">
+              <div class="priceText">
+                <p>Order value</p>
+                <p>Delivery</p>
+              </div>
+              <div class="priceAmount">
+                <p class="orderValue">1800 DKK</p>
+                <p class="delivery">FREE</p>
+              </div>
+            </div>
+            <div class="couponDiv">
+              <input type="text" name="coupon" placeholder="COUPON CODE" />
+              <button>Apply coupon</button>
+            </div>
+            <div class="lineL"></div>
+            <div class="subtotalFinal">
+              <p class="subtotal">SUBTOTAL</p>
+              <p class="subtotal">1800 DKK</p>
+            </div>
+            <div class="buttons">
+              <a href="shoppingFlow.html"><button class="proceed b">PROCEED TO CHECKOUT</button></a>
+              <a href="productlist.html"><button class="continue b">CONTINUE SHOPPING</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="top-footer">
+        <div class="newsletter">
+          <img class="white-logo" alt="white logo" src="./img/puuf-white-logo.png" />
+          <h4>Keep in touch with our furniture, sustainability and other tips</h4>
+          <div class="formContainer">
+            <div class="container">
+              <form class="newsletterForm" name="Newsletter">
+                <input class="emailField" id="email" type="email" placeholder="Your e-mail" required />
+                <button type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="spinning-img hidden">
+          <img class="social-image" alt="social" src="./img/social-image.png" />
+          <img class="social-text" alt="social" src="./img/social-text.png" />
+        </div>
+      </section>
+      <section id="bottom-footer">
+        <p>© 2022 - PUUF</p>
+        <ul class="footer-details">
+          <li>Privacy Policy</li>
+          <li>T&Cs</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="./script/shopping flow/shoppingBag.js"></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

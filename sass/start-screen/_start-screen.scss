@@ -39,47 +39,6 @@
       display: block;
       text-align: center;
     }
-
-    // .tt-scroll {
-    //   display: flex;
-    //   position: relative;
-    //   overflow: hidden;
-    //   text-align: center;
-    //   justify-content: center;
-    //   align-items: center;
-    //   height: 100vh;
-    // }
-
-    // .tt-scroll__title {
-    //   line-height: 1;
-    //   white-space: nowrap;
-    //   position: absolute;
-    //   left: 0;
-    //   top: 35%;
-    //   transform: translate(90vw, -50%);
-    //   z-index: 3;
-
-    //   h1 {
-    //     font-size: 4.5rem;
-    //     color: white;
-    //   }
-    // }
-
-    // .tt-scroll__content {
-    //   font-size: 64rem;
-    //   line-height: 70rem;
-    //   max-width: 1084rem;
-    //   margin: 0 auto;
-    //   text-align: center;
-    // }
-
-    // .tt-scroll__line {
-    //   overflow: hidden;
-    // }
-
-    // .tt-scroll__line__inner {
-    //   transform: translateY(100%);
-    // }
   }
 
   #items {
@@ -99,7 +58,6 @@
     #vase:hover {
       transform: scale(1.1);
       transition: 0.5s;
-      // animation: rotate 2s;
     }
 
     .stool {
@@ -185,9 +143,6 @@
     #background {
       grid-column: 1/4;
     }
-    .smooth-scroll {
-      display: none;
-    }
 
     .title {
       font-size: 3.5rem;
@@ -240,14 +195,6 @@
           height: auto;
         }
       }
-    }
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  #start-screen {
-    .title {
-      display: none;
     }
   }
 }

@@ -1,9 +1,24 @@
-function menuToggle() {
+/*MENU*/
+/* function menuToggle() {
   var nav = document.getElementById("menu-overlay");
   nav.classList.toggle("active");
   var nav = document.getElementById("toggleIcon");
   nav.classList.toggle("active");
-} /*MENU*/
+}
+ */
+
+const menu = document.querySelector("#menuSec nav");
+
+document.querySelector("#menuSec .closeMenu").addEventListener("click", closeMenu);
+document.querySelector("#menuSec .openMenu").addEventListener("click", openMenu);
+
+function closeMenu() {
+  menu.style.top = "-100vh";
+}
+
+function openMenu() {
+  menu.style.top = "0";
+}
 
 gsap.registerPlugin(ScrollTrigger);
 

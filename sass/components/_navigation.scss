@@ -2,182 +2,155 @@
 @use "../base/colors";
 
 #menu-nav {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  margin-bottom: -2.4rem;
+  /* MENU */
 
   .logo {
-    padding: 1rem;
+    left: 1vw;
+    top: 1vw;
     width: 4rem;
     position: fixed;
-  }
-
-  .navOptions {
-    display: flex;
-    position: fixed;
-    right: 30px;
-    top: 20px;
-    gap: 22px;
-    z-index: 99;
-  }
-
-  .navOptions p {
-    font-family: typography.$font-1;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: all 0.2s;
-    &:hover {
-      color: colors.$pink-2;
-      transition: all 0.2s;
-    }
-  }
-
-  #toggleIcon {
     z-index: 100;
   }
 
-  #toggleIcon.active {
-    color: colors.$purple-4;
-  }
-
-  nav {
+  .navOptions {
+    position: absolute;
+    top: 20px;
+    right: 30px;
     display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    margin-left: 3rem;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 2rem;
-  }
-
-  #menu-overlay {
+    gap: 1.2rem;
+    font-size: 1.5rem;
     position: fixed;
-    top: 0;
+    z-index: 98;
+    div {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: colors.$pink-2;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: colors.$pink-2;
+    transition: 0.2s;
+  }
+
+  .closeMenu:hover {
+    color: #000;
+  }
+
+  #menuSec nav {
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
+    z-index: 100;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow-y: auto;
-    transform: translateY(-100vh);
-    transition: 0.7s;
-    z-index: 90;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    color: colors.$purple-3;
+    transition: 1s;
+  }
 
-    .menuClose {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-
-      p {
-        font-family: typography.$font-1;
-        font-size: 1.5em;
-        cursor: pointer;
-        transition: all 0.2s;
-        &:hover {
-          color: colors.$pink-2;
-          transition: all 0.2s;
-        }
-      }
+  @keyframes bgchange {
+    0% {
+      background-color: colors.$purple-1;
     }
-
-    #top-menu {
-      margin-top: 10rem;
-      li {
-        padding: 1rem 0;
-      }
+    16% {
+      background-color: colors.$purple-2;
     }
-    #bottom-menu {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      li a {
-        padding: 1rem;
-        color: black;
-        font-size: 1rem;
-        transition: all 0.2s;
-        &:hover {
-          color: colors.$purple-4;
-          transition: all 0.2s;
-        }
-      }
+    32% {
+      background-color: colors.$purple-3;
+    }
+    48% {
+      background-color: colors.$purple-4;
+    }
+    64% {
+      background-color: colors.$pink-1;
+    }
+    80% {
+      background-color: colors.$pink-2;
+    }
+    100% {
+      background-color: colors.$purple-1;
     }
   }
 
-  #menu-overlay.active {
-    transform: translateY(0);
+  .menuOptions {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    gap: 4.5rem;
+    text-align: center;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
   }
 
-  #menu-overlay li a {
+  .menuOptions a {
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+    position: relative;
+    width: fit-content;
+    color: #000;
+  }
+
+  .menuOptions a:hover {
+    color: colors.$pink-2;
+    text-decoration: none;
+    transform: translateX(10px);
+  }
+
+  .menuBottom {
+    align-self: flex-start;
+    margin-left: 3rem;
+    display: flex;
+    gap: 2rem;
+    color: #000;
     transition: all 0.2s;
-    &:hover {
-      color: colors.$pink-2;
+    a:hover {
+      text-decoration: underline;
       transition: all 0.2s;
     }
   }
+}
 
-  #menu-overlay ul {
-    position: relative;
-  }
-
-  #menu-overlay ul li {
-    position: relative;
-    list-style: none;
-    text-align: center;
-    display: block;
-  }
-
-  #menu-overlay ul li a {
-    text-decoration: none;
-    position: relative;
-    font-size: 3em;
-    padding: 0 10px;
-    margin-bottom: 10px;
-    color: colors.$purple-3;
-    display: inline-block;
-    font-family: typography.$font-1;
-  }
-
-  #menu-overlay ul li a:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--color-1);
-    transform: translateY(-50%) scaleX(0);
-    transform-origin: right;
-    transition: 0.5s transform;
-  }
-
-  #menu-overlay ul li a:hover:before {
-    transform: translateY(-50%) scaleX(1);
-    transform-origin: left;
-    transition: 0.5s transform;
+@media only screen and (max-width: 720px) {
+  #menu-nav {
+    .menuOptions {
+      font-size: 5rem;
+    }
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 500px) {
-  #menu-overlay {
-    ul li a {
-      font-size: 2em;
-    }
-    #top-menu li {
-      padding: 0.5rem 0;
+
+@media only screen and (max-width: 500px) {
+  #menu-nav {
+    .closeMenu {
+      top: 10px;
+      right: 25px;
     }
 
-    #bottom-menu {
-      justify-content: center;
+    .openMenu {
+      top: 10px;
+      right: 10px;
+    }
 
-      li a {
-        font-size: 0.7rem;
-        padding: 0.5rem;
-      }
+    .menuBottom {
+      flex-direction: column;
+      gap: 1px;
+      align-self: center;
     }
   }
 }

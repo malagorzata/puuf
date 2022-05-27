@@ -19,6 +19,7 @@
     right: 30px;
     top: 20px;
     gap: 22px;
+    z-index: 99;
   }
 
   .navOptions p {
@@ -37,7 +38,7 @@
   }
 
   #toggleIcon.active {
-    color: colors.$green;
+    color: colors.$purple-4;
   }
 
   nav {

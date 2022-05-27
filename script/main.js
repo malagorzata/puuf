@@ -1,11 +1,16 @@
 /*MENU*/
 
-document.querySelector("#toggleIcon").addEventListener("click", menuToggle);
-function menuToggle() {
-  var nav = document.getElementById("menu-overlay");
-  nav.classList.toggle("active");
-  var nav = document.getElementById("toggleIcon");
-  nav.classList.toggle("active");
+const menu = document.querySelector("#menuSec nav");
+
+document.querySelector("#menuSec .closeMenu").addEventListener("click", closeMenu);
+document.querySelector("#menuSec .openMenu").addEventListener("click", openMenu);
+
+function closeMenu() {
+  menu.style.top = "-100vh";
+}
+
+function openMenu() {
+  menu.style.top = "0";
 }
 
 // const text = document.querySelector(".title");

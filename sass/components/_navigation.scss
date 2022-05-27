@@ -16,8 +16,8 @@
   .navOptions {
     display: flex;
     position: fixed;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 20px;
     gap: 22px;
   }
 
@@ -99,6 +99,11 @@
         padding: 1rem;
         color: black;
         font-size: 1rem;
+        transition: all 0.2s;
+        &:hover {
+          color: colors.$purple-4;
+          transition: all 0.2s;
+        }
       }
     }
   }
@@ -107,9 +112,14 @@
     transform: translateY(0);
   }
 
-  #menu-overlay li a:hover {
-    color: colors.$pink-2;
+  #menu-overlay li a {
+    transition: all 0.2s;
+    &:hover {
+      color: colors.$pink-2;
+      transition: all 0.2s;
+    }
   }
+
   #menu-overlay ul {
     position: relative;
   }

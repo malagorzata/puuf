@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", start);
 
 const allProducts = [];
 
-let mediaQuery;
+let mediaQuery = "desktop";
 
 function start() {
   registerFilterOptions();
@@ -102,25 +102,11 @@ function showWood(product) {
 
 /* MEDIA QUERIES */
 
-//tablet
-function readMediaQueriesB(y) {
-  if (y.matches) {
-    // If media query matches
-    mediaQuery = "tablet";
-    console.log(mediaQuery);
-    handleProductList(allProducts);
-  } else {
-    mediaQuery = "desktop";
-    console.log(mediaQuery);
-    handleProductList(allProducts);
-  }
-}
-
-var y = window.matchMedia("(max-width: 770px)");
-readMediaQueriesB(y); // Call listener function at run time
-y.addListener(readMediaQueriesB); // Attach listener function on state changes
-
 //mobile
+
+var x = window.matchMedia("(max-width: 500px)");
+readMediaQueries(x); // Call listener function at run time
+x.addListener(readMediaQueries); // Attach listener function on state changes
 
 function readMediaQueries(x) {
   if (x.matches) {
@@ -135,9 +121,24 @@ function readMediaQueries(x) {
   }
 }
 
-var x = window.matchMedia("(max-width: 500px)");
-readMediaQueries(x); // Call listener function at run time
-x.addListener(readMediaQueries); // Attach listener function on state changes
+//tablet
+
+var y = window.matchMedia("(max-width: 770px)");
+readMediaQueriesB(y); // Call listener function at run time
+y.addListener(readMediaQueriesB); // Attach listener function on state changes
+
+function readMediaQueriesB(y) {
+  if (y.matches) {
+    // If media query matches
+    mediaQuery = "tablet";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  } else {
+    mediaQuery = "desktop";
+    console.log(mediaQuery);
+    handleProductList(allProducts);
+  }
+}
 
 /* handling current data */
 

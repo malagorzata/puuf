@@ -42,10 +42,23 @@ function handleProducts(products) {
   document.querySelector(".third").alt = products.name;
 
   document.querySelector(".addCart").addEventListener("click", () => {
-    alert("added to cart");
-    //console.log(bags);
     CART.add(products);
   });
+
+  /* ADD TO CART BUTTON */
+  const cartButton = document.querySelector(".cart-button");
+
+  cartButton.addEventListener("click", cartClick);
+
+  function cartClick() {
+    cartButton.classList.add("clicked");
+  }
+
+  document.querySelector(".cart-button span.added").addEventListener("animationend", restartButton);
+
+  function restartButton() {
+    cartButton.classList.remove("clicked");
+  }
 }
 
 //CART

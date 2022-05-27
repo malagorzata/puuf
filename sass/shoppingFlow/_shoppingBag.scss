@@ -27,6 +27,7 @@
 
   #shoppingbagDetails {
     margin-top: 2rem;
+    margin-bottom: 7rem;
   }
 
   .shoppingBagTitle {
@@ -95,14 +96,16 @@
 
   .bagproductPrice {
     align-self: flex-end;
+    margin-top: 0.5rem;
   }
 
   .lineS {
     width: 170px;
-    height: 2px;
-    background-color: gray;
+    height: 1px;
+    background-color: rgb(198, 198, 198);
     position: relative;
     z-index: -1;
+    margin-top: 4rem;
   }
 
   .lineL {
@@ -163,16 +166,18 @@
     text-transform: uppercase;
     border: solid 2px black;
     border-radius: 20px;
-    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.12);
     width: 150px;
     height: 35px;
     margin-top: 0.5rem;
+    transition: all 0.2s;
   }
 
   .couponDiv button:hover,
   .couponDiv button:active {
-    background-color: #c2c2c2;
+    background-color: black;
+    color: #fff;
     cursor: pointer;
+    transition: all 0.2s;
   }
 
   .couponDiv button:active {
@@ -233,22 +238,32 @@
     margin: 0;
   }
 
+  .buttons {
+    margin-top: 1.5rem;
+  }
+
   .proceed {
-    background-color: colors.$purple-3;
-    color: white;
-    border: none;
+    background-color: #fff;
+    color: #000;
+    border: solid 2px #000;
+    transition: all 0.2s;
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      transition: all 0.2s;
+    }
   }
 
   .continue {
-    background-color: white;
-    color: colors.$purple-3;
-    border: 2px solid colors.$purple-3;
+    background-color: colors.$purple-1;
+    border: none;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #bdbbee;
+      transition: all 0.2s;
+    }
   }
 
-  .proceed:hover,
-  .continue:hover {
-    transform: scale(1.1);
-  }
   .b {
     font-size: 0.9rem;
     border-radius: 20px;
@@ -270,8 +285,10 @@
     margin-left: 0.8rem;
     padding: 0;
   }
+}
 
-  @media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) {
+  #shoppingBag {
     .orderSummary {
       display: flex;
       flex-direction: row;
@@ -319,6 +336,18 @@
     .bagColor,
     .bagQuantity {
       font-size: 0.9rem;
+    }
+
+    .minus,
+    .plus {
+      background-color: #fff;
+      border: solid 1px #000;
+      width: 15px;
+      height: 18px;
+    }
+
+    input.quantityInput {
+      text-align: center;
     }
 
     .price {

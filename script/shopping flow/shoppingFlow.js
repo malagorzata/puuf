@@ -1,3 +1,7 @@
+/* const form = document.querySelector(".paymentForm");
+const urlParams = new URLSearchParams(window.location.search);
+const orderId = urlParams.get("article"); */
+
 //CART
 const CART = {
   KEY: "basket",
@@ -10,57 +14,6 @@ const CART = {
       // if there's anything there, turn it into 20 objects that we can access with the dot . notation
       CART.contents = JSON.parse(_contents);
     } else {
-      /*CART.contents = [
-          {
-            _id: "608187eb3e28515100031d8f",
-            qty: 5,
-            collection: "",
-            colour: "Blue",
-            description:
-              "Ulrikke Woven Satin is a new shoulder bag with a shiny twist",
-            dimensions: "Dimensions: 30 x 6 x 20 cm.",
-            material: "Material: 100 % Polyester",
-            name: "ULRIKKE WOVEN SATIN",
-            newProducts: true,
-            outOfStock: false,
-            photo:
-              "https://anasofich.github.io/SILFEN-website/photos/ulrike-woven-satin-blue.jpg",
-            photoOne:
-              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-blue-top.jpg",
-            photoThree: "",
-            photoTwo:
-              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-statin-blue-side.jpg",
-            price: 499,
-            sale: false,
-            salePrice: "",
-            typeOfTheBag: "BumbagsandCrossbodybags",
-          },
-          {
-            _id: "608188303e28515100031d9a",
-            qty: 3,
-            collection: "",
-            colour: "Beige",
-            description:
-              "Ulrikke Woven Satin is a new crossbody bag with a shiny twist",
-            dimensions: "Dimensions: 30 x 6 x 20 cm.",
-            material: "Material: 100 % Polyester",
-            name: "ULRIKKE WOVEN SATIN",
-            newProducts: true,
-            outOfStock: false,
-            photo:
-              "https://anasofich.github.io/SILFEN-website/photos/ulrike-woven-satin-beige.jpg",
-            photoOne:
-              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-beige-side.jpg",
-            photoThree:
-              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-model.jpg",
-            photoTwo:
-              "https://anasofich.github.io/SILFEN-website/photos/urlike-woven-satin-beige-top.jpg",
-            price: 499,
-            sale: false,
-            salePrice: "",
-            typeOfTheBag: "BumbagsandCrossbodybags",
-          },
-        ];*/
     }
     // I want to update the
     //this.updateDOM(); use this when we're not hardcoding the contents, and the content is read from localStorage
@@ -73,7 +26,7 @@ const CART = {
     CART.updateDOM();
   },
   updateDOM() {
-    const cartcontentEl = document.querySelector(".cartContent");
+    const cartcontentEl = document.querySelector(".cartContentConf");
     cartcontentEl.innerHTML = "";
 
     if (CART.contents.length === 0) {
@@ -83,7 +36,7 @@ const CART = {
       document.querySelector(".itemsTwo").classList.add("hidden");
     } else {
       CART.contents.forEach((element) => {
-        const tempItem = document.querySelector("#cartTemplate").content;
+        const tempItem = document.querySelector("#cartTemplateConf").content;
         //console.log(element);
         const itemCopy = tempItem.cloneNode(true);
 
@@ -166,3 +119,55 @@ const CART = {
 };
 
 CART.init();
+
+/* form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(form.elements.firstName.value);
+  console.log(form.elements.lastName.value);
+  console.log(form.elements.address.value);
+  console.log(form.elements.city.value);
+  console.log(form.elements.country.value);
+  console.log(form.elements.postCode.value);
+  console.log(form.elements.phoneNumber.value);
+  console.log(form.elements.email.value);
+
+  const payload = {
+    firstName: form.elements.firstName.value,
+    lastName: form.elements.lastName.value,
+    address: form.elements.address.value,
+    city: form.elements.city.value,
+    country: form.elements.country.value,
+    postCode: form.elements.postCode.value,
+    phoneNumber: form.elements.phoneNumber.value,
+    email: form.elements.email.value,
+  };
+
+  document.querySelector("input[type=submit]").disabled = true;
+
+  fetch("https://kea2021-907c.restdb.io/rest/orderdetails", {
+    method: "POST",
+    headers: {
+      "x-apikey": "602e264f5ad3610fb5bb6267",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => {
+      console.log(response);
+      document.querySelector("input[type=submit]").disabled = false;
+      form.elements.firstName.value = "";
+      form.elements.lastName.value = "";
+      form.elements.address.value = "";
+      form.elements.city.value = "";
+      form.elements.country.value = "";
+      form.elements.postCode.value = "";
+      form.elements.phoneNumber.value = "";
+      form.elements.email.value = "";
+      document.querySelector("#orderDetails").classList.add("hidden");
+      document.querySelector("#orderConfirmation").classList.remove("hidden");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+ */

@@ -7,12 +7,20 @@ const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("#contact-form");
   let formData = new FormData(contactForm);
+  document.querySelector("button[id=button-submit]").disabled = true;
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Form successfully submitted"))
+    .then(() => {
+      console.log("form submited sucesfully");
+      document.querySelector("button[id=button-submit]").disabled = false;
+      document.querySelector("input[id=name]").value = "";
+      document.querySelector("input[id=email]").value = "";
+      document.querySelector("textarea[id=message]").value = "";
+      document.querySelector("input[type=checkbox]").checked = false;
+    })
     .catch((error) => alert(error));
 };
 
@@ -24,6 +32,8 @@ form.addEventListener("submit", handleSubmit);
 //   const formIsValid = form.checkValidity();
 //   if (formIsValid) {
 //     ("valid");
+//     // document.querySelector("button[id=button-submit]").disabled = true;
+//     // document.querySelector("button[id=button-submit]").backgroundColor = "red";
 //   } else {
 //     console.log("not valid");
 //   }

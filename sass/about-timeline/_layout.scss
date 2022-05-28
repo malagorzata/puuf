@@ -147,6 +147,7 @@
     display: grid;
     column-gap: 10vw;
     grid-template-columns: 35% 60%;
+    // padding: 60px 20px;
 
     #contact-info {
       display: flex;
@@ -154,20 +155,20 @@
       justify-content: space-between;
       #phone-nr {
         p {
-          margin-top: 1.2vw;
-        }
-        span {
-          height: 1.5vw;
-          svg {
-            height: 1.5vw;
-            width: 1.5vw;
+          line-height: 2vw;
+          span {
+            svg {
+              height: 2vw;
+              width: 2vw;
+            }
           }
         }
       }
     }
     p {
+      height: 3vw;
       display: flex;
-      gap: 10px;
+      gap: 12px;
     }
   }
 }

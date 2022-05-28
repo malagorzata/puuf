@@ -4,28 +4,34 @@
 .about-timeline {
   #part4 {
     #contact-form {
+      margin-top: 30px; //usunac
+
       input[type="text"],
       input[type="email"],
       textarea {
-        width: 40vw;
+        // width: 40vw;
+        // padding: 10px 20px;
+        // margin-bottom: 20px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 80vw;
         border-radius: 20px;
         border: solid 1px colors.$purple-2;
-        padding: 10px 20px;
-        margin-bottom: 20px;
-      }
-
-      input[id="message"] {
-        height: 40px;
       }
 
       label {
         display: block;
         padding-left: 10px;
         color: colors.$purple-3;
+        font-size: 1.5rem; //back do 1.1rem
       }
 
       button {
-        margin: 1.5vw 0 0 0;
+        // margin: 1.5vw 0 0 0;
+        display: block; //
+        margin-right: auto; //
+        margin-left: auto; //
+        margin-top: 20px;
       }
 
       input:invalid:not(:placeholder-shown, :focus) {
@@ -107,7 +113,8 @@
 
       label[for="terms"] {
         color: black;
-        font-size: 1vw;
+        // font-size: 1vw;
+        font-size: 1.1rem; //
         display: inline;
         padding-left: 10px;
         width: 40px;

@@ -10,7 +10,7 @@ module.exports = {
         productlist: resolve(__dirname, "productlist.html"),
         productpage: resolve(__dirname, "productview.html"),
         about: resolve(__dirname, "about-timeline.html"),
-        orderconfirm: resolve(__dirname, "orederConfirmation.html"),
+        orderconfirm: resolve(__dirname, "orderConfirmation.html"),
         shoppingbag: resolve(__dirname, "shoppingBag.html"),
         shoppingflow: resolve(__dirname, "shoppingFlow.html"),
       },

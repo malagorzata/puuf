@@ -117,16 +117,16 @@
               <div class="shippingDetails">
                 <h3>Shipping details</h3>
                 <label for="firstName">First name</label>
-                <input type="text" name="firstName" id="firstName" required />
+                <input type="text" name="firstName" id="firstName" placeholder=" " required />
 
                 <label for="lastName">Last name</label>
-                <input type="text" name="lastName" id="lastName" required />
+                <input type="text" name="lastName" id="lastName" placeholder=" " required />
 
                 <label for="address">Address</label>
-                <input type="text" name="address" id="address" required />
+                <input type="text" name="address" id="address" placeholder=" " required />
 
                 <label for="city">City</label>
-                <input type="text" name="city" id="city" required />
+                <input type="text" name="city" id="city" placeholder=" " required />
 
                 <label for="country">Country/region</label>
                 <select name="country" id="country" required>
@@ -139,13 +139,13 @@
                 </select>
 
                 <label for="postCode">Postcode</label>
-                <input type="text" name="postCode" id="postCode" required />
+                <input type="text" name="postCode" id="postCode" placeholder=" " required />
 
                 <label for="phoneNumber">Phone number</label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" required />
+                <input type="tel" name="phoneNumber" id="phoneNumber" minlength="5" maxlength="10" placeholder=" " required />
 
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" required />
+                <input type="email" name="email" id="email" placeholder=" " required />
               </div>
 
               <div class="deliveryForm">
@@ -263,6 +263,8 @@
     </footer>
 
     <script type="module" src="./script/shopping-flow/shoppingBag.js"></script>
+    <script type="module" src="./script/shopping-flow/paymentForm.js"></script>
+
     <script type="module" src="./script/main.js"></script>
   </body>
 </html>

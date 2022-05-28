@@ -16,7 +16,32 @@
   </head>
 
   <body id="shoppingFlow">
-    <header></header>
+    <header id="menu-nav">
+      <a href="home.html"><img class="logo" src="./img/puuf-logo.png" alt="logo" /></a>
+      <section id="menuSec">
+        <nav>
+          <div class="menuTop">
+            <div class="closeMenu">MENU</div>
+          </div>
+          <div class="menuOptions">
+            <a href="./productlist.html">Shop</a>
+            <a href="./about-timeline.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Circularity</a>
+          </div>
+          <div class="menuBottom">
+            <a href="#">Privacy Policy</a>
+            <a href="#">T&C</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+        <div class="navOptions">
+          <div><a href="shoppingBag.html">CART</a></div>
+          <div class="openMenu">MENU</div>
+        </div>
+      </section>
+    </header>
 
     <main>
       <section id="orderDetails">
@@ -87,32 +112,6 @@
                 </div>
               </template>
 
-              <!-- <div class="orderItem">
-              <div class="bagproductImg">
-                <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
-              </div>
-              <div class="bagproductInfo">
-                <h3 class="bagName">Bibbi Nylon</h3>
-                <p>Color: <span class="bagColor">light blue</span></p>
-                <p>Quantity: <span class="bagQuantity">2</span></p>
-                <p class="bagproductPrice">1200 DKK</p>
-                <div class="lineS"></div>
-              </div>
-            </div>
-
-            <div class="orderItem">
-              <div class="bagproductImg">
-                <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-green.jpg" />
-              </div>
-              <div class="bagproductInfo">
-                <h3 class="bagName">Bibbi Nylon</h3>
-                <p>Color: <span class="bagColor">green</span></p>
-                <p>Quantity: <span class="bagQuantity">1</span></p>
-                <p class="bagproductPrice">600 DKK</p>
-                <div class="lineS"></div>
-              </div>
-            </div> -->
-
               <div class="lineL"></div>
 
               <div class="orderPrice">
@@ -145,16 +144,18 @@
           <div class="formContainer">
             <div class="container">
               <form class="newsletterForm" name="Newsletter">
-                <input class="emailField" id="emailFooter" type="email" placeholder="Your e-mail" required />
+                <input class="emailField" id="email" type="email" placeholder="Your e-mail" required />
                 <button type="submit"></button>
               </form>
             </div>
           </div>
         </div>
-        <div class="spinning-img hidden">
-          <img class="social-image" alt="social" src="./img/social-image.png" />
-          <img class="social-text" alt="social" src="./img/social-text.png" />
-        </div>
+        <a href="https://www.instagram.com/puuf.studio/">
+          <div class="spinning-img hidden">
+            <img class="social-image" alt="social" src="./img/social-image.png" />
+            <img class="social-text" alt="social" src="./img/social-text.png" />
+          </div>
+        </a>
       </section>
       <section id="bottom-footer">
         <p>© 2022 - PUUF</p>
@@ -168,5 +169,6 @@
     </footer>
 
     <script type="module" src="./script/shopping-flow/orderConfirmation.js"></script>
+    <script type="module" src="./script/main.js"></script>
   </body>
 </html>

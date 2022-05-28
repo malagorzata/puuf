@@ -97,6 +97,10 @@ footer {
       flex-direction: row;
       li {
         padding: 0 0.9rem;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
     }
   }

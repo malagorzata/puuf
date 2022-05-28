@@ -34,7 +34,7 @@ function gsapAnimation(x) {
           scrub: 0,
           start: "top 10%",
           end: "bottom 30%",
-          markers: true,
+          markers: false,
         },
       })
 

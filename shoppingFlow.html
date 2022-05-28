@@ -163,9 +163,9 @@
               <div class="paymentForm2">
                 <h3>Payment</h3>
                 <h4>Billing address</h4>
-                <input type="radio" id="same" name="address" />
+                <input type="radio" id="same" name="address" required />
                 <label for="same">Same as shipping address</label><br />
-                <input type="radio" id="different" name="address" />
+                <input type="radio" id="different" name="address" required />
                 <label for="different">Use a different billing address</label><br />
 
                 <div class="paymentMethod">
@@ -215,18 +215,17 @@
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="paypalMethod" name="payment" />
+                  <input type="radio" id="paypalMethod" name="payment" required />
                   <label for="paypalMethod">PAYPAL</label>
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="mobilepayMethod" name="payment" />
+                  <input type="radio" id="mobilepayMethod" name="payment" required />
                   <label for="mobilepayMethod">MOBILE PAY</label>
                 </div>
               </div>
+              <a href="orderConfirmation.html"><button type="submit" class="regular-button" id="place-order">PLACE ORDER</button></a>
             </form>
-
-            <a href="orderConfirmation.html"><button type="submit" class="regular-button place-order">PLACE ORDER</button></a>
           </section>
         </section>
       </section>

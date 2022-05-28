@@ -6,8 +6,8 @@ const form = document.querySelector("#payment-form");
 const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("payment-form");
-  let formData = new FormData(paymentForm);
-  document.querySelector("button[class=place-order]").disabled = true;
+  let formData = new FormData(myForm);
+  document.querySelector("button[id=place-order]").disabled = true;
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -15,6 +15,7 @@ const handleSubmit = (e) => {
   })
     .then(() => {
       console.log("form submited sucesfully");
+      window.location.href = "orderConfirmation.html";
     })
     .catch((error) => alert(error));
 };

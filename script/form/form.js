@@ -1,14 +1,12 @@
 console.log("hejka to form.js");
 
 const form = document.querySelector("#contact-form");
-console.log(form.elements);
-
-form.addEventListener("submit", handleSubmit);
+// console.log(form.elements);
 
 const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("#contact-form");
-  let formData = new FormData(myForm);
+  let formData = new FormData(contactForm);
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -18,13 +16,15 @@ const handleSubmit = (e) => {
     .catch((error) => alert(error));
 };
 
-document.querySelector("#button-submit").addEventListener("click", checkValidity);
+form.addEventListener("submit", handleSubmit);
 
-function checkValidity() {
-  const formIsValid = form.checkValidity();
-  if (formIsValid) {
-    ("valid");
-  } else {
-    console.log("not valid");
-  }
-}
+// document.querySelector("#button-submit").addEventListener("click", checkValidity);
+
+// function checkValidity() {
+//   const formIsValid = form.checkValidity();
+//   if (formIsValid) {
+//     ("valid");
+//   } else {
+//     console.log("not valid");
+//   }
+// }

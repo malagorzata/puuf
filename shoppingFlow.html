@@ -16,35 +16,65 @@
   </head>
 
   <body id="shoppingFlow">
-    <header></header>
-
+    <header id="menu-nav">
+      <a href="home.html"><img class="logo" src="./img/puuf-logo.png" alt="logo" /></a>
+      <section id="menuSec">
+        <nav>
+          <div class="menuTop">
+            <div class="closeMenu">MENU</div>
+          </div>
+          <div class="menuOptions">
+            <a href="./productlist.html">Shop</a>
+            <a href="./about-timeline.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Circularity</a>
+          </div>
+          <div class="menuBottom">
+            <a href="#">Privacy Policy</a>
+            <a href="#">T&C</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+        <div class="navOptions">
+          <div><a href="shoppingBag.html">CART</a></div>
+          <div class="openMenu">MENU</div>
+        </div>
+      </section>
+    </header>
     <main>
       <section id="orderDetails">
-        <div>
-          <a class="backArrow" href="shoppingBag.html">
-            <div class="arrowBox">
-              <img src="../images/SVG/arrow.svg" />
-            </div>
-            <p>Back to shopping bag</p>
-          </a>
-        </div>
-
-        <div class="logIn">
-          <p>Do you have an account? <span>Log in!</span></p>
-        </div>
-
+        <a class="back-button" href="shoppingBag.html">
+          <button class="backArrow regular-button">
+            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="20.066" height="20.895" viewBox="0 0 20.066 20.895">
+              <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
+                <path id="Path_9" data-name="Path 9" d="M7.5,18H25.567" transform="translate(-7.5 -8.967)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <path id="Path_10" data-name="Path 10" d="M18,7.5l9.033,9.033L18,25.567" transform="translate(-8.967 -7.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </g>
+            </svg>
+            GO BACK
+          </button>
+        </a>
         <section id="orderFlow">
           <section id="shoppingbagDetails">
             <div class="shoppingBagTitle">
-              <h4>SHOPPING BAG</h4>
-              <a href="shoppingBag.html"><button class="editButton">EDIT</button></a>
+              <h3>Shopping bag</h3>
+              <a href="shoppingBag.html"
+                ><button class="editButton regular-button">
+                  EDIT &nbsp
+                  <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="20.066" height="20.895" viewBox="0 0 20.066 20.895">
+                    <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
+                      <path id="Path_9" data-name="Path 9" d="M7.5,18H25.567" transform="translate(-7.5 -8.967)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                      <path id="Path_10" data-name="Path 10" d="M18,7.5l9.033,9.033L18,25.567" transform="translate(-8.967 -7.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    </g>
+                  </svg></button
+              ></a>
             </div>
 
             <div class="orderSummary">
               <div class="cartContent"></div>
 
-              <div class="lineL"></div>
-
+              <hr class="line" />
               <div class="orderPrice">
                 <div class="priceText">
                   <p>Order value</p>
@@ -57,11 +87,6 @@
                   <p class="subtotal">1800 DKK</p>
                 </div>
               </div>
-
-              <div class="couponDiv">
-                <input type="text" name="coupon" placeholder="COUPON CODE" />
-                <button>Apply coupon</button>
-              </div>
             </div>
 
             <template id="cartTemplate">
@@ -70,7 +95,7 @@
                   <img src="https://anasofich.github.io/SILFEN-website/photos/bibbi-nylon-blue.jpg" />
                 </div>
                 <div class="bagproductInfo">
-                  <label for="fid-"><h3 class="bagName">NAME</h3></label>
+                  <label for="fid-"><h4 class="bagName">NAME</h4></label>
 
                   <p>
                     <span class="bagQuantity">
@@ -81,7 +106,7 @@
                     </span>
                   </p>
 
-                  <div class="lineS"></div>
+                  <hr class="lineS" />
                   <p class="bagproductPrice">1200 DKK</p>
                 </div>
               </div>
@@ -90,7 +115,7 @@
           <section id="paymentForm">
             <form class="paymentForm" name="paymentForm" autocomplete="on">
               <div class="shippingDetails">
-                <h2>SHIPPING DETAILS</h2>
+                <h3>Shipping details</h3>
                 <label for="firstName">First name</label>
                 <input type="text" name="firstName" id="firstName" required />
 
@@ -124,37 +149,37 @@
               </div>
 
               <div class="deliveryForm">
-                <h2>DELIVERY</h2>
-                <input type="radio" id="pickUp" name="pickUp" />
+                <h3>Delivery</h3>
+                <input type="radio" id="pickUp" name="delivery" />
                 <label for="pickUp">Standard pick-up location<br /><span>Free 2-3 days</span></label
                 ><br />
-                <input type="radio" id="standardHome" name="standardHome" />
+                <input type="radio" id="standardHome" name="delivery" />
                 <label for="standardHome">Standard home delivery<br /><span>Free 2-3 days</span></label
                 ><br />
-                <input type="radio" id="expressHome" name="expressHome" />
+                <input type="radio" id="expressHome" name="delivery" />
                 <label for="expressHome">Express home delivery<br /><span>100 DKK 1-2 days</span></label>
               </div>
 
               <div class="paymentForm2">
-                <h2>PAYMENT</h2>
-                <h3>BILLING ADDRESS</h3>
-                <input type="radio" id="same" name="same" />
+                <h3>Payment</h3>
+                <h4>Billing address</h4>
+                <input type="radio" id="same" name="address" />
                 <label for="same">Same as shipping address</label><br />
-                <input type="radio" id="different" name="different" />
+                <input type="radio" id="different" name="address" />
                 <label for="different">Use a different billing address</label><br />
 
                 <div class="paymentMethod">
-                  <h3>PAYMENT METHOD</h3>
+                  <h4>Payment method</h4>
 
                   <div class="methodOptions">
-                    <input type="radio" id="cardMethod" />
-                    <label for="cardMethod"><h4>CREDIT/DEBIT CARD</h4></label>
+                    <input type="radio" id="cardMethod" name="payment" />
+                    <label for="cardMethod">CREDIT/DEBIT CARD</label>
                   </div>
 
                   <label for="cardNumber">Card number</label>
                   <input type="text" name="cardNumber" id="cardNumber" />
 
-                  <label
+                  <label for="monthdate"
                     >Expiry date <br />
                     <select name="month" id="month">
                       <option>Month</option>
@@ -190,18 +215,18 @@
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="paypalMethod" />
-                  <label for="paypalMethod"><h4>PAYPAL</h4></label>
+                  <input type="radio" id="paypalMethod" name="payment" />
+                  <label for="paypalMethod">PAYPAL</label>
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="mobilepayMethod" />
-                  <label for="mobilepayMethod"><h4>MOBILE PAY</h4></label>
+                  <input type="radio" id="mobilepayMethod" name="payment" />
+                  <label for="mobilepayMethod">MOBILE PAY</label>
                 </div>
               </div>
             </form>
 
-            <a href="orderConfimation.html"><button>PLACE ORDER</button></a>
+            <a href="orderConfirmation.html"><button class="regular-button place-order">PLACE ORDER</button></a>
           </section>
         </section>
       </section>
@@ -238,5 +263,6 @@
     </footer>
 
     <script type="module" src="./script/shopping-flow/shoppingBag.js"></script>
+    <script type="module" src="./script/main.js"></script>
   </body>
 </html>

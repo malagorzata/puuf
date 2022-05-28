@@ -137,6 +137,40 @@
 }
 
 @media only screen and (min-width: 760px) {
+  .about-timeline {
+    #part4 {
+      #contact-form {
+        margin-top: 0; //usunac
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 40vw;
+          padding: 10px 20px;
+          margin-bottom: 20px;
+          padding: 10px 20px;
+          // margin-bottom: 10px;
+          // width: 80vw;
+          // border-radius: 20px;
+          // border: solid 1px colors.$purple-2;
+        }
+
+        label {
+          font-size: 1.1rem; //back do 1.1rem
+        }
+
+        button {
+          margin: 1.5vw 0 0 0;
+          display: auto; //
+          margin-top: 20px;
+        }
+
+        label[for="terms"] {
+          font-size: 0.9rem; //
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {

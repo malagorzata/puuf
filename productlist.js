@@ -171,6 +171,7 @@ function showProduct(product) {
   copy.querySelector("a.singleProduct").href = `productview.html?_id=${product._id}`;
   copy.querySelector(".materialBottom .circle").style.background = `url(${product.materialPhoto})`;
   copy.querySelector(".materialTop .circle").style.background = `url(${product.materialPhoto})`;
+  copy.querySelector(".hoverVideo").src = `../videos/${product.hoverVideo}`;
 
   if (mediaQuery === "desktop") {
     if (product.rightColumn === true) {

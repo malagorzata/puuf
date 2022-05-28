@@ -1,46 +1,51 @@
-window.addEventListener("DOMContentLoaded", start);
+import { get_products } from "./script/modules/api.js";
+
+window.addEventListener("DOMContentLoaded", init);
+
+// window.addEventListener("DOMContentLoaded", start);
 
 const allProducts = [];
 
 let mediaQuery = "desktop";
 
-function start() {
+async function init() {
   registerFilterOptions();
-  getData();
+  const data = await get_products();
+  prepareData(data);
 }
 
 function registerFilterOptions() {
   document.querySelectorAll(".filters li[data-action='filter']").forEach((option) => option.addEventListener("click", selectFilter));
 }
 
-//fetching database
+// //fetching database
 
-let url = "https://kea2021-907c.restdb.io/rest/puuf";
+// let url = "https://kea2021-907c.restdb.io/rest/puuf";
 
-/*API key*/
-const options = {
-  headers: {
-    "x-apikey": "602e264f5ad3610fb5bb6267",
-  },
-};
+// /*API key*/
+// const options = {
+//   headers: {
+//     "x-apikey": "602e264f5ad3610fb5bb6267",
+//   },
+// };
 
-function getData() {
-  fetch(url, options)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
+// function getData() {
+//   fetch(url, options)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw Error(response.statusText);
+//       }
+//       return response.json();
+//     })
 
-    .then((data) => {
-      // console.log(data);
-      prepareData(data);
-    })
-    .catch((e) => {
-      console.error("an error occured:", e.message);
-    });
-}
+//     .then((data) => {
+//       // console.log(data);
+//       prepareData(data);
+//     })
+//     .catch((e) => {
+//       console.error("an error occured:", e.message);
+//     });
+// }
 
 function prepareData(data) {
   data.forEach((jsonObject) => {

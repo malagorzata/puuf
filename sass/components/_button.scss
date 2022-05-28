@@ -64,7 +64,7 @@
 }
 /* ADD TO CART regular-button */
 
-.cart-regular-button {
+.cart-button {
   margin-top: 2rem;
   position: relative;
   font-family: typography.$font-1;
@@ -79,7 +79,7 @@
   overflow: hidden;
   background-color: #fff;
 }
-.cart-regular-button:hover {
+.cart-button:hover {
   background-color: colors.$purple-3;
   .fa-shopping-cart {
     color: #fff;
@@ -91,11 +91,11 @@
     color: #fff;
   }
 }
-.cart-regular-button:active {
+.cart-button:active {
   transform: scale(0.9);
 }
 
-.cart-regular-button .fa-shopping-cart {
+.cart-button .fa-shopping-cart {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -104,7 +104,7 @@
   transform: translate(-50%, -50%);
   color: #000;
 }
-.cart-regular-button .fa-box {
+.cart-button .fa-box {
   position: absolute;
   z-index: 3;
   top: -20%;
@@ -113,7 +113,7 @@
   transform: translate(-50%, -50%);
   color: #000;
 }
-.cart-regular-button span {
+.cart-button span {
   position: absolute;
   z-index: 3;
   left: 50%;
@@ -123,25 +123,25 @@
   text-transform: uppercase;
   transform: translate(-50%, -50%);
 }
-.cart-regular-button span.add-to-cart {
+.cart-button span.add-to-cart {
   opacity: 1;
   transition: all 0.2s;
 }
-.cart-regular-button span.added {
+.cart-button span.added {
   opacity: 0;
   transition: all 0.2s;
 }
 
-.cart-regular-button.clicked .fa-shopping-cart {
+.cart-button.clicked .fa-shopping-cart {
   animation: cart 1.5s ease-in-out forwards;
 }
-.cart-regular-button.clicked .fa-box {
+.cart-button.clicked .fa-box {
   animation: box 1.5s ease-in-out forwards;
 }
-.cart-regular-button.clicked span.add-to-cart {
+.cart-button.clicked span.add-to-cart {
   animation: txt1 1.5s ease-in-out forwards;
 }
-.cart-regular-button.clicked span.added {
+.cart-button.clicked span.added {
   animation: txt2 2s ease-in-out forwards;
   animation-delay: 1.5s;
 }

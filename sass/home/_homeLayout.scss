@@ -147,11 +147,26 @@
       white-space: nowrap;
       width: unset;
       margin-left: 4vw;
+      &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 7px;
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgb(232, 232, 232);
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
 
       article {
         display: inline-block;
         width: 55vw;
         margin-right: 2vw;
+        margin-bottom: 1rem;
         img {
           max-width: 100%;
         }

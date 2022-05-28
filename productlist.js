@@ -204,6 +204,7 @@ function showProduct(product) {
   } else {
     copy.querySelector(".infoRight").style.display = "none";
     copy.querySelector(".materialTop").style.display = "none";
+    copy.querySelector(".singleProduct").style.marginLeft = "-3rem";
   }
 
   //grab the parent

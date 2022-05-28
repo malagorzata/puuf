@@ -24,6 +24,7 @@
     div {
       transition: all 0.2s ease-in-out;
       cursor: pointer;
+      z-index: 90;
       &:hover {
         color: colors.$pink-2;
         transition: all 0.2s ease-in-out;
@@ -39,6 +40,7 @@
     cursor: pointer;
     color: colors.$pink-2;
     transition: 0.2s;
+    z-index: 90;
   }
 
   .closeMenu:hover {

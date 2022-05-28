@@ -1,23 +1,8 @@
 @use "../base/colors";
 @use "../base/typography";
 
-// .regular-regular-button:hover {
-//   cursor: pointer;
-// }
-// .regular-regular-button {
-//   padding: 8px 20px;
-//   display: inline-flex;
-//   align-items: center;
-//   font-size: 15px;
-//   background-color: transparent;
-//   border-radius: 45px;
-//   border: solid 2px colors.$purple-3;
-//   height: 37px;
-//   margin-top: auto;
-//   margin-bottom: auto;
-// }
 .regular-button {
-  padding: 12px 40px;
+  padding: 10px 37px;
   background: transparent;
   border: solid 2px colors.$purple-3;
   border-radius: 30px;
@@ -25,12 +10,13 @@
   text-transform: uppercase;
   font-family: typography.$font-1;
   font-weight: 900;
-  font-size: 15px;
+
+  font-size: 13px;
   letter-spacing: 1px;
   position: relative;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: pointer;
-  display: block;
+  display: inline-flex;
 }
 
 .regular-button::after,
@@ -45,11 +31,13 @@
 }
 
 .regular-button::after {
-  width: 30px;
+  width: 20px;
   height: 1px;
   background: black;
   transform: translateX(-3px);
-  margin-top: 0px;
+  // margin-top: 0;
+
+  margin-top: -1px;
 }
 
 .regular-button::before {
@@ -60,17 +48,19 @@
   background: transparent;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  margin-top: -1px;
+  margin-top: -2px;
+  // margin-top: -1px;
 }
 
 .regular-button:hover {
-  padding: 12px 60px 12px 20px;
+  // padding: 12px 60px 12px 20px;
+  padding: 10px 60px 10px 14px;
 }
 
 .regular-button:hover::after,
 .regular-button:hover::before {
   opacity: 1;
-  right: 15px;
+  right: 20px;
 }
 /* ADD TO CART regular-button */
 
@@ -200,15 +190,37 @@
 }
 
 @media only screen and (min-width: 760px) {
-  .regular-regular-button {
-    font-size: 17px;
-    height: 40px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .regular-regular-button {
-    font-size: 18px;
-    height: 40px;
+  .regular-button {
+    padding: 12px 40px;
+
+    font-size: 15px;
+    display: block;
+  }
+
+  .regular-button::after {
+    width: 30px;
+    margin-top: 0px;
+  }
+
+  .regular-button::before {
+    content: "";
+
+    width: 11px;
+    height: 11px;
+
+    margin-top: -1px;
+  }
+
+  .regular-button:hover {
+    padding: 12px 62px 12px 20px;
+  }
+
+  .regular-button:hover::after,
+  .regular-button:hover::before {
+    opacity: 1;
+    right: 20px;
   }
 }

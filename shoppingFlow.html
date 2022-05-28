@@ -150,22 +150,22 @@
 
               <div class="deliveryForm">
                 <h3>Delivery</h3>
-                <input type="radio" id="pickUp" name="delivery" />
+                <input type="radio" id="pickUp" name="delivery" required />
                 <label for="pickUp">Standard pick-up location<br /><span>Free 2-3 days</span></label
                 ><br />
-                <input type="radio" id="standardHome" name="delivery" />
+                <input type="radio" id="standardHome" name="delivery" required />
                 <label for="standardHome">Standard home delivery<br /><span>Free 2-3 days</span></label
                 ><br />
-                <input type="radio" id="expressHome" name="delivery" />
+                <input type="radio" id="expressHome" name="delivery" required />
                 <label for="expressHome">Express home delivery<br /><span>100 DKK 1-2 days</span></label>
               </div>
 
               <div class="paymentForm2">
                 <h3>Payment</h3>
                 <h4>Billing address</h4>
-                <input type="radio" id="same" name="address" />
+                <input type="radio" id="same" name="address" required />
                 <label for="same">Same as shipping address</label><br />
-                <input type="radio" id="different" name="address" />
+                <input type="radio" id="different" name="address" required />
                 <label for="different">Use a different billing address</label><br />
 
                 <div class="paymentMethod">
@@ -215,12 +215,12 @@
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="paypalMethod" name="payment" />
+                  <input type="radio" id="paypalMethod" name="payment" required />
                   <label for="paypalMethod">PAYPAL</label>
                 </div>
 
                 <div class="methodOptions">
-                  <input type="radio" id="mobilepayMethod" name="payment" />
+                  <input type="radio" id="mobilepayMethod" name="payment" required />
                   <label for="mobilepayMethod">MOBILE PAY</label>
                 </div>
               </div>

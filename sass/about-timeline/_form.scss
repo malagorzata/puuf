@@ -1,7 +1,9 @@
 @use "../base/colors";
+@use "../base/typography";
+
 .about-timeline {
   #part4 {
-    #form {
+    #contact-form {
       input[type="text"],
       input[type="email"],
       textarea {
@@ -27,6 +29,31 @@
       }
       button {
         margin-top: 2vw;
+      }
+
+      input:invalid:not(:placeholder-shown, :focus) {
+        border: dashed 1px red;
+      }
+
+      input:focus-visible {
+        outline: none;
+        box-shadow: none;
+
+        outline: solid 1.5px colors.$purple-3;
+      }
+
+      textarea {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      textarea:focus-visible {
+        outline: none;
+        box-shadow: none;
+
+        outline: solid 1.5px colors.$purple-3;
+      }
+
+      textarea:invalid:not(:placeholder-shown, :focus) {
+        border: dashed 1px red;
       }
     }
   }

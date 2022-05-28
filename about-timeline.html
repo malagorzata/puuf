@@ -218,31 +218,31 @@
           </div>
         </div>
 
-        <section id="form">
+        <form id="contact-form" name="myForm">
           <div id="wrapper">
             <div class="wrapper">
               <div class="grouping">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="" required />
+                <input type="text" id="name" name="name" placeholder=" " required />
               </div>
 
               <div class="grouping">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="" required />
+                <input type="email" id="email" name="email" placeholder=" " required />
               </div>
 
               <div class="grouping">
                 <label for="message">Your message</label>
-                <textarea id="message" name="message" rows="6" required> </textarea>
+                <textarea id="message" name="message" rows="6" minlength="15" placeholder=" " required> </textarea>
               </div>
             </div>
             <div class="grouping">
-              <input type="checkbox" id="terms" name="terms" value="" />
+              <input type="checkbox" id="terms" name="terms" value="" required />
               <label for="terms"> By submitting this form, I confirm I have read and agreed with PUUF's GDPR compliant Privacy Policy</label>
             </div>
 
             <div class="create-account">
-              <button id="but-create" class="nosubmit regular-button">
+              <button id="button-submit" class="nosubmit regular-button">
                 SEND &nbsp<svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 20.066 20.895">
                   <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
                     <path
@@ -272,11 +272,12 @@
               </button>
             </div>
           </div>
-        </section>
+        </form>
       </div>
     </main>
 
     <footer></footer>
     <script type="module" src="./script/main.js"></script>
+    <script type="module" src="./script/form/form.js"></script>
   </body>
 </html>

@@ -18,16 +18,16 @@ function registerFilterOptions() {
   document.querySelectorAll(".filters li[data-action='filter']").forEach((option) => option.addEventListener("click", selectFilter));
 }
 
-//fetching database
+// //fetching database
 
-let url = "https://kea2021-907c.restdb.io/rest/puuf";
+// let url = "https://kea2021-907c.restdb.io/rest/puuf";
 
-/*API key*/
-const options = {
-  headers: {
-    "x-apikey": "602e264f5ad3610fb5bb6267",
-  },
-};
+// /*API key*/
+// const options = {
+//   headers: {
+//     "x-apikey": "602e264f5ad3610fb5bb6267",
+//   },
+// };
 
 // function getData() {
 //   fetch(url, options)

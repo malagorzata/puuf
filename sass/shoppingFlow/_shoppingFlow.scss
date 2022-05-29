@@ -3,11 +3,11 @@
 
 #shoppingFlow {
   .back-button {
-    margin-left: 20rem;
     .backArrow {
       display: flex;
       align-items: center;
       margin-top: 5rem;
+      border: none;
       svg {
         transform: rotate(180deg);
         transform-origin: 50% 50%;
@@ -21,11 +21,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     /*ORDER DETAILS*/
     #paymentForm {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       margin-bottom: 4rem;
       width: 35rem;
       margin-right: 0;
@@ -61,6 +63,22 @@
         margin-left: 1rem;
         font-size: 12px;
         padding: 5px 16px;
+        text-align: center;
+        display: flex;
+        // padding: 10px 37px;
+        background: transparent;
+        border: solid 2px colors.$purple-3;
+        border-radius: 30px;
+        color: black;
+        text-transform: uppercase;
+        font-family: typography.$font-1;
+        font-weight: 900;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+        display: inline-flex;
+
         svg {
           width: 1rem;
           height: auto;
@@ -124,13 +142,14 @@
       border-top: 1px solid black;
     }
     .line {
-      width: 23rem;
+      width: 25rem;
       border-top: 1px solid black;
     }
     .orderPrice {
       margin-left: 0.5rem;
       display: flex;
       font-size: 0.8rem;
+      width: 25rem;
     }
 
     .orderPrice * {
@@ -165,6 +184,7 @@
     .paymentForm2 {
       padding-left: 2rem;
       background-color: colors.$purple-1;
+      width: 25rem;
     }
 
     #shoppingbagDetails {
@@ -179,14 +199,14 @@
       flex-direction: column;
       padding-right: 5rem;
       input {
-        width: 20vw;
+        width: 200px;
         border-radius: 20px;
         border: solid 1px colors.$purple-2;
         padding: 10px 20px;
         margin-bottom: 10px;
       }
       select {
-        width: 23vw;
+        width: 240px;
         border-radius: 20px;
         border: solid 1px colors.$purple-2;
         padding: 10px 20px;
@@ -239,17 +259,12 @@
       margin-top: 1rem;
     }
 
-    // .paymentForm label {
-    //   margin-top: 0.5rem;
-    // }
-
     .paymentMethod {
       display: flex;
       flex-direction: column;
-      // margin-right: 3rem;
       input[name="cardNumber"],
       input[name="nameCard"] {
-        width: 20vw;
+        width: 200px;
         border-radius: 20px;
         border: solid 1px colors.$purple-2;
         padding: 10px 20px;
@@ -257,7 +272,7 @@
       input[name="CVV"],
       select[name="month"],
       select[name="year"] {
-        width: 10vw;
+        width: 100px;
         border-radius: 20px;
         border: solid 1px colors.$purple-2;
         padding: 10px 20px;
@@ -389,23 +404,59 @@
   }
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 375px) {
   #shoppingFlow {
     #orderFlow {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      // .line {
+      //   width: 30rem;
+      // }
+
+      // .orderPrice {
+      //   width: 30rem;
+      // }
     }
 
     .paymentForm {
       width: 350px;
       background-color: white;
+      align-items: center;
     }
 
     #shoppingbagDetails {
       height: 500px;
       width: 380px;
       top: 0;
-      position: sticky;
+      // position: sticky;
+      .editButton {
+        margin-left: 1rem;
+        font-size: 12px;
+        padding: 5px 16px;
+        text-align: center;
+        // padding: 10px 37px;
+        background: transparent;
+        border: solid 2px colors.$purple-3;
+        border-radius: 30px;
+        color: black;
+        text-transform: uppercase;
+        font-family: typography.$font-1;
+        font-weight: 900;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+          width: 3rem;
+          height: auto;
+        }
+      }
     }
 
     .orderConfSec {
@@ -426,25 +477,30 @@
   }
 }
 
-@media only screen and (max-width: 860px) {
-  #shoppingFlow {
-    #orderFlow {
-      flex-direction: column;
-      align-items: center;
-    }
-    .paymentForm {
-      width: 400px;
-    }
+// @media only screen and (max-width: 860px) {
+//   #shoppingFlow {
+//     #orderFlow {
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//     .paymentForm {
+//       width: 400px;
+//     }
 
-    #shoppingbagDetails {
-      // margin-right: 4vw;
-      width: 500px;
-    }
-  }
-}
+//     #shoppingbagDetails {
+//       // margin-right: 4vw;
+//       width: 500px;
+//     }
+//   }
+// }
 
 @media only screen and (min-width: 960px) {
   #shoppingFlow {
+    #orderFlow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     #shoppingbagDetails {
       // margin-right: 8vw;
       margin-left: 5vw;
@@ -454,14 +510,56 @@
 
 @media only screen and (min-width: 1024px) {
   #shoppingFlow {
+    #orderFlow {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: baseline;
+      margin-top: -3rem;
+
+      .shippingDetails {
+        input {
+          width: 300px;
+        }
+        select {
+          width: 340px;
+        }
+        option {
+          padding: 10px;
+        }
+      }
+      .paymentMethod {
+        input[name="cardNumber"],
+        input[name="nameCard"] {
+          width: 300px;
+        }
+        input[name="CVV"],
+        select[name="month"],
+        select[name="year"] {
+          width: 150px;
+        }
+      }
+    }
     .orderDetailsConf {
       margin-left: 6rem;
+    }
+    #shoppingbagDetails {
+      // margin-right: 15vw;
+      height: fit-content;
+      position: sticky;
     }
   }
 }
 
 @media only screen and (min-width: 1200px) {
   #shoppingFlow {
+    #orderFlow {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: baseline;
+      .line {
+        width: 22.5rem;
+      }
+    }
     .paymentForm {
       width: 500px;
     }
@@ -469,13 +567,32 @@
     .orderDetailsConf {
       margin-left: 12rem;
     }
+    #shoppingbagDetails {
+      // margin-right: 15vw;
+      height: fit-content;
+      position: sticky;
+    }
   }
 }
 
 @media only screen and (min-width: 1300px) {
   #shoppingFlow {
+    #orderFlow {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: baseline;
+
+      .line {
+        width: 22.5rem;
+      }
+    }
     .orderDetailsConf {
       margin-left: 15rem;
+    }
+    #shoppingbagDetails {
+      // margin-right: 15vw;
+      height: fit-content;
+      position: sticky;
     }
   }
 }
@@ -485,6 +602,7 @@
     #orderFlow {
       display: flex;
       flex-direction: row-reverse;
+      align-items: baseline;
     }
 
     .paymentForm {
@@ -495,6 +613,7 @@
     #shoppingbagDetails {
       // margin-right: 15vw;
       height: fit-content;
+      position: sticky;
     }
 
     .orderDetailsConf {

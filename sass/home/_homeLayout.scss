@@ -115,6 +115,9 @@
     img {
       display: none;
     }
+    .circleVideo {
+      display: none;
+    }
 
     /* .circleVideoWrapper {
       display: none;
@@ -444,6 +447,7 @@
         border-radius: 100rem;
         .circleVideo {
           max-height: 100%;
+          display: unset;
         }
       }
 

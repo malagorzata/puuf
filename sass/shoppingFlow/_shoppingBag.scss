@@ -95,6 +95,11 @@
 
   .orderSummary {
     margin-top: 3rem;
+
+    .shopping-total {
+      background-color: colors.$purple-1;
+      padding: 1rem 0.5rem;
+    }
   }
 
   .orderPrice {
@@ -131,7 +136,8 @@
 
   .shoppingBag {
     font-size: 1.2rem;
-    margin: 0 0.4rem;
+    margin: 0.2rem 0;
+    line-height: 1.6rem;
   }
 
   .subtotalFinal {

@@ -40,6 +40,7 @@ function handleProducts(products) {
   document.querySelector(".first").alt = products.name;
   document.querySelector(".second").alt = products.name;
   document.querySelector(".third").alt = products.name;
+  document.querySelector(".breadcrumbs .name").textContent = products.name;
 
   document.querySelector(".addCart").addEventListener("click", () => {
     CART.add(products);

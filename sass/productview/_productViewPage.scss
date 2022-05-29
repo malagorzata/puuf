@@ -50,7 +50,11 @@
       position: sticky;
       top: 0;
       margin-left: 2rem;
-
+      .breadcrumbs {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+      }
       .hide {
         display: none;
       }
@@ -65,7 +69,7 @@
       }
 
       li {
-        font-weight: 900;
+        font-weight: 500;
         font-size: 18px;
         line-height: 25px;
       }

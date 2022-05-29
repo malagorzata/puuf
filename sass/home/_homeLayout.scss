@@ -125,10 +125,10 @@
 
     .background-circle {
       border: colors.$purple-3 solid 5px;
-      width: 60vw;
-      margin-top: -54px;
-      margin-left: 32vw;
-      height: 14vw;
+      width: 68vw;
+      margin-top: -75px;
+      margin-left: 25vw;
+      height: 16vw;
       position: unset;
       border-radius: 100%;
       transform: rotate(-12deg);
@@ -445,6 +445,7 @@
         height: 38vw;
         overflow: hidden;
         border-radius: 100rem;
+        margin-left: -80px;
         .circleVideo {
           max-height: 100%;
           display: unset;
@@ -458,10 +459,10 @@
       } */
 
       .background-circle {
-        width: 30vw;
-        margin-top: -90px;
-        margin-left: 13vw;
-        height: 9vw;
+        width: 32vw;
+        margin-top: -85px;
+        margin-left: 15vw;
+        height: 10vw;
       }
       svg {
         width: 100px;
@@ -597,10 +598,48 @@
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  #home-body {
+    #section3 {
+      .background-circle {
+        width: 32vw;
+        margin-top: -85px;
+        margin-left: 13vw;
+        height: 9vw;
+      }
+      .circleVideoWrapper {
+        width: 38vw;
+        height: 38vw;
+        overflow: hidden;
+        border-radius: 100rem;
+        margin-left: -55px;
+        margin-top: -10px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1250px) {
   #home-body {
     #wrapper {
       width: 40%;
+    }
+
+    #section3 {
+      .background-circle {
+        width: 30vw;
+        margin-top: -120px;
+        margin-left: 14vw;
+        height: 9vw;
+      }
+      .circleVideoWrapper {
+        width: 38vw;
+        height: 38vw;
+        overflow: hidden;
+        border-radius: 100rem;
+        margin-left: -60px;
+        margin-top: -10px;
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 //RELOAD when RESIZING THE SCREEN
-let resizeTimeout;
-window.addEventListener("resize", function (event) {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(function () {
-    window.location.reload();
-  }, 500);
-});
+// let resizeTimeout;
+// window.addEventListener("resize", function (event) {
+//   clearTimeout(resizeTimeout);
+//   resizeTimeout = setTimeout(function () {
+//     window.location.reload();
+//   }, 500);
+// });
 
 gsap.set("#circular-icon", { xPercent: 0 });
 

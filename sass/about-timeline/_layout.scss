@@ -1,6 +1,13 @@
 @use "../base/colors";
 
 .about-timeline {
+  #about {
+    // color: colors.$purple-3;
+    line-height: 10px;
+    padding-top: 10px;
+    margin-bottom: 5vw;
+  }
+
   #part1 {
     text-align: center;
     margin-top: 80px;
@@ -16,8 +23,8 @@
     #intro {
       padding: 0 30px;
 
-      h2 {
-        margin-top: 6vw;
+      h3 {
+        margin-top: 10vw;
       }
 
       p {
@@ -90,13 +97,14 @@
   .sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 30px;
+    top: 80px;
   }
 
   #part3 {
     // padding-right: 60px;
     padding-right: 20px;
     margin-top: 100px;
+    margin-bottom: 200px;
 
     img {
       width: 100%;
@@ -211,9 +219,11 @@
 
       #intro {
         padding: 0 0 50px 0;
-
         h2 {
-          margin-top: 4.5vw;
+          margin-top: 4vw;
+        }
+        h3 {
+          margin-top: 3vw;
         }
 
         p {

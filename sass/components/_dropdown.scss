@@ -50,6 +50,17 @@ hr {
   margin-bottom: 1rem;
 }
 
+.dropdown > .dropdownList:hover .name .plus {
+  display: none;
+}
+.dropdown > .dropdownList:hover .name .minus {
+  display: inline-block;
+}
+
+.minus {
+  display: none;
+}
+
 .about-timeline {
   .dropdown > .dropdownList:hover .list {
     height: 48vw;

@@ -141,7 +141,7 @@
   }
 
   #section4 {
-    padding: 10vw 0;
+    padding: 10vw 0 0 0;
     #circular-goods {
       display: block;
       text-align: center;
@@ -192,7 +192,8 @@
   }
 
   #section5 {
-    padding: 1vw 7vw 20vw 7vw;
+    // border-top: 3px dashed colors.$purple-3;
+    padding: 10vw 7vw 20vw 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;

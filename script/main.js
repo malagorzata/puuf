@@ -1,5 +1,5 @@
 /*MENU*/
-
+document.addEventListener("click", (x) => 0);
 const menu = document.querySelector("#menuSec nav");
 
 document.querySelector("#menuSec .closeMenu").addEventListener("click", closeMenu);

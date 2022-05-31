@@ -1,4 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
+
+document.addEventListener("click", (x) => 0);
+
 const id = urlParams.get("_id");
 const url = "https://kea2021-907c.restdb.io/rest/puuf/" + id;
 

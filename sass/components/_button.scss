@@ -48,7 +48,7 @@
   background: transparent;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  margin-top: -2px;
+  margin-top: -3px;
   // margin-top: -1px;
 }
 
@@ -202,7 +202,7 @@
 
   .regular-button::after {
     width: 30px;
-    margin-top: 0px;
+    margin-top: -2px;
   }
 
   .regular-button::before {
@@ -211,7 +211,7 @@
     width: 11px;
     height: 11px;
 
-    margin-top: -1px;
+    margin-top: -3px;
   }
 
   .regular-button:hover {

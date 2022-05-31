@@ -22,7 +22,8 @@ body#order-confirmation {
       width: 100%;
     }
     .orderConfSec {
-      margin-top: 2vw;
+      margin-top: 6vw;
+      margin-bottom: 6vw;
       h2 {
         font-size: 2rem;
       }
@@ -49,7 +50,7 @@ body#order-confirmation {
         // background-color: colors.$purple-1;
         // padding: 30px 60px;
 
-        min-height: 50vw;
+        min-height: 40vw;
         height: 50%;
         width: 50%;
 
@@ -60,21 +61,32 @@ body#order-confirmation {
           margin-top: 20px;
           width: 150px;
         }
-        .bagQuantity {
-          // display: none;
-          pointer-events: none;
-          display: inline;
-          input {
-            padding: 10px 0 10px 10px;
-            border-radius: 20px;
-            border: solid 1px colors.$purple-3;
-          }
 
-          button {
-            opacity: 0;
+        .orderItem {
+          display: flex;
+          gap: 10px;
+
+          .bagproductInfo {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+
+            .bagQuantity {
+              // display: none;
+              pointer-events: none;
+              display: inline;
+              margin: 0;
+              input {
+                padding: 10px 0 10px 10px;
+                border-radius: 20px;
+                border: solid 1px colors.$purple-3;
+              }
+              button {
+                display: none;
+              }
+            }
           }
         }
-
         .priceText {
           display: none;
         }

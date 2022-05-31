@@ -2,53 +2,30 @@
 @use "../base/colors";
 
 #shoppingBag {
-  /*ORDER DETAILS*/
-
-  .backArrow {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 1rem;
-    font-size: 0.8rem;
-  }
-
-  .backArrow {
-    text-decoration: none;
-    color: black;
-  }
-
-  .backArrow img {
-    max-width: 6%;
-  }
-
-  .logIn {
-    text-align-last: center;
-    margin-top: -1rem;
-  }
-
   #shoppingbagDetails {
-    margin-top: 2rem;
-    margin-bottom: 7rem;
-  }
-
-  .shoppingBagTitle {
     display: flex;
     flex-direction: column;
-  }
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+    .shoppingBagTitle {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin: 0;
+        margin-top: 0.8rem;
+      }
+      button {
+        background-color: white;
+        border: solid 2px black;
+        box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.12);
+        width: 60px;
+      }
 
-  .shoppingBagTitle h2 {
-    margin: 0;
-    margin-top: 0.8rem;
-  }
-
-  .shoppingBagTitle a {
-    text-align: right;
-  }
-
-  .shoppingBagTitle button {
-    background-color: white;
-    border: solid 2px black;
-    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.12);
-    width: 60px;
+      a {
+        text-align: right;
+      }
+    }
   }
 
   .shoppingBagTitle button:hover,
@@ -82,12 +59,12 @@
     flex-direction: column;
     margin-bottom: 1rem;
     font-size: 0.8rem;
-    width: 160px;
+    width: 15rem;
   }
 
   .bagproductInfo * {
     margin: 0;
-    margin-top: 0.3rem;
+    // margin-top: 0.3rem;
   }
 
   .bagName {
@@ -100,7 +77,7 @@
   }
 
   .lineS {
-    width: 170px;
+    width: 15rem;
     height: 1px;
     background-color: rgb(198, 198, 198);
     position: relative;
@@ -109,31 +86,36 @@
   }
 
   .lineL {
-    width: 350px;
+    width: 30rem;
     height: 2px;
-    background-color: gray;
-    position: relative;
-    z-index: -1;
+    background-color: black;
+    // position: relative;
+    // z-index: -1;
   }
 
   .orderSummary {
     margin-top: 3rem;
+
+    .shopping-total {
+      background-color: colors.$purple-1;
+      padding: 1rem 0.5rem;
+    }
   }
 
   .orderPrice {
-    margin-left: 0.5rem;
     display: flex;
     font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    width: 30rem;
   }
 
   .orderPrice * {
-    margin: 0;
     margin-top: 0.2rem;
     text-transform: uppercase;
   }
 
   .priceText {
-    width: 185px;
+    width: 20rem;
   }
 
   .priceAmount {
@@ -143,45 +125,7 @@
 
   .subtotal {
     margin-top: 1rem;
-    font-weight: 800;
-  }
-
-  .couponDiv {
-    display: flex;
-    gap: 1rem;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .couponDiv input {
-    margin-top: 0.6rem;
-    width: 185px;
-    height: 30px;
-  }
-
-  .couponDiv button {
-    background-color: white;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    border: solid 2px black;
-    border-radius: 20px;
-    width: 150px;
-    height: 35px;
-    margin-top: 0.5rem;
-    transition: all 0.2s;
-  }
-
-  .couponDiv button:hover,
-  .couponDiv button:active {
-    background-color: black;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .couponDiv button:active {
-    box-shadow: none;
+    font-weight: 500;
   }
 
   .similar {
@@ -192,7 +136,8 @@
 
   .shoppingBag {
     font-size: 1.2rem;
-    margin: 2rem 0 0 0.4rem;
+    margin: 0.2rem 0;
+    line-height: 1.6rem;
   }
 
   .subtotalFinal {
@@ -242,48 +187,48 @@
     margin-top: 1.5rem;
   }
 
-  .proceed {
-    background-color: #fff;
-    color: #000;
-    border: solid 2px #000;
-    transition: all 0.2s;
-    &:hover {
-      color: #fff;
-      background-color: #000;
-      transition: all 0.2s;
-    }
-  }
+  // .proceed {
+  //   background-color: #fff;
+  //   color: #000;
+  //   border: solid 2px #000;
+  //   transition: all 0.2s;
+  //   &:hover {
+  //     color: #fff;
+  //     background-color: #000;
+  //     transition: all 0.2s;
+  //   }
+  // }
 
-  .continue {
-    background-color: colors.$purple-1;
-    border: none;
-    transition: all 0.2s;
-    &:hover {
-      background-color: #bdbbee;
-      transition: all 0.2s;
-    }
-  }
+  // .continue {
+  //   background-color: colors.$purple-1;
+  //   border: none;
+  //   transition: all 0.2s;
+  //   &:hover {
+  //     background-color: #bdbbee;
+  //     transition: all 0.2s;
+  //   }
+  // }
 
-  .b {
-    font-size: 0.9rem;
-    border-radius: 20px;
-    width: 300px;
-    height: 35px;
-    align-self: center;
-    cursor: pointer;
-    margin: 0.5rem;
-    padding: 0;
-  }
+  // .b {
+  //   font-size: 0.9rem;
+  //   border-radius: 20px;
+  //   width: 300px;
+  //   height: 35px;
+  //   align-self: center;
+  //   cursor: pointer;
+  //   margin: 0.5rem;
+  //   padding: 0;
+  // }
 
   .buttons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 3rem;
   }
 
   a {
-    margin-left: 0.8rem;
-    padding: 0;
+    margin: 0.5rem 0;
   }
 }
 
@@ -299,8 +244,7 @@
       justify-content: center;
     }
 
-    .items,
-    .itemsTwo {
+    .items {
       margin: 0 4rem;
     }
 
@@ -326,7 +270,7 @@
     }
 
     .lineL {
-      width: 400px;
+      width: 30rem;
     }
     .bagName {
       font-size: 1.3rem;
@@ -337,6 +281,13 @@
     .bagQuantity {
       font-size: 0.9rem;
     }
+    .bagQuantity {
+      input {
+        border: 1px solid colors.$purple-3;
+        text-align: center;
+        border-radius: 25%;
+      }
+    }
 
     .minus,
     .plus {
@@ -344,10 +295,6 @@
       border: solid 1px #000;
       width: 15px;
       height: 18px;
-    }
-
-    input.quantityInput {
-      text-align: center;
     }
 
     .price {

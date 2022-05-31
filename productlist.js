@@ -47,11 +47,14 @@ function registerFilterOptions() {
 //     });
 // }
 
+document.querySelector(".preloader").classList.remove("none");
+
 function prepareData(data) {
   data.forEach((jsonObject) => {
     //adding prducts to global array to use for filtering
     allProducts.push(jsonObject);
     handleProductList(allProducts);
+    document.querySelector(".preloader").classList.add("none");
   });
 }
 

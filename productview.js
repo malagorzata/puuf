@@ -8,6 +8,8 @@ const options = {
   },
 };
 
+document.querySelector(".preloader").classList.remove("none");
+
 fetch(url, options)
   .then((response) => {
     if (!response.ok) {
@@ -18,6 +20,7 @@ fetch(url, options)
 
   .then((data) => {
     handleProducts(data);
+    document.querySelector(".preloader").classList.add("none");
   })
   .catch((e) => {
     console.error("an error occured:", e.message);
@@ -40,6 +43,7 @@ function handleProducts(products) {
   document.querySelector(".first").alt = products.name;
   document.querySelector(".second").alt = products.name;
   document.querySelector(".third").alt = products.name;
+  document.querySelector(".breadcrumbs .name").textContent = products.name;
 
   document.querySelector(".addCart").addEventListener("click", () => {
     CART.add(products);

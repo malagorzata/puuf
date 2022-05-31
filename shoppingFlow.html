@@ -33,7 +33,7 @@
             <a href="#">Privacy Policy</a>
             <a href="#">T&C</a>
             <a href="#">FAQ</a>
-            <a href="#">Contact</a>
+            <a href="about-timeline.html#contact-info">Contact</a>
           </div>
         </nav>
         <div class="navOptions">
@@ -44,7 +44,7 @@
     </header>
     <main>
       <section id="orderDetails">
-        <a class="back-button" href="shoppingBag.html">
+        <!-- <a class="back-button" href="shoppingBag.html">
           <button class="backArrow regular-button">
             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="20.066" height="20.895" viewBox="0 0 20.066 20.895">
               <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
@@ -74,12 +74,12 @@
             </svg>
             GO BACK
           </button>
-        </a>
+        </a> -->
         <section id="orderFlow">
           <section id="shoppingbagDetails">
             <div class="shoppingBagTitle">
               <h3>Shopping bag</h3>
-              <a href="shoppingBag.html"
+              <!-- <a href="shoppingBag.html"
                 ><button class="editButton regular-button">
                   EDIT &nbsp
                   <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="20.066" height="20.895" viewBox="0 0 20.066 20.895">
@@ -108,7 +108,8 @@
                       />
                     </g>
                   </svg></button
-              ></a>
+              ></a> -->
+              <a href="shoppingBag.html"><button class="editButton">EDIT</button></a>
             </div>
 
             <div class="orderSummary">
@@ -153,6 +154,9 @@
             </template>
           </section>
           <section id="paymentForm">
+            <!-- <a class="back-button" href="shoppingBag.html">
+              <button class="backArrow regular-button">GO BACK</button>
+            </a> -->
             <form id="payment-form" class="paymentForm" name="paymentForm" autocomplete="on" method="POST" data-netlify="true">
               <div class="shippingDetails">
                 <h3>Shipping details</h3>
@@ -210,7 +214,15 @@
 
                 <div class="paymentMethod">
                   <h4>Payment method</h4>
+                  <div class="methodOptions">
+                    <input type="radio" id="paypalMethod" name="payment" required />
+                    <label for="paypalMethod">PAYPAL</label>
+                  </div>
 
+                  <div class="methodOptions">
+                    <input type="radio" id="mobilepayMethod" name="payment" required />
+                    <label for="mobilepayMethod">MOBILE PAY</label>
+                  </div>
                   <div class="methodOptions">
                     <input type="radio" id="cardMethod" name="payment" />
                     <label for="cardMethod">CREDIT/DEBIT CARD</label>
@@ -253,16 +265,6 @@
                   <label for="CVV">CVV</label>
                   <input type="password" name="CVV" id="CVV" minlength="3" maxlength="3" />
                 </div>
-
-                <div class="methodOptions">
-                  <input type="radio" id="paypalMethod" name="payment" required />
-                  <label for="paypalMethod">PAYPAL</label>
-                </div>
-
-                <div class="methodOptions">
-                  <input type="radio" id="mobilepayMethod" name="payment" required />
-                  <label for="mobilepayMethod">MOBILE PAY</label>
-                </div>
               </div>
               <a href="orderConfirmation.html"><button type="submit" class="regular-button" id="place-order">PLACE ORDER</button></a>
             </form>
@@ -298,7 +300,7 @@
           <li>Privacy Policy</li>
           <li>T&Cs</li>
           <li>FAQ</li>
-          <li>Contact</li>
+          <li><a href="about-timeline.html#contact-info">Contact</a></li>
         </ul>
       </section>
     </footer>

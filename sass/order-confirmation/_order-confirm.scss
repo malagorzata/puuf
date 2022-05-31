@@ -5,6 +5,10 @@ body#order-confirmation {
     padding: 20px 60px;
     margin: 0;
 
+    .orderNumber {
+      color: colors.$purple-3;
+    }
+
     button {
       display: block;
       margin-top: 20px;
@@ -22,8 +26,16 @@ body#order-confirmation {
       width: 100%;
     }
     .orderConfSec {
+      display: flex; //
+      flex-direction: column; //
+
+      text-align: center; //
+
       margin-top: 6vw;
       margin-bottom: 6vw;
+      display: flex;
+      justify-content: space-around;
+
       h2 {
         font-size: 2rem;
       }
@@ -36,27 +48,24 @@ body#order-confirmation {
         margin-bottom: 20px;
         line-height: 7px;
       }
-      display: flex;
-      justify-content: space-around;
 
       .orderDetailsConf {
-        margin: 0;
-        padding-right: 3%;
-        padding-left: 17%;
-        width: 50%;
+        margin-bottom: 40px;
+        // margin: 0;
+        // padding-right: 3%;
+        // padding-left: 17%;
+        // width: 50%;
         height: fit-content;
       }
       .orderSummaryConf {
-        // background-color: colors.$purple-1;
-        // padding: 30px 60px;
-
         min-height: 40vw;
         height: 50%;
-        width: 50%;
-
-        padding-right: 10%;
-        padding-left: 10%;
-        border-left: solid 2px black;
+        padding-top: 10vw;
+        // width: 50%;
+        // padding-right: 10%;
+        // padding-left: 10%;
+        // border-left: solid 2px black;
+        border-top: solid 2px black;
         img {
           margin-top: 20px;
           width: 150px;
@@ -67,6 +76,7 @@ body#order-confirmation {
           gap: 10px;
 
           .bagproductInfo {
+            text-align: left; // usunac
             display: flex;
             flex-direction: column;
             padding-top: 20px;
@@ -101,6 +111,65 @@ body#order-confirmation {
       text-align: center;
       h1 {
         font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  body#order-confirmation {
+    main {
+      padding: 0; //
+      .orderConfSec {
+        text-align: left; //
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .orderDetailsConf {
+          margin: 0;
+          // padding-right: 3%;
+          // padding-left: 17%;
+          padding-right: 0%;
+          padding-left: 12%;
+          width: 50%;
+          height: fit-content;
+        }
+        .orderSummaryConf {
+          width: 50%;
+          padding-right: 6%;
+          padding-left: 6%;
+          // padding-right: 10%;
+          // padding-left: 10%;
+          border-left: solid 2px black;
+          border-top: 0;
+          padding-top: 0;
+
+          .orderItem {
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1100px) {
+  body#order-confirmation {
+    main {
+      padding: 20px 60px;
+      margin: 0;
+      .orderConfSec {
+        .orderDetailsConf {
+          padding-right: 3%;
+          padding-left: 17%;
+        }
+        .orderSummaryConf {
+          padding-right: 10%;
+          padding-left: 10%;
+        }
       }
     }
   }

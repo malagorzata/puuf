@@ -67,12 +67,18 @@
         list-style-type: none;
         display: flex;
         flex-direction: row;
+        font-weight: 500;
+        padding: 1rem 0;
+        li:nth-child(1) {
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+        }
       }
       .hide {
         display: none;
       }
       h3 {
-        padding: 1rem 0;
+        padding: 0.1rem 0;
       }
 
       .product-description {
@@ -100,11 +106,13 @@
     padding: 0;
   }
 
-  .list li,
-  .list2 li,
-  .list3 li {
-    color: black;
-    font-weight: 100;
+  .list,
+  .list2,
+  .list3 {
+    span {
+      color: black;
+      font-weight: 200;
+    }
   }
   .list,
   .list2,
@@ -177,10 +185,11 @@
         margin: 0 1rem;
 
         h2 {
-          padding: 0.4rem 0;
+          padding: 1rem 0;
           margin: 0;
-          line-height: 25px;
+          line-height: 30px;
         }
+
         .price {
           padding: 0;
           margin-bottom: 0.5rem;
@@ -252,8 +261,10 @@
         }
 
         .price {
-          padding: 0;
           font-size: 2.5rem;
+          span {
+            padding: 0;
+          }
         }
         .dropdown > .dropdownList:hover .list3 {
           height: 100px;

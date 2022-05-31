@@ -283,7 +283,9 @@
         color: colors.$purple-3;
         padding-top: 0.5rem;
       }
-      label[for="cardMethod"] {
+      label[for="cardMethod"],
+      label[for="paypalMethod"],
+      label[for="mobilepayMethod"] {
         color: black;
         padding-top: 0.5rem;
       }

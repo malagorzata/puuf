@@ -147,6 +147,7 @@
     .bagQuantity .minus,
     .bagQuantity .plus {
       display: none;
+      pointer-events: none;
     }
 
     .bagQuantity .quantityInput {

@@ -37,8 +37,22 @@
       input:focus-visible {
         outline: none;
         box-shadow: none;
-
         outline: solid 1.5px colors.$purple-3;
+      }
+      .error,
+      .error-card {
+        display: none;
+        color: red;
+        font-size: 0.8rem;
+        padding-top: 0.3rem;
+      }
+
+      input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .error {
+        display: block;
+      }
+
+      input[name="cardNumber"]:not(:focus):not(:placeholder-shown):invalid ~ .error-card {
+        display: block;
       }
     }
 
@@ -126,10 +140,10 @@
       font-size: 1.3rem;
     }
 
-    // .bagQuantity .minus,
-    // .bagQuantity .plus {
-    //   display: none;
-    // }
+    .bagQuantity .minus,
+    .bagQuantity .plus {
+      display: none;
+    }
 
     .bagQuantity .quantityInput {
       border: 1px solid;

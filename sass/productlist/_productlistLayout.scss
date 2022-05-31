@@ -19,13 +19,14 @@
   }
 
   .title {
+    margin-top: 7rem;
     h2 {
       margin-bottom: 0.5rem;
     }
 
     .oval {
       position: absolute;
-      top: -3%;
+      top: 7%;
       left: 14rem;
       z-index: -1;
       svg {
@@ -74,7 +75,7 @@
       }
 
       li.selected {
-        font-weight: 900;
+        font-weight: 600;
         border-color: colors.$purple-4;
       }
     }
@@ -153,7 +154,7 @@
 
     h4 {
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 500;
     }
 
     .infoRight {
@@ -275,10 +276,10 @@
 
     .title {
       .oval {
-        top: -8.5%;
-        left: 13rem;
+        top: 9%;
+        left: 14rem;
         svg {
-          max-width: 45%;
+          max-width: 50%;
         }
       }
     }
@@ -291,6 +292,20 @@
 
     .vrSection {
       height: 70vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #productList {
+    .title {
+      .oval {
+        top: 3%;
+        left: 13rem;
+        svg {
+          max-width: 45%;
+        }
+      }
     }
   }
 }
@@ -440,7 +455,7 @@
 
     .title {
       .oval {
-        top: -10.5%;
+        top: 3%;
         left: 12rem;
         svg {
           max-width: 45%;
@@ -490,7 +505,7 @@
 
     .title {
       .oval {
-        top: -11.5%;
+        top: -2.5%;
         left: 12rem;
         svg {
           max-width: 39%;
@@ -544,10 +559,24 @@
   #productList {
     .title {
       .oval {
-        top: -11.5%;
+        top: -2%;
         left: 13rem;
         svg {
-          max-width: 52%;
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #productList {
+    .title {
+      .oval {
+        top: -2.5%;
+        left: 12rem;
+        svg {
+          max-width: 59%;
         }
       }
     }
@@ -558,10 +587,10 @@
   #productList {
     .title {
       .oval {
-        top: -11.5%;
+        top: -2.5%;
         left: 13rem;
         svg {
-          max-width: 70%;
+          max-width: 80%;
         }
       }
     }

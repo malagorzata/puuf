@@ -8,6 +8,7 @@
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 7rem;
+
     .shoppingBagTitle {
       display: flex;
       flex-direction: column;
@@ -27,17 +28,28 @@
       }
     }
   }
-
-  .shoppingBagTitle button:hover,
-  .shoppingBagTitle button:active {
-    background-color: #c2c2c2;
-    cursor: pointer;
+  .qt {
+    display: flex;
+    flex-direction: row;
+    .bagQuantity {
+      display: flex;
+      align-items: center;
+      input {
+        border: 1px solid colors.$purple-3;
+        text-align: center;
+        border-radius: 25%;
+      }
+      .minus,
+      .plus {
+        background-color: #fff;
+        border: 1px solid colors.$purple-3;
+        border-radius: 25%;
+        width: 15px;
+        height: 15px;
+        margin: 0 0.2rem;
+      }
+    }
   }
-
-  .shoppingBagTitle button:active {
-    box-shadow: none;
-  }
-
   .orderItem {
     display: flex;
     gap: 1rem;
@@ -86,35 +98,47 @@
   }
 
   .lineL {
-    width: 30rem;
+    width: 35rem;
     height: 2px;
     background-color: black;
-    // position: relative;
-    // z-index: -1;
+  }
+
+  .lineL_2 {
+    width: 35rem;
+    height: 2px;
+    background-color: black;
   }
 
   .orderSummary {
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     .shopping-total {
       background-color: colors.$purple-1;
-      padding: 1rem 0.5rem;
+      padding: 0;
     }
   }
 
-  .orderPrice {
+  .orderPrice,
+  .orderPriceTotal {
     display: flex;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
-    width: 30rem;
+    width: 34rem;
   }
 
-  .orderPrice * {
+  .orderPriceTotal {
+    width: 34rem;
+  }
+  .orderPrice *,
+  .orderPriceTotal * {
     margin-top: 0.2rem;
     text-transform: uppercase;
   }
 
   .priceText {
+    width: 30rem;
+  }
+  .priceText_2 {
     width: 20rem;
   }
 
@@ -187,39 +211,6 @@
     margin-top: 1.5rem;
   }
 
-  // .proceed {
-  //   background-color: #fff;
-  //   color: #000;
-  //   border: solid 2px #000;
-  //   transition: all 0.2s;
-  //   &:hover {
-  //     color: #fff;
-  //     background-color: #000;
-  //     transition: all 0.2s;
-  //   }
-  // }
-
-  // .continue {
-  //   background-color: colors.$purple-1;
-  //   border: none;
-  //   transition: all 0.2s;
-  //   &:hover {
-  //     background-color: #bdbbee;
-  //     transition: all 0.2s;
-  //   }
-  // }
-
-  // .b {
-  //   font-size: 0.9rem;
-  //   border-radius: 20px;
-  //   width: 300px;
-  //   height: 35px;
-  //   align-self: center;
-  //   cursor: pointer;
-  //   margin: 0.5rem;
-  //   padding: 0;
-  // }
-
   .buttons {
     display: flex;
     flex-direction: column;
@@ -237,6 +228,15 @@
     .orderSummary {
       display: flex;
       flex-direction: row;
+      .shopping-total {
+        background-color: colors.$purple-1;
+        padding: 1rem 2rem;
+
+        .orderPrice,
+        .orderPriceTotal {
+          width: 30rem;
+        }
+      }
     }
 
     #shoppingbagDetails {
@@ -272,6 +272,11 @@
     .lineL {
       width: 30rem;
     }
+
+    .lineL_2 {
+      width: 31rem;
+    }
+
     .bagName {
       font-size: 1.3rem;
     }
@@ -281,20 +286,27 @@
     .bagQuantity {
       font-size: 0.9rem;
     }
-    .bagQuantity {
-      input {
-        border: 1px solid colors.$purple-3;
-        text-align: center;
-        border-radius: 25%;
+    .qt {
+      display: flex;
+      flex-direction: row;
+      .bagQuantity {
+        display: flex;
+        align-items: center;
+        input {
+          border: 1px solid colors.$purple-3;
+          text-align: center;
+          border-radius: 25%;
+        }
+        .minus,
+        .plus {
+          background-color: #fff;
+          border: 1px solid colors.$purple-3;
+          border-radius: 25%;
+          width: 15px;
+          height: 15px;
+          margin: 0 0.2rem;
+        }
       }
-    }
-
-    .minus,
-    .plus {
-      background-color: #fff;
-      border: solid 1px #000;
-      width: 15px;
-      height: 18px;
     }
 
     .price {

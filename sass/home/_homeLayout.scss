@@ -179,6 +179,15 @@
           max-width: 100%;
         }
       }
+      article:hover {
+        img {
+          outline: solid 2px colors.$purple-3;
+          outline-offset: -2px;
+        }
+        h4 {
+          color: colors.$purple-3;
+        }
+      }
     }
   }
 

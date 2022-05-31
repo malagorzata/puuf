@@ -1,6 +1,19 @@
 @use "../base/colors";
 
 #productList {
+  .preloader {
+    height: 200vh;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    z-index: 1000;
+    position: absolute;
+    margin-top: -5rem;
+  }
+
+  .none {
+    display: none;
+  }
   .marginWrapper {
     margin: 3rem;
   }

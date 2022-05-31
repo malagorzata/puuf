@@ -8,6 +8,8 @@ const options = {
   },
 };
 
+document.querySelector(".preloader").classList.remove("none");
+
 fetch(url, options)
   .then((response) => {
     if (!response.ok) {
@@ -18,6 +20,7 @@ fetch(url, options)
 
   .then((data) => {
     handleProducts(data);
+    document.querySelector(".preloader").classList.add("none");
   })
   .catch((e) => {
     console.error("an error occured:", e.message);

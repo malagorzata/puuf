@@ -4,6 +4,19 @@
 #productView {
   margin: 0;
   padding: 0;
+  .preloader {
+    height: 200%;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    z-index: 10;
+    position: absolute;
+  }
+
+  .none {
+    display: none;
+  }
+
   main {
     display: flex;
     flex-direction: row;

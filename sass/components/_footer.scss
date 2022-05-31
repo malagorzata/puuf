@@ -5,6 +5,7 @@ footer {
   background-color: colors.$purple-2;
   height: 30rem;
   padding: 0;
+  padding-bottom: 1rem;
   margin: 0;
   display: grid;
   grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
@@ -89,6 +90,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
     p {
       padding: 0.1rem 0.6rem;
     }

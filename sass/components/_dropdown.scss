@@ -49,3 +49,45 @@ hr {
   width: 25rem;
   margin-bottom: 1rem;
 }
+
+.about-timeline {
+  .dropdown > .dropdownList:hover .list {
+    height: 48vw;
+    overflow-y: scroll;
+  }
+  .dropdown > .dropdownList:hover .list1 {
+    height: 40vw;
+    overflow-y: scroll;
+  }
+  .dropdown > .dropdownList:hover .list2 {
+    height: 39vw;
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .about-timeline {
+    .dropdown > .dropdownList:hover .list {
+      height: 27rem;
+    }
+    .dropdown > .dropdownList:hover .list1 {
+      height: 22rem;
+    }
+    .dropdown > .dropdownList:hover .list2 {
+      height: 20rem;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about-timeline {
+    .dropdown > .dropdownList:hover .list {
+      height: 22rem;
+    }
+    .dropdown > .dropdownList:hover .list1 {
+      height: 18rem;
+    }
+    .dropdown > .dropdownList:hover .list2 {
+      height: 17rem;
+    }
+  }
+}

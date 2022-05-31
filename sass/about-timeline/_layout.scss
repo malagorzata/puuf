@@ -45,7 +45,18 @@
     #team {
       // display: flex;
       // justify-content: space-around;
+      .list,
+      .list1,
+      .list2 {
+        li {
+          font-weight: 400;
 
+          div {
+            line-height: 7vw;
+            font-weight: 500;
+          }
+        }
+      }
       p {
         text-align: center;
         padding-top: 20px;
@@ -64,11 +75,6 @@
           font-size: 1.3rem; //
           line-height: 4vw;
           margin-top: 2vw; //
-
-          div {
-            line-height: 7vw;
-            font-weight: 600;
-          }
         }
       }
       svg {
@@ -239,7 +245,7 @@
 
             div {
               line-height: 5vw;
-              font-weight: 600;
+              // font-weight: 400;
             }
           }
         }
@@ -341,7 +347,6 @@
 
             div {
               line-height: 5vw;
-              font-weight: 600;
             }
           }
         }

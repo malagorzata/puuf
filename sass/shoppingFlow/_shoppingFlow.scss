@@ -40,7 +40,8 @@
         outline: solid 1.5px colors.$purple-3;
       }
       .error,
-      .error-card {
+      .error-card,
+      .error-cvv {
         display: none;
         color: red;
         font-size: 0.8rem;
@@ -52,6 +53,9 @@
       }
 
       input[name="cardNumber"]:not(:focus):not(:placeholder-shown):invalid ~ .error-card {
+        display: block;
+      }
+      input[name="CVV"]:not(:focus):not(:placeholder-shown):invalid ~ .error-card {
         display: block;
       }
     }

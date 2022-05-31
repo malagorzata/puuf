@@ -135,6 +135,12 @@
       padding-right: 10px;
     }
   }
+
+  .two-img {
+    display: flex;
+    max-width: 50%;
+    gap: 10px;
+  }
   #box1,
   #box2 {
     margin-bottom: 40px;
@@ -291,7 +297,8 @@
 
       #box1,
       #box2,
-      #box3 {
+      #box3,
+      #box4 {
         margin-bottom: 40px;
         .img-container {
           margin-left: 130px;
@@ -386,7 +393,8 @@
 
       #box1,
       #box2,
-      #box3 {
+      #box3,
+      #box4 {
         margin-bottom: 40px;
         .img-container {
           margin-left: 160px;

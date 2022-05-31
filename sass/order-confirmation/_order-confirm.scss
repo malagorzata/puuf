@@ -17,6 +17,10 @@ body#order-confirmation {
     img {
       max-width: 100%;
     }
+
+    #orderDetails {
+      width: 100%;
+    }
     .orderConfSec {
       margin-top: 2vw;
       h2 {
@@ -33,26 +37,39 @@ body#order-confirmation {
       }
       display: flex;
       justify-content: space-around;
-      gap: 50px;
+
       .orderDetailsConf {
         margin: 0;
-        padding: 30px 60px;
+        padding-right: 3%;
+        padding-left: 17%;
         width: 50%;
         height: fit-content;
-        // background-color: colors.$purple-1;
-        border-right: solid 2px black;
       }
       .orderSummaryConf {
         // background-color: colors.$purple-1;
-        padding: 30px 60px;
-        height: 50%;
+        // padding: 30px 60px;
 
+        min-height: 50vw;
+        height: 50%;
+        width: 50%;
+
+        padding-right: 10%;
+        padding-left: 10%;
+        border-left: solid 2px black;
         img {
           margin-top: 20px;
           width: 150px;
         }
         .bagQuantity {
-          display: none;
+          // display: none;
+          pointer-events: none;
+          display: inline;
+          input {
+            padding: 10px 0 10px 10px;
+            border-radius: 20px;
+            border: solid 1px colors.$purple-3;
+          }
+
           button {
             opacity: 0;
           }

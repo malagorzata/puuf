@@ -177,6 +177,8 @@
     }
 
     .left {
+      display: flex;
+      flex-direction: column;
       a {
         padding: 0 0.4rem;
       }

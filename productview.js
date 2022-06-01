@@ -12,6 +12,7 @@ const options = {
 };
 
 document.querySelector(".preloader").classList.remove("none");
+document.querySelector(".preloader-img").classList.remove("none");
 
 fetch(url, options)
   .then((response) => {
@@ -24,6 +25,7 @@ fetch(url, options)
   .then((data) => {
     handleProducts(data);
     document.querySelector(".preloader").classList.add("none");
+    document.querySelector(".preloader-img").classList.add("none");
   })
   .catch((e) => {
     console.error("an error occured:", e.message);

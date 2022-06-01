@@ -48,6 +48,7 @@ function registerFilterOptions() {
 // }
 
 document.querySelector(".preloader").classList.remove("none");
+document.querySelector(".preloader-img").classList.remove("none");
 
 function prepareData(data) {
   data.forEach((jsonObject) => {
@@ -55,6 +56,7 @@ function prepareData(data) {
     allProducts.push(jsonObject);
     handleProductList(allProducts);
     document.querySelector(".preloader").classList.add("none");
+    document.querySelector(".preloader-img").classList.add("none");
   });
 }
 

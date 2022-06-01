@@ -13,31 +13,38 @@ function openMenu() {
   menu.style.top = "0";
 }
 
-// const text = document.querySelector(".title");
-// const fullText = text.textContent;
-// const splitText = fullText.split("");
-// text.textContent = "";
+const scrollElements = document.querySelectorAll(".js-scroll");
 
-// for (let i = 0; i < splitText.length; i++) {
-//   text.innerHTML += "<span>" + splitText[i] + "</span>";
-// }
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
 
-// let char = 0;
-// let timer = setInterval(onTick, 50);
+  return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+};
 
-// function onTick() {
-//   const span = text.querySelectorAll("span")[char];
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
 
-//   span.classList.add("fade");
-//   char++;
+  return elementTop > (window.innerHeight || document.documentElement.clientHeight);
+};
 
-//   if (char === splitText.length) {
-//     complete();
-//     return;
-//   }
-// }
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
 
-// function complete() {
-//   clearInterval(timer);
-//   timer = null;
-// }
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el);
+    }
+  });
+};
+
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
+});

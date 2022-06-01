@@ -2,15 +2,32 @@
 
 #productList {
   .preloader {
-    height: 200vh;
+    height: 200%;
     width: 100%;
     background-color: black;
     opacity: 50%;
-    z-index: 1000;
+    z-index: 10;
     position: absolute;
-    margin-top: -5rem;
+    margin-top: -3rem;
   }
 
+  .preloader-img {
+    animation: 3s rotate infinite;
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15rem;
+    }
+  }
   .none {
     display: none;
   }

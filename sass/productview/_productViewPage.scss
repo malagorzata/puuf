@@ -13,6 +13,24 @@
     position: absolute;
   }
 
+  .preloader-img {
+    animation: 3s rotate infinite;
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15rem;
+    }
+  }
+
   .none {
     display: none;
   }

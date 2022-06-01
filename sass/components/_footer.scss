@@ -98,6 +98,16 @@ footer {
     .footer-details {
       display: flex;
       flex-direction: row;
+      .social-media {
+        display: flex;
+        flex-direction: row;
+        a {
+          img {
+            width: 1rem;
+            height: auto;
+          }
+        }
+      }
       li {
         padding: 0 0.9rem;
         &:hover {

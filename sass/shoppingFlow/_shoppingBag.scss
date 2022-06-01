@@ -38,6 +38,8 @@
         border: 1px solid colors.$purple-3;
         text-align: center;
         border-radius: 25%;
+        width: 25px;
+        height: auto;
       }
       .minus,
       .plus {
@@ -47,6 +49,7 @@
         width: 15px;
         height: 15px;
         margin: 0 0.2rem;
+        display: block;
       }
     }
   }
@@ -291,20 +294,30 @@
       flex-direction: row;
       .bagQuantity {
         display: flex;
-        align-items: center;
         input {
           border: 1px solid colors.$purple-3;
           text-align: center;
           border-radius: 25%;
+          pointer-events: none;
+          width: 30px;
+          height: 20px;
         }
-        .minus,
+        .minus {
+          background-color: #fff;
+          border: 1px solid colors.$purple-3;
+          border-radius: 25%;
+          width: 15px;
+          height: 15px;
+          display: block;
+          // margin: 0 0.2rem;
+        }
         .plus {
           background-color: #fff;
           border: 1px solid colors.$purple-3;
           border-radius: 25%;
           width: 15px;
           height: 15px;
-          margin: 0 0.2rem;
+          // margin: 0 0.2rem;
         }
       }
     }

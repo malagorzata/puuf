@@ -30,15 +30,16 @@
       margin-bottom: 4rem;
       width: 35rem;
       margin-right: 0;
-      input:invalid:not(:placeholder-shown, :focus) {
-        border: dashed 1px red;
-      }
 
       input:focus-visible {
         outline: none;
         box-shadow: none;
         outline: solid 1.5px colors.$purple-3;
       }
+      input:invalid:not(:placeholder-shown, :focus) {
+        border: dashed 1px red;
+      }
+
       .error,
       .error-card,
       .error-cvv {
@@ -55,7 +56,7 @@
       input[name="cardNumber"]:not(:focus):not(:placeholder-shown):invalid ~ .error-card {
         display: block;
       }
-      input[name="CVV"]:not(:focus):not(:placeholder-shown):invalid ~ .error-card {
+      input[name="CVV"]:not(:focus):not(:placeholder-shown):invalid ~ .error-cvv {
         display: block;
       }
     }

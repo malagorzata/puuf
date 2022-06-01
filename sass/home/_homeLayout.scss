@@ -641,7 +641,20 @@
   }
 }
 
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1200px) {
+  #home-body {
+    #section3 {
+      .background-circle {
+        width: 34vw;
+        margin-top: -115px;
+        margin-left: 15vw;
+        height: 9.5vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
   #home-body {
     #wrapper {
       width: 40%;
@@ -651,7 +664,7 @@
       .background-circle {
         width: 30vw;
         margin-top: -120px;
-        margin-left: 14vw;
+        margin-left: 16vw;
         height: 9vw;
       }
       .circleVideoWrapper {
@@ -666,6 +679,18 @@
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  #home-body {
+    #section3 {
+      .background-circle {
+        width: 28vw;
+        margin-top: -118px;
+        margin-left: 12vw;
+        height: 7.7vw;
+      }
+    }
+  }
+}
 ////// not sure if im gonna use this part ???
 
 // .delayed-section .inner-container {

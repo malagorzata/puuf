@@ -61,7 +61,7 @@
             <div class="shoppingBagTitle">
               <h3>Shopping bag</h3>
 
-              <a href="shoppingBag.html"><button class="editButton">EDIT</button></a>
+              <a href="shoppingBag.html"><button class="editButton" name="edit">EDIT</button></a>
             </div>
 
             <div class="orderSummary">
@@ -93,9 +93,9 @@
                   <p>
                     <span class="bagQuantity">
                       Quantity:
-                      <button class="minus no" type="button">-</button>
+                      <button class="minus no" type="button" name="minus">-</button>
                       <input name="NAME-" type="number" id="fid-" min="0" max="20" class="quantityInput" />
-                      <button class="plus no" type="button">+</button>
+                      <button class="plus no" type="button" name="plus">+</button>
                     </span>
                   </p>
 
@@ -218,7 +218,7 @@
                   <p class="error-cvv">3 digits in the back of your card</p>
                 </div>
               </div>
-              <a href="orderConfirmation.html"><button type="submit" class="regular-button" id="place-order">PLACE ORDER</button></a>
+              <a href="orderConfirmation.html"><button type="submit" class="regular-button" id="place-order" name="place-order">PLACE ORDER</button></a>
             </form>
           </section>
         </section>
@@ -234,7 +234,7 @@
             <div class="container">
               <form class="newsletterForm" name="Newsletter">
                 <input class="emailField" id="email" type="email" placeholder="Your e-mail" required />
-                <button type="submit"></button>
+                <button type="submit" name="newsletter-button"></button>
               </form>
             </div>
           </div>

@@ -154,12 +154,15 @@
     gap: 10px;
   }
   #box1,
-  #box2 {
+  #box2,
+  #box3,
+  #box4 {
     margin-bottom: 40px;
     .img-container {
       margin-top: 10px;
       // margin-left: 165px;
       margin-left: 110px;
+      margin-bottom: 10vw;
     }
   }
   .background-circle {

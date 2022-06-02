@@ -67,6 +67,10 @@
       .list,
       .list1,
       .list2 {
+        &::-webkit-scrollbar {
+          height: 0px;
+          width: 0px;
+        }
         li {
           font-weight: 400;
 

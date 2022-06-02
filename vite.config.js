@@ -13,6 +13,7 @@ module.exports = {
         orderconfirm: resolve(__dirname, "orderConfirmation.html"),
         shoppingbag: resolve(__dirname, "shoppingBag.html"),
         shoppingflow: resolve(__dirname, "shoppingFlow.html"),
+        services: resolve(__dirname, "services.html"),
       },
     },
   },

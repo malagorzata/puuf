@@ -1,0 +1,136 @@
+@use "../base/colors";
+
+.services-page {
+  #part1 {
+    text-align: center;
+    margin-top: 80px;
+
+    img {
+      width: 70%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    #intro {
+      padding: 0 30px;
+
+      h3 {
+        margin-top: 10vw;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 17px;
+      }
+    }
+  }
+  #part4 {
+    margin-top: 20vw;
+    background-color: colors.$purple-1;
+    // padding: 60px 60px;
+    // display: grid;
+    // column-gap: 10vw;
+    // grid-template-columns: 35% 60%;
+    padding: 60px 20px;
+
+    #contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 180px; // usunac
+      p {
+        font-size: 16px;
+        line-height: 20px; //usunac
+      }
+      #phone-nr {
+        div {
+          display: flex;
+          justify-items: center;
+          gap: 12px;
+          margin-bottom: 3vw;
+          // margin-bottom: 1.2vw;
+
+          svg {
+            // height: 2.3vw;
+            // width: 2.3vw;
+            height: 4vw;
+            width: 4vw;
+            display: flex;
+            justify-content: center;
+          }
+          p {
+            // line-height: 2.5vw;
+            line-height: 4vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .services-page {
+    #part1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      padding-right: 65px;
+      text-align: left;
+      margin-top: 40px;
+
+      // nie wiem jak tu z navigacja, jakby co usunac
+      img {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+      }
+
+      #intro {
+        padding: 0 0 50px 0;
+        h2 {
+          margin-top: 4vw;
+        }
+        h3 {
+          margin-top: 3vw;
+        }
+
+        p {
+          font-size: unset;
+          line-height: unset;
+        }
+      }
+    }
+    #part4 {
+      margin-top: 30px;
+      padding: 60px 60px;
+      display: grid;
+      column-gap: 10vw;
+      grid-template-columns: 35% 60%;
+
+      #contact-info {
+        height: auto;
+        p {
+          font-size: 1.1rem;
+          line-height: unset; //usunac
+        }
+        #phone-nr {
+          div {
+            margin-bottom: 1.2vw;
+            gap: 15px;
+            svg {
+              height: 2.3vw;
+              width: 2.3vw;
+            }
+            p {
+              line-height: 2.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

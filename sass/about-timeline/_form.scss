@@ -1,7 +1,8 @@
 @use "../base/colors";
 @use "../base/typography";
 
-.about-timeline {
+.about-timeline,
+.services-page {
   #part4 {
     #contact-form {
       margin-top: 30px; //usunac
@@ -137,7 +138,8 @@
 }
 
 @media only screen and (min-width: 760px) {
-  .about-timeline {
+  .about-timeline,
+  .services-page {
     #part4 {
       #contact-form {
         margin-top: 0; //usunac
